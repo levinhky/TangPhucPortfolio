@@ -1,0 +1,106 @@
+@mixin center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+@mixin absLeft {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(0, -50%);
+}
+
+@mixin flex($align-item, $justify-content) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+}
+@mixin grid($number) {
+  display: grid;
+  grid-template-columns: repeat($number, minmax(0, 1fr));
+}
+
+@mixin text-overflow($number) {
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint ==extra-large-desktop {
+    @media only screen and (min-width: 1500px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==large-desktop {
+    @media only screen and (min-width: 1200px) and (max-width: 1499px) {
+      @content;
+    }
+  }
+
+  // 24px
+  @if $breakpoint ==small-desktop {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  }
+
+  // 20px
+  @if $breakpoint ==extra-large-mobile {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==large-mobile {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  // 20 px
+  @if $breakpoint ==small-mobile {
+    @media only screen and (max-width: 575px) {
+      @content;
+    }
+  }
+
+  // 16px
+  @if $breakpoint ==extra-small-mobile {
+    @media only screen and (max-width: 479px) {
+      @content;
+    }
+  }
+}
+// breakpoint custom
+@mixin breakpoint-min($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin breakpoint($breakpoint-min, $breakpoint-max) {
+  @media only screen and (min-width: $breakpoint-min) and (max-width: $breakpoint-max) {
+    @content;
+  }
+}
