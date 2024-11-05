@@ -1,0 +1,87 @@
+.playlist-item {
+  background: linear-gradient(
+    135deg,
+    rgba(249, 245, 245, 0.8) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-radius: 20px;
+
+  &-thumbnail > img {
+    width: 100%;
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+
+  height: 2px;
+  background: $secondary-color;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    border: none;
+
+    transition: 0.2s ease-in-out;
+  }
+
+  &::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    border: none;
+
+    transition: 0.2s ease-in-out;
+  }
+
+  &::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(112, 150, 209, 1);
+  }
+
+  &:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(112, 150, 209, 0.2);
+  }
+
+  &::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(112, 150, 209, 0.1);
+  }
+  &:active::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(112, 150, 209, 0.2);
+  }
+}
+
+.playlist-item-control {
+  &--play-btn {
+    width: 40px;
+    height: 40px;
+    background-color: $primary-color;
+  }
+}
+
+.buttonSlider {
+  width: 64px;
+  height: 64px;
+  background-color: $white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 24;
+
+  &Left {
+    left: 0px;
+  }
+
+  &Right {
+    right: 0px;
+  }
+}

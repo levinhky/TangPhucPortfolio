@@ -1,0 +1,13 @@
+.footer-wrapper {
+  background-color: $secondary-color;
+
+  .footer-bottom {
+    border-top: 1px solid $primary-color;
+    padding: $base-space;
+    text-align: center;
+
+    & > p {
+      color: $primary-color;
+    }
+  }
+}

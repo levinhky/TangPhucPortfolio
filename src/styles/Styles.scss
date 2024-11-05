@@ -3,4 +3,11 @@
 
 @import "base/animation";
 @import "base/base";
+@import "base/styles";
 
+// components
+@import "components/NavbarModal";
+@import "components/HeroBanner";
+@import "components/Playlist";
+@import "components/Schedule";
+@import "components/Footer";

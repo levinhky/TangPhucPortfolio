@@ -1,6 +1,8 @@
 /*=============================================
 =            base            =
 =============================================*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 *,
 *::after,
@@ -13,12 +15,20 @@ body {
   height: 100%;
   text-align: unset;
   padding-right: 0 !important;
+  background: linear-gradient(to bottom, #dce3f4, #f4f4fa) !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
   margin: 0;
 
   background: $white;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 p:last-child {
@@ -48,6 +58,10 @@ ul {
   padding: 0;
 
   list-style: outside none none;
+}
+
+img {
+  height: fit-content !important;
 }
 
 input:focus::-webkit-input-placeholder,
@@ -81,5 +95,9 @@ textarea:focus:-ms-input-placeholder {
 .skeleton {
   border-radius: 2px;
   animation: skeleton-loading 1s linear infinite alternate;
+}
+.center-abs {
+  position: absolute;
+  @include absCenter;
 }
 /*=====  End of base  ======*/

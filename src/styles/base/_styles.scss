@@ -1,0 +1,31 @@
+.wrapper {
+  padding: $base-space;
+}
+.main-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: $primary-color;
+  margin-bottom: $base-space;
+}
+.sub-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: $primary-color;
+
+  &--small {
+    font-size: 14px;
+    font-weight: 400;
+    color: $primary-color;
+  }
+
+  &--bold {
+    font-weight: 700;
+    color: $primary-color;
+  }
+}
+.social-button {
+  background-color: $primary-color;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: $white;
+}

@@ -1,18 +1,17 @@
 // fonts
-$work-sans: 'Work Sans', sans-serif;
-$spectral: 'Spectral', serif;
-$archivo: 'Archivo', sans-serif;
-$montserrat: 'Montserrat', sans-serif;
+$montserrat: "Montserrat", sans-serif;
+$bodoni-moda: "Bodoni Moda", serif;
 
-$font-family: $archivo;
-$font-family--rtl: 'Droid Arabic Kufi';
+$font-family: $montserrat;
 
 $width-container: 1410px;
 
+$base-space: 16px;
+
 // color
-$primary-color: #131313;
+$primary-color: #081f5c;
 $primary-color--disabled: #cccdcb;
-$secondary-color: #fd6a62;
+$secondary-color: #d0e3ff;
 $basic-color: #82b736;
 $border-green: #149447;
 
@@ -20,7 +19,7 @@ $black: #000;
 $black--two: #333;
 $black--three: #222;
 $black-four: #b3b3b3;
-$black-five: #02150a;
+$black-five: #000a26;
 $white: #fff;
 $grey: #7e7e7e;
 $grey--light: #fafafa;
@@ -154,7 +153,8 @@ $border--option-selected: 2px ridge $white;
 $border--tippy-arrow: 7px solid rgb(221, 221, 221);
 $border--customize-bundle: 1px #e4e4e4 solid;
 
-$product-item-hover-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+$product-item-hover-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+  rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 // z-index
 $z-index--sidebar: 999;
