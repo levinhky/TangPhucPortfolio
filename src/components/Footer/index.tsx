@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Container from "@/app/themes/Container";
+import Container from "@/themes/Container";
 import Link from "next/link";
 import { SOCIAL_LINKS } from "@/utils/constants";
 
@@ -17,7 +17,7 @@ const Footer = () => {
               height={25}
               alt="location-icon"
             />
-            <p>
+            <p className="sub-title--small">
               Text text text text text text text text text text text text Text
               text text text text text text text text text text text Text text
               text text text text text text text text text text
@@ -30,7 +30,7 @@ const Footer = () => {
               height={25}
               alt="phone-icon"
             />
-            <p>000-000-0000</p>
+            <p className="sub-title--small">000-000-0000</p>
           </div>
           <div className="flex gap-2">
             <Image
@@ -39,13 +39,13 @@ const Footer = () => {
               height={25}
               alt="mail-icon"
             />
-            <p>example@gmail.com</p>
+            <p className="sub-title--small">example@gmail.com</p>
           </div>
         </div>
 
         <ul className="footer-links flex flex-col gap-4">
           <li>
-            <Link className="sub-title" href="/about-us">
+            <Link className="sub-title" href="/about">
               Giới thiệu
             </Link>
           </li>

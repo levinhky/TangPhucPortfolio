@@ -1,4 +1,4 @@
-import Container from "@/app/themes/Container";
+import Container from "@/themes/Container";
 import { SOCIAL_LINKS } from "@/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,19 +13,19 @@ const NavbarModal = ({ toggleShowModal }: { toggleShowModal: () => void }) => {
             <h1 className="rotate-text">Tăng Phúc</h1>
             <div className="navbar-modal-wrapper">
               <ul>
-                <li className="navbar-modal-link">
+                <li onClick={toggleShowModal} className="navbar-modal-link">
                   <Link href="/">Home</Link>
                 </li>
-                <li className="navbar-modal-link">
+                <li onClick={toggleShowModal} className="navbar-modal-link">
                   <Link href="/about">About</Link>
                 </li>
-                <li className="navbar-modal-link">
+                <li onClick={toggleShowModal} className="navbar-modal-link">
                   <Link href="/schedule">Schedule</Link>
                 </li>
-                <li className="navbar-modal-link">
+                <li onClick={toggleShowModal} className="navbar-modal-link">
                   <Link href="/merchandise">Merchandise</Link>
                 </li>
-                <li className="navbar-modal-link">
+                <li onClick={toggleShowModal} className="navbar-modal-link">
                   <Link href="/contact">Contact</Link>
                 </li>
               </ul>

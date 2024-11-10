@@ -1,5 +1,5 @@
 "use client";
-import Container from "@/app/themes/Container";
+import Container from "@/themes/Container";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";

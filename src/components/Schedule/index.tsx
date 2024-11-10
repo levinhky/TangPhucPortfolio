@@ -1,6 +1,7 @@
-import Container from "@/app/themes/Container";
+import Container from "@/themes/Container";
 import Image from "next/image";
 import Link from "next/link";
+import MerchandiseItem from "../MerchandiseItem";
 
 const Schedule = () => {
   return (
@@ -49,65 +50,11 @@ const Schedule = () => {
       </div>
 
       <div className="schedule-promotions">
-        <h6 className="main-title text-center">Lịch hoạt động</h6>
+        <h6 className="main-title text-center">Merchandise</h6>
         <div className="schedule-promotions__list grid grid-cols-3 gap-4">
-          <div className="schedule-promotions__list--item flex flex-col">
-            <div className="image">
-              <Image
-                src={"/aochinmuoi.png"}
-                width={400}
-                height={400}
-                alt="ao"
-              />
-            </div>
-
-            <div className="info">
-              <h6 className="category">Danh mục sản phẩm</h6>
-
-              <h2 className="product-name">
-                Tên sản phẩm Tên sản phẩm Tên sản phẩm
-              </h2>
-              <div className="price">000.000đ</div>
-            </div>
-          </div>
-          <div className="schedule-promotions__list--item flex flex-col">
-            <div className="image">
-              <Image
-                src={"/aochinmuoi.png"}
-                width={400}
-                height={400}
-                alt="ao"
-              />
-            </div>
-
-            <div className="info">
-              <h6 className="category">Danh mục sản phẩm</h6>
-
-              <h2 className="product-name">
-                Tên sản phẩm Tên sản phẩm Tên sản phẩm
-              </h2>
-              <div className="price">000.000đ</div>
-            </div>
-          </div>
-          <div className="schedule-promotions__list--item flex flex-col">
-            <div className="image">
-              <Image
-                src={"/aochinmuoi.png"}
-                width={400}
-                height={400}
-                alt="ao"
-              />
-            </div>
-
-            <div className="info">
-              <h6 className="category">Danh mục sản phẩm</h6>
-
-              <h2 className="product-name">
-                Tên sản phẩm Tên sản phẩm Tên sản phẩm
-              </h2>
-              <div className="price">000.000đ</div>
-            </div>
-          </div>
+          <MerchandiseItem />
+          <MerchandiseItem />
+          <MerchandiseItem />
         </div>
       </div>
     </Container>

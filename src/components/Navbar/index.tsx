@@ -1,5 +1,5 @@
 "use client";
-import Container from "@/app/themes/Container";
+import Container from "@/themes/Container";
 import Image from "next/image";
 import NavbarModal from "./components/NavbarModal";
 import { useCallback, useEffect, useState } from "react";

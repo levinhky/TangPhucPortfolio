@@ -28,34 +28,6 @@
   }
 }
 
-.schedule-promotions__list {
-  .image {
-    margin-bottom: 32px;
-  }
-  .info {
-    margin-top: auto;
-    .category {
-      background: linear-gradient(to bottom, #e0e7ee, #f5f7fa);
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-size: 14px;
-      color: $black-five;
-      display: inline-block;
-    }
-    .product-name {
-      font-size: 21px;
-      font-weight: 600;
-      color: $black-five;
-      margin: 16px 0;
-    }
-    .price {
-      font-size: 21px;
-      font-weight: 500;
-      color: $black-five;
-    }
-  }
-}
-
 .schedule--float-text {
   position: absolute;
   right: -20%;
@@ -65,5 +37,140 @@
     font-family: $bodoni-moda;
     font-style: italic;
     color: $white;
+  }
+}
+
+#schedule-page {
+  .floating-text {
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    color: $primary-color;
+    font-size: 125px;
+    font-family: $bodoni-moda;
+    font-style: italic;
+    color: $white;
+    opacity: 0.8;
+  }
+
+  .floating-text-2 {
+    position: absolute;
+    bottom: -15%;
+    left: 45%;
+    color: $primary-color;
+    font-size: 125px;
+    font-family: $bodoni-moda;
+    font-style: italic;
+    color: $white;
+    opacity: 0.8;
+  }
+
+  .month {
+    font-family: $bodoni-moda;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 180px;
+    color: $primary-color;
+  }
+
+  .calendar-view {
+    .days,
+    .calendar {
+      background: linear-gradient(
+        117.54deg,
+        rgba(255, 255, 255, 0.8) 14.14%,
+        rgba(255, 255, 255, 0.05) 94.3%
+      );
+      border: 1px solid $blue--two;
+    }
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    gap: 32px;
+    margin-top: 50px;
+  }
+
+  .nav-link {
+    position: relative;
+    font-weight: bold;
+    color: $black-five;
+    text-decoration: underline;
+    font-size: 1rem;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+
+  .nav-link.prev::before {
+    content: "←";
+    position: absolute;
+    left: -1.2em;
+    color: $black-five;
+  }
+
+  .nav-link.next::after {
+    content: "→";
+    position: absolute;
+    right: -1.2em;
+    color: $black-five;
+  }
+
+  .event-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+
+  .event-date {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-right: 16px;
+  }
+
+  .event-date::before {
+    content: "◆";
+    font-size: 1.2rem;
+    margin-right: 5px;
+  }
+
+  .event-type,
+  .event-info {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #000;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .event-details {
+    flex-grow: 1;
+    padding: 0 15px;
+  }
+
+  .event-name {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+  }
+
+  .event-address {
+    font-size: 0.9rem;
+    color: #555;
   }
 }

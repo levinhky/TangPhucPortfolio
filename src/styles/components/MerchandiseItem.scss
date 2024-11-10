@@ -1,0 +1,31 @@
+.merchandise-item {
+  .image {
+    margin-bottom: 32px;
+  }
+  .info {
+    margin-top: auto;
+    .category {
+      background: linear-gradient(
+        117.54deg,
+        rgba(255, 255, 255, 0.8) 14.14%,
+        rgba(255, 255, 255, 0.05) 94.3%
+      );
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: $black-five;
+      display: inline-block;
+    }
+    .product-name {
+      font-size: 21px;
+      font-weight: 600;
+      color: $black-five;
+      margin: 16px 0;
+    }
+    .price {
+      font-size: 21px;
+      font-weight: 500;
+      color: $black-five;
+    }
+  }
+}
