@@ -67,7 +67,7 @@ const Playlist = () => {
   };
 
   return (
-    <Container style="relative">
+    <Container style="relative px-[100px]">
       <p className="main-title text-center">Sản phẩm âm nhạc</p>
       <Swiper
         slidesPerView={3}

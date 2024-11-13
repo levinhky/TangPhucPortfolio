@@ -6,34 +6,11 @@ import { useCallback, useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isShowModal, setShowModal] = useState<boolean>(false);
+  const [isClicked, setClicked] = useState<boolean>(false);
 
-  const toggleShowModal = useCallback(
-    () => setShowModal(!isShowModal),
-    [isShowModal]
-  );
-
-  const openModal = () => {
-    document.body.classList.add("modal-open");
-    const navbarModal = document.querySelector(".navbar-modal") as HTMLElement;
-    if (navbarModal) {
-      navbarModal.style.display = "block";
-    }
-  };
-
-  const closeModal = () => {
-    document.body.classList.remove("modal-open");
-    const navbarModal = document.querySelector(".navbar-modal") as HTMLElement;
-    if (navbarModal) {
-      navbarModal.style.display = "none";
-    }
-  };
-
-  useEffect(() => {
-    if (isShowModal) {
-      openModal();
-    } else {
-      closeModal();
-    }
+  const toggleShowModal = useCallback(() => {
+    setShowModal(!isShowModal);
+    setClicked(true);
   }, [isShowModal]);
 
   return (
@@ -48,7 +25,12 @@ const Navbar = () => {
           />
         </button>
       </div>
-      {isShowModal && <NavbarModal toggleShowModal={toggleShowModal} />}
+      {isClicked && (
+        <NavbarModal
+          toggleShowModal={toggleShowModal}
+          isShowModal={isShowModal}
+        />
+      )}
     </Container>
   );
 };

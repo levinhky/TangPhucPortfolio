@@ -120,7 +120,7 @@ const SchedulePage = () => {
                   <p>- Text text</p>
                 </div>
               </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1] border-r-[1px]">
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1]">
                 <p className="day">5</p>
                 <div className="flex">
                   <p>- Text text</p>
@@ -128,55 +128,193 @@ const SchedulePage = () => {
                 </div>
               </div>
 
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
                 <p className="day">6</p>
                 <div className="flex">
                   <p>- Text text</p>
                   <p>- Text text</p>
                 </div>
               </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
                 <p className="day">7</p>
                 <div className="flex">
                   <p>- Text text</p>
                   <p>- Text text</p>
                 </div>
               </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
                 <p className="day">8</p>
                 <div className="flex">
                   <p>- Text text</p>
                   <p>- Text text</p>
                 </div>
               </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
                 <p className="day">9</p>
                 <div className="flex">
                   <p>- Text text</p>
                   <p>- Text text</p>
                 </div>
               </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
                 <p className="day">10</p>
                 <div className="flex">
                   <p>- Text text</p>
                   <p>- Text text</p>
                 </div>
               </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
                 <p className="day">11</p>
                 <div className="flex">
                   <p>- Text text</p>
                   <p>- Text text</p>
                 </div>
               </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px]">
                 <p className="day">12</p>
                 <div className="flex">
                   <p>- Text text</p>
                   <p>- Text text</p>
                 </div>
               </div>
+
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">13</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">14</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">15</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">16</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">17</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">18</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px]">
+                <p className="day">19</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">20</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">21</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">22</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">23</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">24</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
+                <p className="day">25</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px]">
+                <p className="day">26</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+
+              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+                <p className="day">27</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+                <p className="day">28</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+                <p className="day">29</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+                <p className="day">30</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
+                <p className="day">31</p>
+                <div className="flex">
+                  <p>- Text text</p>
+                  <p>- Text text</p>
+                </div>
+              </div>
+              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]"></div>
+              <div className="px-12 py-2 border-r-[#7096D1]"></div>
             </div>
           </div>
         )}

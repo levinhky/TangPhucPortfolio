@@ -4,9 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { memo } from "react";
 
-const NavbarModal = ({ toggleShowModal }: { toggleShowModal: () => void }) => {
+const NavbarModal = ({
+  toggleShowModal,
+  isShowModal,
+}: {
+  toggleShowModal: () => void;
+  isShowModal: boolean;
+}) => {
   return (
-    <div className="navbar-modal">
+    <div
+      className={`navbar-modal -translate-x-full ${
+        !isShowModal ? "fadeInRight" : "fadeInLeft"
+      } transition delay-300 ease-in-out`}
+    >
       <Container>
         <div className="relative">
           <div className="rotate-text-wrapper">
