@@ -1,32 +1,39 @@
 "use client";
 import Container from "@/themes/Container";
+import { formatPrice } from "@/utils/functions";
 import ImageGallery from "react-image-gallery";
-import { useState } from "react";
 
-const MerchandiseDetail = () => {
+const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
+  const { id } = params || {};
   const images = [
     {
-      original: "https://picsum.photos/id/1018/1000/600/",
-      thumbnail: "https://picsum.photos/id/1018/250/150/",
+      original:
+        "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg",
+      thumbnail:
+        "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg",
     },
+  ];
+
+  const images2 = [
     {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
-    },
-    {
-      original: "https://picsum.photos/id/1019/1000/600/",
-      thumbnail: "https://picsum.photos/id/1019/250/150/",
+      original:
+        "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731842716/462473598_846713767625801_8362309805917196511_n.jpg_s5xdrl.jpg",
+      thumbnail:
+        "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731842716/462473598_846713767625801_8362309805917196511_n.jpg_s5xdrl.jpg",
     },
   ];
   return (
     <Container>
-      <div className="flex gap-12 my-12" id="merchandise-detail">
-        <ImageGallery items={images} showBullets showPlayButton={false} />
+      <div className="flex gap-12 my-12 justify-center" id="merchandise-detail">
+        <ImageGallery
+          items={+id === 2 ? images2 : images}
+          showBullets
+          showPlayButton={false}
+        />
 
-        <div className="content basis-[100%]">
+        <div className="content basis-[50%]">
           <h1 className="font-semibold text-2xl mb-4">
-            Tên sản phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm Tên sản phẩm Tên
-            sản phẩm Tên sản phẩm
+            {+id === 2 ? "Áo 9M" : "Túi tote"}
           </h1>
           <h2 className="sub-title--small">
             Lorem ipsum dolor sit amet consectetur. Vitae velit volutpat aliquam
@@ -34,7 +41,9 @@ const MerchandiseDetail = () => {
             aenean lectus aliquam mattis curabitur quisque commodo sed in.
             Suspendisse ullamcorper nunc nulla rutrum.
           </h2>
-          <h3 className="text-3xl font-semibold my-4">000.000đ</h3>
+          <h3 className="text-3xl font-semibold my-4">
+            {+id === 2 ? formatPrice(349000) : formatPrice(225000)}
+          </h3>
           <div className="flex flex-col">
             <p className="font-semibold">Màu sắc</p>
             <div className="flex gap-4 my-4">

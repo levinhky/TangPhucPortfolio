@@ -1,22 +1,44 @@
+import { formatPrice } from "@/utils/functions";
 import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
 
-const MerchandiseItem = () => {
+interface MerchandiseItemProps {
+  id?: number;
+  image?: string;
+  category?: string;
+  productName?: string;
+  price?: number;
+  stockStatus?: string;
+}
+
+const MerchandiseItem = (props: MerchandiseItemProps) => {
+  const {
+    id = 1,
+    image = "/aochinmuoi.png",
+    category = "Danh mục sản phẩm",
+    productName = "Tên sản phẩm",
+    price = 10000,
+    stockStatus = "in-stock",
+  } = props;
   return (
     <div className="merchandise-item flex flex-col">
-      <Link href={"/merchandise/1"} className="image">
-        <Image src={"/aochinmuoi.png"} width={400} height={400} alt="ao" />
+      <Link href={`/merchandise/${id}`} className="image">
+        <Image src={image} width={400} height={400} alt="ao" />
       </Link>
 
       <div className="info">
-        <h6 className="category">Danh mục sản phẩm</h6>
-        <Link href={"/merchandise/1"}>
-          <h2 className="product-name">
-            Tên sản phẩm Tên sản phẩm Tên sản phẩm
-          </h2>
+        <h6 className="category">{category}</h6>
+        <Link href={`/merchandise/${id}`}>
+          <h2 className="product-name">{productName}</h2>
         </Link>
-        <div className="price">000.000đ</div>
+        <div
+          className={`price ${
+            stockStatus === "out-stock" ? "line-through" : ""
+          }`}
+        >
+          {formatPrice(price)}
+        </div>
       </div>
     </div>
   );

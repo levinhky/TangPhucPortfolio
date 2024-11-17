@@ -8,7 +8,7 @@ const ContactPage = () => {
         <div className="basis-2/5">
           <h6 className="main-title">Liên hệ với chúng tôi</h6>
           <div className="company-info flex flex-col gap-4 max-w-96">
-            <h6 className="sub-title">Tên công ty</h6>
+            <h6 className="sub-title">Công ty GSN Production</h6>
             <div className="flex gap-2">
               <Image
                 src={"/icons/location.png"}
@@ -16,11 +16,7 @@ const ContactPage = () => {
                 height={25}
                 alt="location-icon"
               />
-              <p className="sub-title--small">
-                Text text text text text text text text text text text text Text
-                text text text text text text text text text text text Text text
-                text text text text text text text text text text
-              </p>
+              <p className="sub-title--small">Ho Chi Minh City</p>
             </div>
             <div className="flex gap-2">
               <Image
@@ -29,7 +25,7 @@ const ContactPage = () => {
                 height={25}
                 alt="phone-icon"
               />
-              <p className="sub-title--small">000-000-0000</p>
+              <p className="sub-title--small">+963334400</p>
             </div>
             <div className="flex gap-2">
               <Image
@@ -38,7 +34,7 @@ const ContactPage = () => {
                 height={25}
                 alt="mail-icon"
               />
-              <p className="sub-title--small">example@gmail.com</p>
+              <p className="sub-title--small">Gsnmedia.pro@gmail.com</p>
             </div>
           </div>
         </div>

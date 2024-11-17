@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const HeroBanner = () => {
   return (
-    <div className="wrapper flex items-center justify-center relative container mx-auto">
+    <div
+      className="wrapper flex items-center justify-center relative container mx-auto mb-5"
+      id="hero-banner"
+    >
       <Image
         src={"/hero.png"}
         width={0}
@@ -16,16 +19,9 @@ const HeroBanner = () => {
       <div className="artist-information">
         <p className="artist-information--title">Giới thiệu</p>
         <h2 className="artist-information--description">
-          Lorem ipsum dolor sit amet consectetur. Egestas augue urna quisque a
-          duis nec lorem faucibus at. Non sed mi quisque adipiscing nisl. Orci
-          fermentum iaculis quam aliquet sit molestie adipiscing in congue. Amet
-          morbi massa amet neque felis nibh blandit integer purus.
-        </h2>
-        <h2 className="artist-information--description">
-          Lorem ipsum dolor sit amet consectetur. Egestas augue urna quisque a
-          duis nec lorem faucibus at. Non sed mi quisque adipiscing nisl. Orci
-          fermentum iaculis quam aliquet sit molestie adipiscing in congue. Amet
-          morbi massa amet neque felis nibh blandit integer purus.
+          Tăng Vũ Minh Phúc, thường được biết đến với nghệ danh Tăng Phúc, là
+          một nam ca sĩ được biết đến với nhiều ca khúc ballad sâu lắng với chất
+          giọng ấm áp và tình cảm.
         </h2>
       </div>
     </div>

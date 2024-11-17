@@ -81,7 +81,8 @@
         rgba(255, 255, 255, 0.8) 14.14%,
         rgba(255, 255, 255, 0.05) 94.3%
       );
-      border: 1px solid $blue--two;
+      border-left: 1px solid $blue--two;
+      border-top: 1px solid $blue--two;
     }
   }
 

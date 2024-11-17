@@ -23,10 +23,9 @@ const AboutPage = () => {
         <div>
           <p className="font-light">
             <strong className="font-bold">[Giới thiệu ngắn về anh]</strong>.
-            Lorem ipsum dolor sit amet consectetur. Egestas augue urna quisque a
-            duis nec lorem faucibus at. Non sed mi quisque adipiscing nisl. Orci
-            fermentum iaculis quam aliquet sit molestie adipiscing in congue.
-            Amet morbi massa amet neque felis nibh blandit integer purus.
+            Tăng Vũ Minh Phúc, thường được biết đến với nghệ danh Tăng Phúc, là
+            một nam ca sĩ được biết đến với nhiều ca khúc ballad sâu lắng với
+            chất giọng ấm áp và tình cảm.
           </p>
           <table className="my-5">
             <tr className="block mb-3">
@@ -82,7 +81,9 @@ const AboutPage = () => {
         <li className="timeline-item">
           <div className="timeline-info !flex justify-end">
             <Image
-              src={"/placeholder.png"}
+              src={
+                "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731829160/485e62dfdc68f22a44fdd320cd8f4364-Copy_eon1by.jpg"
+              }
               width={300}
               height={300}
               alt="placeholder"
@@ -91,23 +92,25 @@ const AboutPage = () => {
           <div className="timeline-marker"></div>
           <div className="timeline-content">
             <h3 className="timeline-title sub-title--bold !text-[#000A26]">
-              20XX
+              2019
             </h3>
             <h3 className="timeline-title sub-title--bold !text-[#000A26]">
-              Thành tựu / Giải thưởng
+              Quán quân Ẩn Số Hoàn Hảo mùa 1
             </h3>
             <p className="sub-title--small !text-[#000A26]">
-              Lorem ipsum dolor sit amet consectetur. Egestas augue urna quisque
-              a duis nec lorem faucibus at. Non sed mi quisque adipiscing nisl.
-              Orci fermentum iaculis quam aliquet sit molestie adipiscing in
-              congue.
+              Năm 2024, Tăng Phúc tham gia chương trình Ẩn Số Hoàn Hảo (mùa 1)
+              kết hợp với ca sĩ Hà Nhi. Trong đêm chung kết, cặp đôi đã có màn
+              trình diễn xuât sắc gây ấn tượng với ban giám khảo để giành được
+              giải Quán quân của chương trình.
             </p>
           </div>
         </li>
         <li className="timeline-item">
           <div className="timeline-info">
             <Image
-              src={"/placeholder.png"}
+              src={
+                "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731828968/437713403_122139125180199321_5545351752770108522_n.jpg_bzypju.jpg"
+              }
               width={300}
               height={300}
               alt="placeholder"
@@ -116,66 +119,18 @@ const AboutPage = () => {
           <div className="timeline-marker"></div>
           <div className="timeline-content">
             <h3 className="timeline-title sub-title--bold !text-[#000A26]">
-              20xx
+              2024
             </h3>
             <h3 className="timeline-title sub-title--bold !text-[#000A26]">
-              Thành tựu / Giải thưởng
+              Giải thưởng Anh tài truyền cảm hứng - Anh Trai Vượt Ngàn Chông Gai
+              2024
             </h3>
             <p className="sub-title--small !text-[#000A26]">
-              Lorem ipsum dolor sit amet consectetur. Egestas augue urna quisque
-              a duis nec lorem faucibus at. Non sed mi quisque adipiscing nisl.
-              Orci fermentum iaculis quam aliquet sit molestie adipiscing in
-              congue.
-            </p>
-          </div>
-        </li>
-        <li className="timeline-item">
-          <div className="timeline-info !flex justify-end">
-            <Image
-              src={"/placeholder.png"}
-              width={300}
-              height={300}
-              alt="placeholder"
-            />
-          </div>
-          <div className="timeline-marker"></div>
-          <div className="timeline-content">
-            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
-              20XX
-            </h3>
-            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
-              Thành tựu / Giải thưởng
-            </h3>
-            <p className="sub-title--small !text-[#000A26]">
-              Lorem ipsum dolor sit amet consectetur. Egestas augue urna quisque
-              a duis nec lorem faucibus at. Non sed mi quisque adipiscing nisl.
-              Orci fermentum iaculis quam aliquet sit molestie adipiscing in
-              congue.
-            </p>
-          </div>
-        </li>
-        <li className="timeline-item">
-          <div className="timeline-info">
-            <Image
-              src={"/placeholder.png"}
-              width={300}
-              height={300}
-              alt="placeholder"
-            />
-          </div>
-          <div className="timeline-marker"></div>
-          <div className="timeline-content">
-            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
-              20xx
-            </h3>
-            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
-              Thành tựu / Giải thưởng
-            </h3>
-            <p className="sub-title--small !text-[#000A26]">
-              Lorem ipsum dolor sit amet consectetur. Egestas augue urna quisque
-              a duis nec lorem faucibus at. Non sed mi quisque adipiscing nisl.
-              Orci fermentum iaculis quam aliquet sit molestie adipiscing in
-              congue.
+              Năm 2024, Tăng Phúc tham gia chương trình Anh Trai Vượt Ngàn Chông
+              Gai 2024 (mùa 1) với tư cách là một trong 33 anh tài. Tại đây, anh
+              đã hể hiện nhiều kỹ năng như rap, nhảy tango, đánh đàn, múa chén,
+              v.v... Kết thúc chương trình, anh đạt giải thưởng Anh tài truyền
+              cảm hứng do khán giả bình chọn.
             </p>
           </div>
         </li>

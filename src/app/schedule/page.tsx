@@ -1,12 +1,33 @@
 "use client";
 import Container from "@/themes/Container";
+import { currentYear, daysOfWeek } from "@/utils/constants";
+import { getDaysInMonth } from "@/utils/functions";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 const SchedulePage = () => {
   const [gridType, setGridType] = useState(false);
+  const daysInMonth = getDaysInMonth(currentYear, 10, (day: number) => {
+    switch (day) {
+      case 15:
+        return `"Từ Đây... Từ Nay..." Chapter Tapei`;
+      case 17:
+        return `"Từ Đây... Từ Nay..." Chapter KaoSiung`;
+      case 21:
+        return "Phòng Trà Bến Thành";
+      case 23:
+        return "Mây Lang Thang";
+      case 24:
+        return `"Từ Đây... Từ Nay..." Slay Hà Nội (đêm 1)`;
+      case 25:
+        return `"Từ Đây... Từ Nay..." Slay Hà Nội (đêm 2)`;
 
+      default:
+        return "Trống";
+    }
+  });
+  console.log("🚀 ~ SchedulePage ~ daysInMonth:", daysInMonth);
   return (
     <Container id="schedule-page" style="my-10">
       <div className="relative">
@@ -32,7 +53,7 @@ const SchedulePage = () => {
                 Tháng
               </p>
             </div>
-            <strong className="month">10</strong>
+            <strong className="month">11</strong>
           </div>
           <div className="flex gap-4">
             <p className="text-[#081f5c] font-semibold">Xem dạng</p>
@@ -66,255 +87,32 @@ const SchedulePage = () => {
         </div>
         {!gridType && (
           <div className="calendar-view flex flex-col justify-center">
-            <div className="days grid grid-cols-7">
-              <div className="px-12 flex items-center justify-center uppercase font-semibold py-2 border-r-[#7096D1] border-r-[1px]">
-                Thứ hai
+            {
+              <div className="days grid grid-cols-7">
+                {daysOfWeek.map((day, index) => (
+                  <div
+                    key={index}
+                    className={`px-12 flex items-center justify-center uppercase font-semibold py-2 border-r-[1px] border-b-[#7096D1] border-b-[1px] border-r-[#7096D1] `}
+                  >
+                    {day}
+                  </div>
+                ))}
               </div>
-              <div className="px-12 flex items-center justify-center uppercase font-semibold py-2 border-r-[#7096D1] border-r-[1px]">
-                Thứ ba
-              </div>
-              <div className="px-12 flex items-center justify-center uppercase font-semibold py-2 border-r-[#7096D1] border-r-[1px]">
-                Thứ tư
-              </div>
-              <div className="px-12 flex items-center justify-center uppercase font-semibold py-2 border-r-[#7096D1] border-r-[1px]">
-                Thứ năm
-              </div>
-              <div className="px-12 flex items-center justify-center uppercase font-semibold py-2 border-r-[#7096D1] border-r-[1px]">
-                Thứ sáu
-              </div>
-              <div className="px-12 flex items-center justify-center uppercase font-semibold py-2 border-r-[#7096D1] border-r-[1px]">
-                Thứ bảy
-              </div>
-              <div className="px-12 flex items-center justify-center uppercase font-semibold py-2">
-                Chủ nhật
-              </div>
-            </div>
+            }
             <div className="calendar grid grid-cols-7 mt-5">
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1] border-r-[1px]"></div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1] border-r-[1px]"></div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1] border-r-[1px]">
-                <p className="day">1</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1] border-r-[1px]">
-                <p className="day">2</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1] border-r-[1px]">
-                <p className="day">3</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1] border-r-[1px]">
-                <p className="day">4</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1]">
-                <p className="day">5</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">6</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">7</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">8</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">9</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">10</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">11</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px]">
-                <p className="day">12</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">13</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">14</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">15</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">16</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">17</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">18</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px]">
-                <p className="day">19</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">20</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">21</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">22</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">23</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">24</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px] border-r-[1px]">
-                <p className="day">25</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-b-[#7096d1] border-b-[1px]">
-                <p className="day">26</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
-                <p className="day">27</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
-                <p className="day">28</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
-                <p className="day">29</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
-                <p className="day">30</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]">
-                <p className="day">31</p>
-                <div className="flex">
-                  <p>- Text text</p>
-                  <p>- Text text</p>
-                </div>
-              </div>
-              <div className="px-12 py-2 border-r-[#7096D1] border-r-[1px]"></div>
-              <div className="px-12 py-2 border-r-[#7096D1]"></div>
+              {daysInMonth.map((item, index) => {
+                return (
+                  <div
+                    id="day"
+                    className="px-12 py-2 border-r-[#7096D1] border-b-[1px] border-b-[#7096d1] border-r-[1px]"
+                  >
+                    <p className="day">{item.day}</p>
+                    <div className="flex">
+                      <p>{item.content}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
@@ -322,41 +120,50 @@ const SchedulePage = () => {
         {gridType && (
           <div>
             <div className="event-card">
-              <div className="event-date">10.01</div>
-              <button className="event-type">Loại sự kiện</button>
+              <div className="event-date">21.11</div>
+              <button className="event-type w-[100px]">SHOW</button>
               <div className="event-details">
                 <Link href={"/schedule/1"} className="event-name">
-                  Tên show Tên show Tên show Tên show
+                  Phòng Trà Bến Thành
                 </Link>
-                <div className="event-address">Địa chỉ địa chỉ địa chỉ</div>
+                <div className="event-address">
+                  🌇 Lầu 3 Nhà hát Bến Thành - 6 Mạc Đĩnh Chi, Q.1, T.P Hồ Chí
+                  Minh
+                </div>
               </div>
               <Link href={"/schedule/1"} className="event-info">
                 Xem thông tin
               </Link>
             </div>
             <div className="event-card">
-              <div className="event-date">10.01</div>
-              <button className="event-type">Loại sự kiện</button>
+              <div className="event-date">23.11</div>
+              <button className="event-type w-[100px]">MINISHOW</button>
               <div className="event-details">
                 <Link href={"/schedule/1"} className="event-name">
-                  Tên show Tên show Tên show Tên show
+                  Mây Lang Thang
                 </Link>
-                <div className="event-address">Địa chỉ địa chỉ địa chỉ</div>
+                <div className="event-address">
+                  Mây in the Nest, X9JW+46R, Măng Lin, Phường 7, Đà Lạt, Lâm
+                  Đồng
+                </div>
               </div>
-              <Link href={"/schedule/1"} className="event-info">
+              <Link href={"/schedule/2"} className="event-info">
                 Xem thông tin
               </Link>
             </div>
             <div className="event-card">
-              <div className="event-date">10.01</div>
-              <button className="event-type">Loại sự kiện</button>
+              <div className="event-date">12.14</div>
+              <button className="event-type w-[100px]">MINISHOW</button>
               <div className="event-details">
-                <Link href={"schedule/1"} className="event-name">
-                  Tên show Tên show Tên show Tên show
+                <Link href={"schedule/3"} className="event-name">
+                  "Từ Đây... Từ Nay..." Slay Sài Gòn
                 </Link>
-                <div className="event-address">Địa chỉ địa chỉ địa chỉ</div>
+                <div className="event-address">
+                  YOYO FACTORY, 2BIS Nguyễn Thị Minh Khai, P. Đa Kao, Q1, TP. Hồ
+                  Chí Minh
+                </div>
               </div>
-              <Link href={"/schedule/1"} className="event-info">
+              <Link href={"/schedule/3"} className="event-info">
                 Xem thông tin
               </Link>
             </div>

@@ -2,7 +2,7 @@
 import Container from "@/themes/Container";
 import Image from "next/image";
 import NavbarModal from "./components/NavbarModal";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 const Navbar = () => {
   const [isShowModal, setShowModal] = useState<boolean>(false);

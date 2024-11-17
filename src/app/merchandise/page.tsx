@@ -6,11 +6,14 @@ import { useRef, useState } from "react";
 
 const MerchandiseList = () => {
   const [isActive, setIsActive] = useState(false);
+  const [categoryActive, setCategoryActive] = useState("all");
   const contentRef = useRef<any>(null);
 
   const toggleCollapsible = () => {
     setIsActive(!isActive);
   };
+
+  const handleActiveCategory = (type: string) => () => setCategoryActive(type);
 
   return (
     <Container style="py-7 merchandise">
@@ -27,20 +30,54 @@ const MerchandiseList = () => {
 
       <div className="merchandise-list mt-[100px]">
         <div className="flex items-center justify-center gap-4">
-          <div className="category category--active sub-title--small py-3 px-4">
+          <div
+            className={`category ${
+              categoryActive === "all" ? "category--active" : ""
+            } sub-title--small py-3 px-4`}
+            onClick={handleActiveCategory("all")}
+          >
             Tất cả
           </div>
-          <button className="category sub-title--small py-3 px-4">Nón</button>
-          <button className="category sub-title--small py-3 px-4">Áo</button>
-          <button className="category sub-title--small py-3 px-4">Túi</button>
-          <button className="category sub-title--small py-3 px-4">
-            Tên danh mục sản phẩm
+          <button
+            className={`category ${
+              categoryActive === "hat" ? "category--active" : ""
+            } sub-title--small py-3 px-4`}
+            onClick={handleActiveCategory("hat")}
+          >
+            Nón
+          </button>
+          <button
+            className={`category ${
+              categoryActive === "shirt" ? "category--active" : ""
+            } sub-title--small py-3 px-4`}
+            onClick={handleActiveCategory("shirt")}
+          >
+            Áo
+          </button>
+          <button
+            className={`category ${
+              categoryActive === "bag" ? "category--active" : ""
+            } sub-title--small py-3 px-4`}
+            onClick={handleActiveCategory("bag")}
+          >
+            Túi
           </button>
         </div>
-        <div className="items flex mt-12">
-          <MerchandiseItem />
-          <MerchandiseItem />
-          <MerchandiseItem />
+        <div className="items flex mt-12 gap-5">
+          <MerchandiseItem
+            image={
+              "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg"
+            }
+            category={"Túi"}
+            productName={"Túi tote"}
+            price={225000}
+            stockStatus={"out-stock"}
+          />
+          <MerchandiseItem
+            category={"Áo"}
+            productName={"Áo 9M"}
+            price={349000}
+          />
         </div>
       </div>
 

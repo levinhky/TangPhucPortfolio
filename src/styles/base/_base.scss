@@ -23,8 +23,6 @@ body {
 
 body {
   margin: 0;
-
-  background: $white;
 }
 
 body.modal-open {
@@ -38,7 +36,6 @@ p:last-child {
 button {
   display: inline-block;
   cursor: pointer;
-  transition: $transition--default;
 }
 
 *:focus {
