@@ -65,18 +65,20 @@ const MerchandiseList = () => {
         </div>
         <div className="items flex mt-12 gap-5">
           <MerchandiseItem
+            category={"Chín Muồi"}
+            productName={"Chín Vừa Tee"}
+            price={349000}
+            id={2}
+          />
+          <MerchandiseItem
             image={
               "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg"
             }
-            category={"Túi"}
-            productName={"Túi tote"}
+            category={"Từ Đây… Từ Nay…"}
+            productName={"Túi Tote"}
             price={225000}
             stockStatus={"out-stock"}
-          />
-          <MerchandiseItem
-            category={"Áo"}
-            productName={"Áo 9M"}
-            price={349000}
+            id={1}
           />
         </div>
       </div>

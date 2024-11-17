@@ -24,6 +24,53 @@ const MOCK_DATA = [
   },
   {
     image:
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731851267/artwork-440x220_xvecnz.jpg",
+    songName: "l'vavie (là vì anh vẫn yêu em)",
+    artistName: "Tăng Phúc",
+    spotifyLink: "https://open.spotify.com/track/64Y4PpLsnVU4frbPRRjNiG",
+    youtubeLink: "https://www.youtube.com/watch?v=Dapx1t7S-ok",
+    appleMusicLink:
+      "https://music.apple.com/vn/album/lvavie-l%C3%A0-v%C3%AC-anh-v%E1%BA%ABn-y%C3%AAu-em-single/1712815116",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731843421/96bb397a8f563079a00d786d5136406e_r2j4kk.jpg",
+    songName: "Nhờ em nhắn với người đó",
+    artistName: "Tăng Phúc",
+    spotifyLink: "https://open.spotify.com/track/22hp9EGjcLPEMVtSkxwFpe",
+    youtubeLink: "https://www.youtube.com/watch?v=thLwEkS-GbA",
+    appleMusicLink:
+      "https://music.apple.com/vn/album/nh%E1%BB%9D-em-nh%E1%BA%AFn-v%E1%BB%9Bi-ng%C6%B0%E1%BB%9Di-%C4%91%C3%B3-single/1707293260",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731851601/maxresdefault_imhoon.jpg",
+    songName: "Kỳ vọng sai lầm",
+    artistName: "Tăng Phúc",
+    spotifyLink: "https://open.spotify.com/track/5pbc99769AMASq8pREi52a",
+    youtubeLink: "https://www.youtube.com/watch?v=1v2YWTZb1Js",
+    appleMusicLink: "https://music.apple.com/vn/album/k%E1%BB%B3-v%E1%BB%8Dng-sai-l%E1%BA%A7m-feat-nguy%E1%BB%85n-%C4%91%C3%ACnh-v%C5%A9-yuno-bigboi/1647572614?i=1647572862",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731851478/maxresdefault_ktilff.jpg",
+    songName: "Trả người về tự do",
+    artistName: "Tăng Phúc",
+    spotifyLink: "https://open.spotify.com/track/4YLpxRPxTYFvuUvp6NpvAO",
+    youtubeLink: "https://www.youtube.com/watch?v=p80T353DyFA",
+    appleMusicLink: "https://music.apple.com/vn/album/tr%E1%BA%A3-ng%C6%B0%E1%BB%9Di-v%E1%BB%81-t%E1%BB%B1-do/1635587417?i=1635587485",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731851536/maxresdefault_f6jgfp.jpg",
+    songName: "Đừng chờ anh nữa",
+    artistName: "Tăng Phúc",
+    spotifyLink: "https://open.spotify.com/track/3Wobxka7sgqeMNHgHZat8q",
+    youtubeLink: "https://www.youtube.com/watch?v=C3GqqnJ9ID0",
+    appleMusicLink: "https://music.apple.com/vn/album/%C4%91%E1%BB%ABng-ch%E1%BB%9D-anh-n%E1%BB%AFa/1637657850?i=1637657857",
+  },
+  {
+    image:
       "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731843266/maxresdefault_zrqdaf.jpg",
     songName: "Chẳng hề đổi thay",
     artistName: "Tăng Phúc",
@@ -51,15 +98,6 @@ const MOCK_DATA = [
     youtubeLink: "https://www.youtube.com/watch?v=UqKVL56IJB8",
     appleMusicLink:
       "https://music.apple.com/tr/album/ch%E1%BB%89-l%C3%A0-kh%C3%B4ng-c%C3%B9ng-nhau-live-version-single/1691343070",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731843421/96bb397a8f563079a00d786d5136406e_r2j4kk.jpg",
-    songName: "Nhờ em nhắn với người đó",
-    artistName: "Tăng Phúc",
-    spotifyLink: "",
-    youtubeLink: "",
-    appleMusicLink: "",
   },
   {
     image:

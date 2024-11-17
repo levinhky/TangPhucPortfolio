@@ -16,7 +16,7 @@ const ContactPage = () => {
                 height={25}
                 alt="location-icon"
               />
-              <p className="sub-title--small">Ho Chi Minh City</p>
+              <p className="sub-title--small">N/A</p>
             </div>
             <div className="flex gap-2">
               <Image
@@ -25,7 +25,7 @@ const ContactPage = () => {
                 height={25}
                 alt="phone-icon"
               />
-              <p className="sub-title--small">+963334400</p>
+              <p className="sub-title--small">+84 963 334 400</p>
             </div>
             <div className="flex gap-2">
               <Image
@@ -34,7 +34,7 @@ const ContactPage = () => {
                 height={25}
                 alt="mail-icon"
               />
-              <p className="sub-title--small">Gsnmedia.pro@gmail.com</p>
+              <p className="sub-title--small">gsnmedia.pro@gmail.com</p>
             </div>
           </div>
         </div>

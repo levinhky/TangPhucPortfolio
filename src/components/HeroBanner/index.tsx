@@ -19,9 +19,16 @@ const HeroBanner = () => {
       <div className="artist-information">
         <p className="artist-information--title">Giới thiệu</p>
         <h2 className="artist-information--description">
-          Tăng Vũ Minh Phúc, thường được biết đến với nghệ danh Tăng Phúc, là
-          một nam ca sĩ được biết đến với nhiều ca khúc ballad sâu lắng với chất
-          giọng ấm áp và tình cảm.
+          Tăng Phúc, là một ca sĩ dòng nhạc trữ tình được biết đến rộng rãi với
+          giọng hát da diết, giàu cảm xúc qua những bản bản ballad sâu lắng,
+          truyền cảm. Cá tính âm nhạc của anh được thể hiện rõ nét qua từng bản
+          cover chỉn chu, hay những dự án cá nhân ấn tượng và nhiều màu sắc. <br /> Với
+          sự xuất hiện tại chương trình Anh Trai Vượt Ngàn Chông Gai 2024, Tăng
+          Phúc đã để lại trong lòng khán giả hình ảnh một nghệ sĩ mới mẻ và gần
+          gũi, vượt qua giới hạn âm nhạc quen thuộc. Sau mỗi công diễn với những
+          sân khấu đầy màu sắc khác nhau, anh có cơ hội được tiếp xúc với nhiều
+          thể loại âm nhạc, được thể hiện tài năng đa dạng và đam mê bền bỉ trên
+          hành trình nghệ thuật.
         </h2>
       </div>
     </div>

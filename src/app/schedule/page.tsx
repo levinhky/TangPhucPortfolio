@@ -152,15 +152,14 @@ const SchedulePage = () => {
               </Link>
             </div>
             <div className="event-card">
-              <div className="event-date">12.14</div>
+              <div className="event-date">24.11</div>
               <button className="event-type w-[100px]">MINISHOW</button>
               <div className="event-details">
                 <Link href={"schedule/3"} className="event-name">
-                  "Từ Đây... Từ Nay..." Slay Sài Gòn
+                  "Từ Đây... Từ Nay..." Slay Hà Nội (đêm 1)
                 </Link>
                 <div className="event-address">
-                  YOYO FACTORY, 2BIS Nguyễn Thị Minh Khai, P. Đa Kao, Q1, TP. Hồ
-                  Chí Minh
+                  SOL8, Số 8 Phố Nguyễn Công Hoan, P. Giảng Võ, Ba Đình, Hà Nội
                 </div>
               </div>
               <Link href={"/schedule/3"} className="event-info">

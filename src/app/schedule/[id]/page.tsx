@@ -6,17 +6,17 @@ const ScheduleDetailPage = ({ params }: { params: { id: string } }) => {
 
   const title =
     +id === 1
-      ? "SHOW | Phòng Trà Bến Thành | HCM"
+      ? "SHOW | Ừ em xin lỗi kỳ vọng sai lầm | HCM"
       : +id === 2
       ? "MINISHOW | Mây Lang Thang | Lâm Đồng"
-      : `MINISHOW | "Từ Đây... Từ Nay..." Slay Sài Gòn | HCM`;
+      : `MINISHOW | "Từ Đây... Từ Nay..." Slay Hà Nội (đêm 1) | HCM`;
   const type = +id === 1 ? "SHOW" : +id === 2 ? "MINISHOW" : "MINISHOW";
   const date =
     +id === 1
       ? "11/21/2024 20:00:00"
       : +id === 2
       ? "11/23/2024 17:00:00"
-      : "12/20/2024 20:30:00";
+      : "11/25/2024 21:00:00";
   const thumb =
     +id === 1
       ? "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731846328/465799545_531423309759651_2979884570748036665_n.jpg_gxwiop.jpg"
@@ -29,9 +29,9 @@ const ScheduleDetailPage = ({ params }: { params: { id: string } }) => {
       : +id === 2
       ? `Mây in the Nest,
 X9JW+46R, Măng Lin, Phường 7, Đà Lạt, Lâm Đồng`
-      : `YOYO FACTORY, 
-2BIS Nguyễn Thị Minh Khai, 
-P. Đa Kao, Q1, TP. Hồ Chí Minh`;
+      : `SOL8, 
+Số 8 Phố Nguyễn Công Hoan, 
+P. Giảng Võ, Ba Đình, Hà Nội`;
   const desc =
     +id === 1
       ? `🪩 21/11 🪩 ĐÊM NHẠC TĂNG PHÚC - LƯƠNG BÍCH HỮU ✨
@@ -40,12 +40,11 @@ P. Đa Kao, Q1, TP. Hồ Chí Minh`;
 Bạn mong chờ màn song ca nào? 😉`
       : +id === 2
       ? `Hãy cùng đắm chìm trong những bản tình ca lãng mạn da diết với giọng hát của Tăng Phúc cùng khách mời Phương Anh Idol giữa xứ sở Đà Lạt mộng mơ.`
-      : `Một đêm diễn với sự kết hợp ăn ý và vui vẻ của các anh tài Tăng Phúc, Neko Lê, BB Trần, Kay Trần và Thiên Minh
-Đến để vui, để thưởng thức và SLAY cùng các anh nhé!`;
+      : `Đêm diễn thứ 2 tại sân khấu Sol8. Đến để thưởng thức sự kết hợp bùng nổ giữa Tăng Phúc với các anh tài: Neko Lê, BB Trần, Duy Khánh`;
   return (
-    <Container id="schedule-detail">
+    <Container id="schedule-detail" style="mt-10">
       <header className="flex gap-10">
-        <div className="info">
+        <div className="info basis-2/4">
           <h1 className="main-title">{title}</h1>
           <div className="category">{type}</div>
           <div className="flex gap-4 mt-3">
@@ -72,13 +71,8 @@ Bạn mong chờ màn song ca nào? 😉`
             Đặt vé
           </button>
         </div>
-        <div className="image">
-          <Image
-            src={thumb}
-            width={717}
-            height={300}
-            alt="placeholder"
-          />
+        <div className="image basis-2/4">
+          <Image src={thumb} width={717} height={300} alt="placeholder" />
         </div>
       </header>
 
