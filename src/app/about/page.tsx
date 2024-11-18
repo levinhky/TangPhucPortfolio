@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <Container style="my-12">
       <Image
-        src={"/pages/about/hero.png"}
+        src={"https://res.cloudinary.com/dahnkbdxi/image/upload/v1731914850/FullSizeRender_5_dwwwt4.jpg"}
         width={1200}
         height={700}
         className="w-full"
