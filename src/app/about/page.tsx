@@ -82,7 +82,7 @@ const AboutPage = () => {
           <div className="timeline-info">
             <Image
               src={
-                "https://i.scdn.co/image/ab67616d0000b27310ede6dbe111427d516fc8cc"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956171/dcan_cup2v1.png"
               }
               width={300}
               height={300}
@@ -122,10 +122,60 @@ const AboutPage = () => {
               Quán quân Ẩn Số Hoàn Hảo mùa 1
             </h3>
             <p className="sub-title--small !text-[#000A26]">
-              Năm 2024, Tăng Phúc tham gia chương trình Ẩn Số Hoàn Hảo (mùa 1)
+              Năm 2019, Tăng Phúc tham gia chương trình Ẩn Số Hoàn Hảo (mùa 1)
               kết hợp với ca sĩ Hà Nhi. Trong đêm chung kết, cặp đôi đã có màn
               trình diễn xuât sắc gây ấn tượng với ban giám khảo để giành được
               giải Quán quân của chương trình.
+            </p>
+          </div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-info !flex justify-end">
+            <Image
+              src={
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956801/clkcn_bkvz26.png"
+              }
+              width={300}
+              height={300}
+              alt="placeholder"
+            />
+          </div>
+          <div className="timeline-marker esm:hidden"></div>
+          <div className="timeline-content">
+            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
+              2020
+            </h3>
+            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
+              Ca khúc: Chỉ là không cùng nhau
+            </h3>
+            <p className="sub-title--small !text-[#000A26]">
+            Ca khúc: Chỉ là không cùng nhau hát cùng Trương Thảo Nhi (Bát hát chuyển thể lời Việt từ ca khúc nhạc Hoa “Thời không sai lệch”)
+            Bùng nổ với bản hit hơn 100 triệu view, và đạt thành tích “khủng” ở mảng nhạc số: top 1 Zing Chart sau 48 giờ phát hành,
+            video live performance đạt top 1 YouTube trending, 30 triệu lượt sử dụng trên nền tảng TikTok.
+            </p>
+          </div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-info !flex justify-end">
+            <Image
+              src={
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956965/kvsl_luzsnp.png"
+              }
+              width={300}
+              height={300}
+              alt="placeholder"
+            />
+          </div>
+          <div className="timeline-marker esm:hidden"></div>
+          <div className="timeline-content">
+            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
+              2022
+            </h3>
+            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
+            Ca khúc: Kỳ vọng sai lầm
+            </h3>
+            <p className="sub-title--small !text-[#000A26]">
+            Hit thứ 3 trong sự nghiệp cùng ca sĩ Nguyễn Đình Vũ, đạt top 1 trên iTunes chỉ sau 2 giờ phát hành
             </p>
           </div>
         </li>
