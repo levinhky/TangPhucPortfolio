@@ -36,7 +36,7 @@ const AboutPage = () => {
                 {/* <strong>Họ tên</strong> */}
               </td>
               <td>
-                <p className="ml-2 font-light"><strong>Tăng Vũ Minh Phúc</strong></p>
+                <strong className="ml-2 font-light">Tăng Vũ Minh Phúc</strong>
               </td>
             </tr>
             <tr className="block mb-3">
@@ -45,7 +45,7 @@ const AboutPage = () => {
                 {/* <strong>Sinh nhật</strong> */}
               </td>
               <td>
-                <p className="ml-2 font-light"><strong>22/05/1990</strong></p>
+                <strong className="ml-2 font-light">22/05/1990</strong>
               </td>
             </tr>
             <tr className="block mb-3">
@@ -54,7 +54,7 @@ const AboutPage = () => {
                 {/* <strong>Lĩnh vực hoạt động</strong> */}
               </td>
               <td>
-                <p className="ml-2 font-light"><strong>Ca Sĩ</strong></p>
+              <strong className="ml-2 font-light">Ca Sĩ</strong>
               </td>
             </tr>
             <tr className="block mb-3">
@@ -63,7 +63,7 @@ const AboutPage = () => {
                 {/* <strong>Số năm hoạt động</strong> */}
               </td>
               <td>
-                <p className="ml-2 font-light"><strong>7 năm</strong></p>
+              <strong className="ml-2 font-light">7 năm</strong>
               </td>
             </tr>
           </table>
