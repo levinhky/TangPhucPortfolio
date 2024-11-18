@@ -28,7 +28,7 @@ const CalendarView = () => {
     <div id="schedule-list" className="mt-[50px]">
       <div className="flex esm:flex-wrap justify-between items-center">
         <div className="flex items-center esm:justify-between esm:w-full">
-          <div className="flex flex-col text-right esm:pr-4">
+          <div className="flex flex-col">
             <p className="font-semibold text-[#081f5c] text-4xl esm:text-3xl">
               Lịch hoạt động
             </p>

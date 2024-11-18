@@ -22,10 +22,12 @@ const AboutPage = () => {
         />
         <div>
           <p className="font-light">
-            <strong className="font-bold">[Giới thiệu ngắn về anh]</strong>.
-            Tăng Vũ Minh Phúc, thường được biết đến với nghệ danh Tăng Phúc, là
-            một nam ca sĩ được biết đến với nhiều ca khúc ballad sâu lắng với
-            chất giọng ấm áp và tình cảm.
+          Là một ca sĩ trẻ nổi bật trong làng nhạc Việt Nam, 
+          Tăng Phúc được biết đến qua các ca khúc ballad nhẹ nhàng và sâu lắng. 
+          Anh nổi lên với giọng hát ấm áp, giàu cảm xúc và phong cách âm nhạc gần gũi, 
+          phù hợp với khán giả yêu thích các bản nhạc trữ tình. Bên cạnh khả năng ca hát, 
+          Tăng Phúc còn gây ấn tượng với những màn trình diễn live mộc mạc, thu hút và truyền cảm, 
+          góp phần giúp anh xây dựng một lượng fan hâm mộ trung thành.
           </p>
           <table className="my-5">
             <tr className="block mb-3">
@@ -69,15 +71,37 @@ const AboutPage = () => {
             }}
           >
             <p className="font-light">
-              <strong className="font-bold">[Quote/Slogan]</strong>. Lorem ipsum
-              dolor sit amet consectetur. Lorem ipsum dolor sit amet
-              consectetur.
+              <strong className="font-bold">[Quote/Slogan]</strong>. Cố gắng vì nhau và vui vẻ mỗi ngày nha !
             </p>
           </div>
         </div>
       </div>
 
       <ul className="timeline timeline-centered">
+      <li className="timeline-item">
+          <div className="timeline-info">
+            <Image
+              src={
+                "https://i.scdn.co/image/ab67616d0000b27310ede6dbe111427d516fc8cc"
+              }
+              width={300}
+              height={300}
+              alt="placeholder"
+            />
+          </div>
+          <div className="timeline-marker esm:hidden"></div>
+          <div className="timeline-content">
+            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
+              2017
+            </h3>
+            <h3 className="timeline-title sub-title--bold !text-[#000A26]">
+              Ca khúc: Đừng Chờ Anh Nữa
+            </h3>
+            <p className="sub-title--small !text-[#000A26]">
+              Ca khúc Debut, chính thức tham gia hoạt động nghệ thuật, trở thành ca sĩ chuyên nghiệp.
+            </p>
+          </div>
+        </li>
         <li className="timeline-item">
           <div className="timeline-info !flex justify-end">
             <Image
