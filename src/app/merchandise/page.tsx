@@ -1,16 +1,31 @@
 "use client";
-import MerchandiseItem from "@/components/MerchandiseItem";
-import Container from "@/themes/Container";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useState } from "react";
+import Collapsible from "react-collapsible";
+
+import Container from "@/themes/Container";
+
+import MerchandiseItem from "@/components/MerchandiseItem";
+
+const questions = [
+  "Lorem ipsum dolor sit amet consectetur. Pellentesque vitae morbi a nisi hac?",
+  "Proin nibh dignissim sagittis nisi. Eget lobortis faucibus in eros pharetra ut?",
+  "Commodo pellentesque quis tortor sed bibendum volutpat tincidunt faucibus?",
+];
+
+const answers = [
+  "Lorem ipsum dolor sit amet consectetur. Proin nibh dignissim sagittis nisi. Eget lobortis faucibus in eros pharetra ut.",
+  "Cursus morbi tortor proin vitae tempor quis. Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+  "Ut vulputate nisl quis suscipit nibh tristique. Sed id sapien quis tortor facilisis cursus.",
+];
 
 const MerchandiseList = () => {
-  const [isActive, setIsActive] = useState(false);
   const [categoryActive, setCategoryActive] = useState("all");
-  const contentRef = useRef<any>(null);
 
-  const toggleCollapsible = () => {
-    setIsActive(!isActive);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
+
+  const toggleCollapsible = (index: any) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   const handleActiveCategory = (type: string) => () => setCategoryActive(type);
@@ -85,40 +100,32 @@ const MerchandiseList = () => {
 
       <div className="fag my-10">
         <h6 className="main-title text-center uppercase">Câu hỏi thường gặp</h6>
-
-        <div className="w-2/4 mx-auto">
-          <button
-            type="button"
-            className={`collapsible ${
-              isActive ? "active" : ""
-            } flex items-center justify-between`}
-            onClick={toggleCollapsible}
+        {questions.map((question, index) => (
+          <Collapsible
+            key={index}
+            onTriggerOpening={() => toggleCollapsible(index)}
+            trigger={
+              <button
+                type="button"
+                className={`collapsible flex ${
+                  activeIndex === index ? "active" : ""
+                } items-center justify-between`}
+                onClick={() => toggleCollapsible(index)}
+              >
+                <div className="flex items-center">
+                  <strong className="text-3xl mr-4">Q</strong>
+                  {question}
+                </div>
+              </button>
+            }
+            className="w-2/4 mx-auto"
+            openedClassName="w-2/4 mx-auto"
+            contentInnerClassName="bg-white p-4"
+            open={activeIndex === index}
           >
-            <div className="flex items-center">
-              <strong className="text-3xl mr-4">Q</strong>
-              Lorem ipsum dolor sit amet consectetur. Pellentesque vitae morbi a
-              nisi hac?
-            </div>
-          </button>
-          <div
-            ref={contentRef}
-            className="content flex items-center"
-            style={{
-              maxHeight:
-                isActive && contentRef.current
-                  ? `${contentRef.current.scrollHeight + 32}px`
-                  : "0px",
-              padding: isActive && contentRef.current ? `48px 32px` : "0px",
-            }}
-          >
-            <p className="sub-title--small">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-        </div>
+            <p>{answers[index]}</p>
+          </Collapsible>
+        ))}
       </div>
     </Container>
   );
