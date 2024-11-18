@@ -35,12 +35,11 @@ const CalendarView = () => {
             <p className="font-semibold text-[#081f5c] text-4xl esm:text-3xl uppercase">
               {/* Tháng */}
               {/* Hane */}
-              <p className="text-[#081f5c] text-2xl esm:text-xl">{new Date().getFullYear()}</p>
+              {new Date().getFullYear()}
               {/* Hane */}
             </p>
           </div>
           <strong className="month">{currentMonth}</strong>
-          
         </div>
         <div className="flex gap-4">
           <p className="text-[#081f5c] font-semibold">Xem dạng</p>
