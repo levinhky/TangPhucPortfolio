@@ -5,7 +5,7 @@ import MerchandiseItem from "../MerchandiseItem";
 
 const Schedule = () => {
   return (
-    <Container style="mt-10 flex items-center flex-col mb-16">
+    <Container style="mt-10 esm:mt-5 flex items-center flex-col mb-16">
       <div className="schedule-news relative">
         <h6 className="main-title text-center">Lịch hoạt động</h6>
         <div className="schedule-list">
@@ -51,7 +51,7 @@ const Schedule = () => {
 
       <div className="schedule-promotions">
         <h6 className="main-title text-center">Merchandise</h6>
-        <div className="schedule-promotions__list grid grid-cols-3 gap-4">
+        <div className="schedule-promotions__list grid grid-cols-3 esm:grid-cols-1 gap-4">
           <MerchandiseItem
             category={"Chín Muồi"}
             productName={"Chín Vừa Tee"}

@@ -2,12 +2,20 @@
   .hero-image {
     width: 50%;
     height: auto;
+
+    @include respond(extra-small-mobile) {
+      width: 100%;
+    }
   }
   .artist-name {
     font-size: 200px;
     color: $primary-color;
     font-family: $bodoni-moda;
     font-style: italic;
+
+    @include respond(extra-small-mobile) {
+      font-size: 100px;
+    }
 
     &:nth-of-type(1) {
       top: 15%;
@@ -17,6 +25,9 @@
       z-index: 21;
       left: 65%;
       top: 40%;
+      @include respond(extra-small-mobile) {
+        left: 75%;
+      }
     }
   }
   .artist-information {
@@ -31,9 +42,18 @@
       font-weight: 900;
       color: $primary-color;
       margin-bottom: $base-space;
+
+      @include respond(extra-small-mobile) {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
     }
     &--description {
       margin-bottom: $base-space;
+      @include respond(extra-small-mobile) {
+        font-size: 8px;
+        margin-bottom: 0;
+      }
     }
   }
 }

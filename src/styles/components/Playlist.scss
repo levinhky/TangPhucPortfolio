@@ -80,9 +80,15 @@ input[type="range"] {
 
   &Left {
     left: 5%;
+    @include respond(extra-small-mobile) {
+      left: -10%;
+    }
   }
 
   &Right {
     right: 5%;
+    @include respond(extra-small-mobile) {
+      right: -10%;
+    }
   }
 }

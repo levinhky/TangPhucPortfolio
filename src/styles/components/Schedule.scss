@@ -12,6 +12,9 @@
     font-weight: 600;
     font-style: italic;
     font-family: $bodoni-moda;
+    @include respond(extra-small-mobile) {
+      font-size: 30px;
+    }
   }
 }
 
@@ -24,6 +27,9 @@
       text-decoration: underline;
       margin-top: 32px;
       margin-bottom: 64px;
+      @include respond(extra-small-mobile) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -37,6 +43,13 @@
     font-family: $bodoni-moda;
     font-style: italic;
     color: $white;
+    @include respond(extra-small-mobile) {
+      font-size: 70px;
+    }
+  }
+
+  @include respond(extra-small-mobile) {
+   bottom: 10%;
   }
 }
 

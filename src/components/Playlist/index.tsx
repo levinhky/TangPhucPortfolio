@@ -181,7 +181,7 @@ const Playlist = () => {
   };
 
   return (
-    <Container style="relative px-[100px]">
+    <Container style="relative px-[100px] esm:px-0">
       <p className="main-title text-center">Sản phẩm âm nhạc</p>
       <Swiper
         slidesPerView={3}
@@ -189,6 +189,14 @@ const Playlist = () => {
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
+        }}
+        breakpoints={{
+          "320": {
+            slidesPerView: 1,
+          },
+          "768": {
+            slidesPerView: 2,
+          },
         }}
         onInit={() => setInit(true)}
         loop={true}

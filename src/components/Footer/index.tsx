@@ -7,7 +7,7 @@ import { SOCIAL_LINKS } from "@/utils/constants";
 const Footer = () => {
   return (
     <div className="footer-wrapper">
-      <Container style="flex justify-between py-12">
+      <Container style="flex esm:flex-col justify-between py-12">
         <div className="company-info flex flex-col gap-4 max-w-96">
           <h6 className="sub-title">Công ty GSN Production</h6>
           <div className="flex gap-2">
@@ -69,7 +69,7 @@ const Footer = () => {
             return (
               <React.Fragment key={`keyNoteCham${index}`}>
                 <h6 className="sub-title">{item.title}</h6>
-                <div className="social-links flex gap-4">
+                <div className="social-links flex flex-wrap gap-4">
                   {item.links.map((item, index) => {
                     return (
                       <a
