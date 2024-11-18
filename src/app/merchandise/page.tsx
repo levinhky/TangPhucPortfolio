@@ -43,7 +43,7 @@ const MerchandiseList = () => {
         <h6 className="floating-text">Merchandise</h6>
       </div>
 
-      <div className="merchandise-list mt-[100px]">
+      <div className="merchandise-list mt-[100px] esm:mt-12">
         <div className="flex items-center justify-center gap-4">
           <div
             className={`category ${
@@ -78,7 +78,7 @@ const MerchandiseList = () => {
             Túi
           </button>
         </div>
-        <div className="items flex mt-12 gap-5">
+        <div className="items grid grid-cols-3 esm:grid-cols-1 mt-12 gap-5">
           <MerchandiseItem
             category={"Chín Muồi"}
             productName={"Chín Vừa Tee"}
@@ -118,8 +118,8 @@ const MerchandiseList = () => {
                 </div>
               </button>
             }
-            className="w-2/4 mx-auto"
-            openedClassName="w-2/4 mx-auto"
+            className="w-2/4 esm:w-full mx-auto"
+            openedClassName="w-2/4 esm:w-full mx-auto"
             contentInnerClassName="bg-white p-4"
             open={activeIndex === index}
           >

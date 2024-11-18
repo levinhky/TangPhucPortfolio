@@ -11,7 +11,7 @@ const GridCalendar = ({
 }) => {
   const router = useRouter();
   return (
-    <div className="w-4/5 mx-auto">
+    <div className="w-4/5 esm:w-full esm:mt-5 mx-auto">
       <FullCalendar
         ref={calendarRef}
         plugins={[dayGridPlugin]}

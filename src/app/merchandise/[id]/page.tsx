@@ -24,14 +24,14 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
   ];
   return (
     <Container>
-      <div className="flex gap-12 my-12 justify-center" id="merchandise-detail">
+      <div className="flex esm:flex-wrap gap-12 my-12 justify-center" id="merchandise-detail">
         <ImageGallery
           items={+id === 2 ? images2 : images}
           showBullets
           showPlayButton={false}
         />
 
-        <div className="content basis-[50%]">
+        <div className="content basis-[50%] esm:basis-full">
           <h1 className="font-semibold text-2xl mb-4">
             {+id === 2 ? "Áo 9M" : "Túi tote"}
           </h1>

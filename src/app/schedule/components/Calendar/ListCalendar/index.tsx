@@ -16,17 +16,21 @@ const ListCalendar = ({
     const { address, category, id } = extendedProps || {};
     return (
       <div className="event-card">
-        <div className="event-date">{formatDate(start)}</div>
-        <button className="event-type w-[100px]">{category}</button>
-        <div className="event-details">
-          <Link href={`/schedule/${id}`} className="event-name">
-            {title}
-          </Link>
-          <div className="event-address">{address}</div>
+        <div className="flex">
+          <div className="event-date">{formatDate(start)}</div>
+          <button className="event-type w-[100px]">{category}</button>
         </div>
-        <Link href={`/schedule/${id}`} className="event-info">
-          Xem thông tin
-        </Link>
+        <div className="flex esm:mt-3 esm:flex-wrap justify-between flex-1">
+          <div className="event-details esm:w-full">
+            <Link href={`/schedule/${id}`} className="event-name">
+              {title}
+            </Link>
+            <div className="event-address">{address}</div>
+          </div>
+          <Link href={`/schedule/${id}`} className="event-info flex items-center justify-center esm:my-3">
+            Xem thông tin
+          </Link>
+        </div>
       </div>
     );
   };
@@ -39,7 +43,7 @@ const ListCalendar = ({
       headerToolbar={false}
       dayHeaderClassNames={"hidden"}
       height={"auto"}
-      viewClassNames={"list-calendar-view"}
+      viewClassNames={"list-calendar-view esm:mt-5"}
       eventContent={renderEventContent}
       noEventsContent={"Lịch hiện đang trống"}
       displayEventTime={false}

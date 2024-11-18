@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const ContactPage = () => {
   return (
-    <Container style="my-12 px-12">
-      <div className="flex">
-        <div className="basis-2/5">
+    <Container style="my-12 px-12 esm:px-0">
+      <div className="flex esm:flex-wrap">
+        <div className="basis-2/5 esm:basis-full">
           <h6 className="main-title">Liên hệ với chúng tôi</h6>
           <div className="company-info flex flex-col gap-4 max-w-96">
             <h6 className="sub-title">Công ty GSN Production</h6>
@@ -38,7 +38,7 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white p-8 rounded-lg shadow-md basis-3/5">
+        <div className="bg-white p-8 rounded-lg shadow-md basis-3/5 esm:mt-12 esm:basis-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
               <label className="block text-gray-700 font-semibold mb-1">

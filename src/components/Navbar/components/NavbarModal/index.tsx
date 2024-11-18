@@ -20,7 +20,7 @@ const NavbarModal = ({
       <Container>
         <div className="relative">
           <div className="rotate-text-wrapper">
-            <h1 className="rotate-text">Tăng Phúc</h1>
+            <h1 className="rotate-text esm:hidden">Tăng Phúc</h1>
             <div className="navbar-modal-wrapper">
               <ul>
                 <li onClick={toggleShowModal} className="navbar-modal-link">
@@ -42,7 +42,7 @@ const NavbarModal = ({
               {SOCIAL_LINKS.map((item, index) => {
                 return (
                   <React.Fragment key={`keyNoteCham${index}`}>
-                    <div className="social-links flex gap-4 mt-4">
+                    <div className="social-links flex esm:flex-wrap gap-4 mt-4">
                       {item.links.map((item, index) => {
                         return (
                           <a

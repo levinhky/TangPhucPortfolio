@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        esm: { min: "320px" }, // extra small mobile
+        esm: { min: "320px", max: "768px" }, // extra small mobile
       },
     },
   },

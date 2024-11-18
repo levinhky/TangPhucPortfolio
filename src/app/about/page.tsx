@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutPage = () => {
   return (
-    <Container style="my-12">
+    <Container style="my-12 esm:my-0 esm:mt-10">
       <Image
         src={"https://res.cloudinary.com/dahnkbdxi/image/upload/v1731914850/FullSizeRender_5_dwwwt4.jpg"}
         width={1200}
@@ -12,7 +12,7 @@ const AboutPage = () => {
         alt="hero-background"
       />
 
-      <div className="flex gap-9 items-center my-[75px]">
+      <div className="flex esm:flex-wrap gap-9 items-center my-[75px]">
         <Image
           src={"/pages/about/tudaytunay.png"}
           width={467}
@@ -89,7 +89,7 @@ const AboutPage = () => {
               alt="placeholder"
             />
           </div>
-          <div className="timeline-marker"></div>
+          <div className="timeline-marker esm:hidden"></div>
           <div className="timeline-content">
             <h3 className="timeline-title sub-title--bold !text-[#000A26]">
               2019
@@ -116,7 +116,7 @@ const AboutPage = () => {
               alt="placeholder"
             />
           </div>
-          <div className="timeline-marker"></div>
+          <div className="timeline-marker esm:hidden"></div>
           <div className="timeline-content">
             <h3 className="timeline-title sub-title--bold !text-[#000A26]">
               2024

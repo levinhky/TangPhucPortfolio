@@ -14,8 +14,7 @@
 }
 .rotate-text {
   writing-mode: vertical-lr;
-  -webkit-transform: rotate(360);
-  -moz-transform: rotate(360);
+  transform: rotate(360);
   color: $primary-color;
   opacity: 0.6;
   font-size: 125px;
@@ -28,12 +27,22 @@
   left: 150%;
   margin: 0 0 0 -25px;
   width: max-content;
+
+  @include respond(extra-small-mobile) {
+    left: 0;
+    top: 15%;
+    width: fit-content;
+  }
 }
 .navbar-modal-link > a {
   color: $primary-color;
   font-weight: 700;
   font-family: $bodoni-moda;
   font-size: 62px;
+
+  @include respond(extra-small-mobile) {
+   font-size: 52px;
+  }
 }
 
 .fadeInLeft {
