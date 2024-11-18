@@ -32,34 +32,38 @@ const AboutPage = () => {
           <table className="my-5">
             <tr className="block mb-3">
               <td>
-                <strong>Họ tên</strong>
+                Họ Tên: 
+                {/* <strong>Họ tên</strong> */}
               </td>
               <td>
-                <p className="ml-2 font-light">Tăng Vũ Minh Phúc</p>
-              </td>
-            </tr>
-            <tr className="block mb-3">
-              <td>
-                <strong>Sinh nhật</strong>
-              </td>
-              <td>
-                <p className="ml-2 font-light">22/05/1990</p>
+                <p className="ml-2 font-light"><strong>Tăng Vũ Minh Phúc</strong></p>
               </td>
             </tr>
             <tr className="block mb-3">
               <td>
-                <strong>Lĩnh vực hoạt động</strong>
+                Sinh Nhật: 
+                {/* <strong>Sinh nhật</strong> */}
               </td>
               <td>
-                <p className="ml-2 font-light">Ca sĩ</p>
+                <p className="ml-2 font-light"><strong>22/05/1990</strong></p>
               </td>
             </tr>
             <tr className="block mb-3">
               <td>
-                <strong>Số năm hoạt động</strong>
+              Lĩnh vực hoạt động: 
+                {/* <strong>Lĩnh vực hoạt động</strong> */}
               </td>
               <td>
-                <p className="ml-2 font-light">07 năm</p>
+                <p className="ml-2 font-light"><strong>Ca Sĩ</strong></p>
+              </td>
+            </tr>
+            <tr className="block mb-3">
+              <td>
+              Số năm hoạt động: 
+                {/* <strong>Số năm hoạt động</strong> */}
+              </td>
+              <td>
+                <p className="ml-2 font-light"><strong>7 năm</strong></p>
               </td>
             </tr>
           </table>
