@@ -79,7 +79,7 @@ const AboutPage = () => {
 
       <ul className="timeline timeline-centered">
       <li className="timeline-item">
-          <div className="timeline-info">
+          <div className="timeline-info !flex justify-end">
             <Image
               src={
                 "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956171/dcan_cup2v1.png"
@@ -103,7 +103,7 @@ const AboutPage = () => {
           </div>
         </li>
         <li className="timeline-item">
-          <div className="timeline-info !flex justify-end">
+          <div className="timeline-info">
             <Image
               src={
                 "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731829160/485e62dfdc68f22a44fdd320cd8f4364-Copy_eon1by.jpg"
@@ -156,7 +156,7 @@ const AboutPage = () => {
           </div>
         </li>
         <li className="timeline-item">
-          <div className="timeline-info !flex justify-end">
+          <div className="timeline-info">
             <Image
               src={
                 "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956965/kvsl_luzsnp.png"
@@ -180,7 +180,7 @@ const AboutPage = () => {
           </div>
         </li>
         <li className="timeline-item">
-          <div className="timeline-info">
+          <div className="timeline-info !flex justify-end">
             <Image
               src={
                 "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731828968/437713403_122139125180199321_5545351752770108522_n.jpg_bzypju.jpg"
