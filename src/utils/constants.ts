@@ -42,15 +42,3 @@ export const SOCIAL_LINKS = [
     ],
   },
 ];
-
-export const daysOfWeek = [
-  "Thứ hai",
-  "Thứ ba",
-  "Thứ tư",
-  "Thứ năm",
-  "Thứ sáu",
-  "Thứ bảy",
-  "Chủ nhật",
-];
-
-export const currentYear = new Date().getFullYear();

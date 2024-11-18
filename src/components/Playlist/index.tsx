@@ -14,13 +14,51 @@ import Link from "next/link";
 const MOCK_DATA = [
   {
     image:
-      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731843884/maxresdefault_nfzjpz.jpg",
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731905361/465115822_865795635717614_4911399115053937585_n.jpg_jnhr7h.jpg",
+    songName: "EP 2024 - TỪ ĐÂY TỪ NAY",
+    artistName: "Tăng Phúc",
+    spotifyLink: "",
+    youtubeLink: "https://www.youtube.com/watch?v=MfvuNYlLaM8",
+    appleMusicLink: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731905420/465987094_868091935487984_2383903536338991917_n.jpg_okes3a.jpg",
+    songName: "TỪ ĐÂY TỪ NAY",
+    artistName: "Tăng Phúc",
+    spotifyLink:
+      "https://open.spotify.com/intl-fr/album/35sltgYSEezRAGFI9zpSAV",
+    youtubeLink: "https://www.youtube.com/watch?v=pEMk7UX8o4s",
+    appleMusicLink: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731905507/465909744_868091942154650_3731301368957798322_n.jpg_gsy6pa.jpg",
     songName: "Kẻ qua đường",
     artistName: "Tăng Phúc",
     spotifyLink: "https://open.spotify.com/track/5ZLQsBfbX1gmjQ9vA7RiU2",
     youtubeLink: "https://www.youtube.com/watch?v=zaeDB9rl0-g",
     appleMusicLink:
       "https://music.apple.com/ca/album/k%E1%BA%BB-qua-%C4%91%C6%B0%E1%BB%9Dng-single/1753245317",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731905552/466102229_868092028821308_2708097383808128044_n.jpg_ho7izv.jpg",
+    songName: "Sau Ngần Ấy Năm",
+    artistName: "Tăng Phúc",
+    spotifyLink: "https://open.spotify.com/track/0PjHvg4fqC05flmP9zEfMk",
+    youtubeLink: "https://www.youtube.com/watch?v=7WtWfcc_JGM",
+    appleMusicLink: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731905690/465969889_868092062154638_2490715934168529661_n.jpg_viyd78.jpg",
+    songName: "Thành Phố Cô Đơn",
+    artistName: "Tăng Phúc",
+    spotifyLink:
+      "https://open.spotify.com/track/3ZUfp4lXGDx8um1rIKBFt8?si=ROrBJMqWQ7iuQ4yxVUe0fA",
+    youtubeLink: "https://www.youtube.com/watch?v=PpVXAlz1jxA&t=2s",
+    appleMusicLink: "",
   },
   {
     image:
@@ -49,7 +87,8 @@ const MOCK_DATA = [
     artistName: "Tăng Phúc",
     spotifyLink: "https://open.spotify.com/track/5pbc99769AMASq8pREi52a",
     youtubeLink: "https://www.youtube.com/watch?v=1v2YWTZb1Js",
-    appleMusicLink: "https://music.apple.com/vn/album/k%E1%BB%B3-v%E1%BB%8Dng-sai-l%E1%BA%A7m-feat-nguy%E1%BB%85n-%C4%91%C3%ACnh-v%C5%A9-yuno-bigboi/1647572614?i=1647572862",
+    appleMusicLink:
+      "https://music.apple.com/vn/album/k%E1%BB%B3-v%E1%BB%8Dng-sai-l%E1%BA%A7m-feat-nguy%E1%BB%85n-%C4%91%C3%ACnh-v%C5%A9-yuno-bigboi/1647572614?i=1647572862",
   },
   {
     image:
@@ -58,7 +97,8 @@ const MOCK_DATA = [
     artistName: "Tăng Phúc",
     spotifyLink: "https://open.spotify.com/track/4YLpxRPxTYFvuUvp6NpvAO",
     youtubeLink: "https://www.youtube.com/watch?v=p80T353DyFA",
-    appleMusicLink: "https://music.apple.com/vn/album/tr%E1%BA%A3-ng%C6%B0%E1%BB%9Di-v%E1%BB%81-t%E1%BB%B1-do/1635587417?i=1635587485",
+    appleMusicLink:
+      "https://music.apple.com/vn/album/tr%E1%BA%A3-ng%C6%B0%E1%BB%9Di-v%E1%BB%81-t%E1%BB%B1-do/1635587417?i=1635587485",
   },
   {
     image:
@@ -67,7 +107,8 @@ const MOCK_DATA = [
     artistName: "Tăng Phúc",
     spotifyLink: "https://open.spotify.com/track/3Wobxka7sgqeMNHgHZat8q",
     youtubeLink: "https://www.youtube.com/watch?v=C3GqqnJ9ID0",
-    appleMusicLink: "https://music.apple.com/vn/album/%C4%91%E1%BB%ABng-ch%E1%BB%9D-anh-n%E1%BB%AFa/1637657850?i=1637657857",
+    appleMusicLink:
+      "https://music.apple.com/vn/album/%C4%91%E1%BB%ABng-ch%E1%BB%9D-anh-n%E1%BB%AFa/1637657850?i=1637657857",
   },
   {
     image:
@@ -156,7 +197,7 @@ const Playlist = () => {
         {MOCK_DATA.map((item, index) => {
           return (
             <SwiperSlide>
-              <div className="playlist-item flex flex-col p-7 h-[500px]">
+              <div className="playlist-item flex flex-col p-7 h-[auto] min-h-[600px]">
                 <div className="playlist-item-thumbnail m-auto">
                   <Image
                     src={item.image}

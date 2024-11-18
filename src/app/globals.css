@@ -40,3 +40,37 @@
   width: unset !important;
   color: #000;
 }
+.fc .fc-daygrid-day-top {
+  flex-direction: row !important;
+  padding: 0 8px;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: white !important;
+}
+.fc .fc-cell-shaded,
+.fc .fc-day-disabled {
+  background: transparent !important;
+}
+.grid-calendar-view {
+  border-left: 1px solid #7096d1 !important;
+  border-top: 1px solid #7096d1 !important;
+}
+.list-calendar-view > .fc-scroller {
+  border: 0px solid red !important;
+}
+.grid-calendar-view td,
+.grid-calendar-view th {
+  border-color: #7096d1 !important;
+}
+.list-calendar-view,
+.list-calendar-view th {
+  border: none !important;
+}
+
+.list-calendar-view td {
+  border-top-width: 0 !important;
+  border-bottom: 1px solid #000a26 !important;
+}
+.fc-direction-ltr .fc-list-table .fc-list-event-graphic {
+  display: none;
+}

@@ -6,22 +6,8 @@ export const formatPrice = (price: number) => {
   return `${price.toLocaleString("vi-VN")} VNĐ`;
 };
 
-export const getDaysInMonth = (
-  year: number,
-  month: number,
-  contentCallback: (day: number) => string
-) => {
-  const days = [];
-  const date = new Date(year, month, 1);
-
-  while (date.getMonth() === month) {
-    const day = date.getDate();
-    days.push({
-      day: day,
-      content: contentCallback(day),
-    });
-    date.setDate(day + 1);
-  }
-
-  return days;
+export const formatDate = (date: any) => {
+  const day = date.getDate().toString().padStart(2, "0");
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  return `${day}.${month}`;
 };
