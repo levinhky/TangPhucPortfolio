@@ -33,7 +33,7 @@ const CalendarView = () => {
               Lịch hoạt động
             </p>
             <p className="font-semibold text-[#081f5c] text-4xl esm:text-3xl uppercase">
-              Tháng
+              Tháng 
             </p>
           </div>
           <strong className="month">{currentMonth}</strong>
