@@ -67,7 +67,7 @@ Bạn mong chờ màn song ca nào? 😉`
               <p>{address}</p>
             </div>
           </div>
-          <button className="text-white bg-[#081F5C] px-6 py-2 h-11 rounded-xl mt-3 w-56">
+          <button className="text-white bg-primary px-6 py-2 h-11 rounded-xl mt-3 w-56">
             Đặt vé
           </button>
         </div>
@@ -90,20 +90,20 @@ Bạn mong chờ màn song ca nào? 😉`
 
         <div className="ticket-info basis-1/3">
           <h1 className="main-title">Thông tin vé</h1>
-          <div className="flex pb-5 border-b-[1px] border-b-[#BAD6EB] items-center justify-between">
+          <div className="flex pb-5 border-b-[1px] border-b-secondary items-center justify-between">
             <p className="font-semibold">Vé loại A</p>
             <p className="font-semibold">000.000đ</p>
           </div>
-          <div className="flex py-5 border-b-[1px] border-b-[#BAD6EB] items-center justify-between">
+          <div className="flex py-5 border-b-[1px] border-b-secondary items-center justify-between">
             <p className="font-semibold">Vé loại A</p>
             <p className="font-semibold">000.000đ</p>
           </div>
-          <div className="flex py-5 border-b-[1px] border-b-[#BAD6EB] items-center justify-between">
+          <div className="flex py-5 border-b-[1px] border-b-secondary items-center justify-between">
             <p className="font-semibold">Vé loại A</p>
             <p className="font-semibold">000.000đ</p>
           </div>
           <div className="text-center mt-3">
-            <button className="text-white bg-[#081F5C] px-6 py-2 h-11 rounded-xl mt-3 w-56">
+            <button className="text-white bg-primary px-6 py-2 h-11 rounded-xl mt-3 w-56">
               Đặt vé
             </button>
           </div>

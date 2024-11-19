@@ -47,7 +47,7 @@ const ContactPage = () => {
               <input
                 type="text"
                 placeholder="Nhập họ tên"
-                className="w-full p-2 border border-[#081F5C] rounded"
+                className="w-full p-2 border border-primary rounded"
               />
             </div>
             <div>
@@ -57,7 +57,7 @@ const ContactPage = () => {
               <input
                 type="text"
                 placeholder="Nhập số điện thoại"
-                className="w-full p-2 border border-[#081F5C] rounded"
+                className="w-full p-2 border border-primary rounded"
               />
             </div>
           </div>
@@ -69,7 +69,7 @@ const ContactPage = () => {
             <input
               type="email"
               placeholder="Nhập địa chỉ email"
-              className="w-full p-2 border border-[#081F5C] rounded"
+              className="w-full p-2 border border-primary rounded"
             />
           </div>
 
@@ -79,11 +79,11 @@ const ContactPage = () => {
             </label>
             <textarea
               placeholder="Nhập nội dung liên hệ"
-              className="w-full p-2 border border-[#081F5C] rounded h-32"
+              className="w-full p-2 border border-primary rounded h-32"
             ></textarea>
           </div>
 
-          <button className=" w-1/4 bg-[#081F5C] text-white py-3 rounded font-semibold">
+          <button className=" w-1/4 bg-primary text-white py-3 rounded font-semibold">
             Gửi
           </button>
         </div>

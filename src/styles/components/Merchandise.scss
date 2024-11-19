@@ -19,7 +19,7 @@
 
   .merchandise-list {
     .category {
-      background-color: $grey--three;
+      background-color: $grey;
 
       &--active {
         background-color: $secondary-color;
@@ -30,7 +30,7 @@
   .fag {
     .collapsible {
       background-color: $white;
-      color: $black--three;
+      color: $black--two;
       cursor: pointer;
       padding: 18px;
       width: 100%;
@@ -52,7 +52,7 @@
 
     .collapsible:after {
       content: "\002B";
-      color: $black--three;
+      color: $black--two;
       font-weight: bold;
       float: right;
       margin-left: 5px;

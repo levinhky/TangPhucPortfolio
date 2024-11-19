@@ -4,107 +4,20 @@ $bodoni-moda: "Bodoni Moda", serif;
 
 $font-family: $montserrat;
 
-$width-container: 1410px;
-
 $base-space: 16px;
 
 // color
 $primary-color: #081f5c;
-$primary-color--disabled: #cccdcb;
 $secondary-color: #d0e3ff;
-$basic-color: #82b736;
-$border-green: #149447;
 
 $black: #000;
-$black--two: #333;
-$black--three: #2e2e2e;
-$black-four: #b3b3b3;
-$black-five: #000a26;
+$black--two: #2e2e2e;
+$black-three: #000a26;
 $white: #fff;
-$grey: #7e7e7e;
-$grey--light: #fafafa;
-$grey--two: #d6d6d6;
-$grey--three: #edf1f6;
-$grey--four: #f5f9fd;
-$grey--five: #fafbfd;
-$grey--six: #999999;
-$grey--seven: #777777;
-$grey--eight: #d0d0d0;
-$grey--nine: #dcdcdc;
-$grey--ten: #eeeeee;
-$grey--eleven: #ccc;
-$grey--twelve: #aaaaaa;
-$grey--thirteen: #dddddd;
-$grey--fourteen: #696969;
-$grey--fifteen: #ababab;
-$grey--sixteen: #d8d8d8;
-$grey--seventeen: #e0e0e0;
-$grey--eighteen: #ededed;
-$grey--nineteen: #e8e8e8;
-$grey--twenty: #e6e6e6;
-$grey--twentyOne: #f7f7f7;
-$grey--twentyTwo: #f2f2f2;
-$grey--twentyThree: #505050;
-$grey--twentyFour: #f9f9f9;
-$grey--twentyFive: #f0ddd6;
-$grey--twentySix: #878787;
-$grey--twentySeven: #9b9b9b;
-$grey--twentyEight: #ebebeb;
-$grey--twentyNine: #f4f4f4;
-$grey--thirty: #abb8c0;
-$grey--thirtyOne: rgb(223, 225, 226);
-$grey--thirtyTwo: rgb(244 245 245);
-$grey--thirtyThree: #c4c4c4;
-$grey--thirtyFour: #666666;
-$grey--thirtyFive: #f0f1f3;
-$grey--thirtySix: #b5b8ba;
-$grey--thirtySeven: #e6e8e7;
-$grey--thirtyEight: #f3f8eb;
-$grey--thirtyNine: #cccfcc;
-$grey--thirtyTen: rgb(205, 205, 205);
-$grey--forty: #f3f7e9;
-$grey--fortyOne: #737a7e;
-$grey--fortyTwo: #555;
-$grey--fortyThree: #adb5bd;
+$grey: #edf1f6;
 
-$grey--recommend-text: rgb(118, 123, 127);
-$disable-button-background: rgba(0, 0, 0, 0.2);
-$text-shadow: 10px 10px 24px rgba(0, 0, 0, 0.05);
-
-$red--one: #c5010e;
-$red--two: #ff0000;
-$red--three: #c61932;
-$red--four: #d11830;
-$red--five: #c9253d;
-$red--seven: #c9252d;
-$green--one: #98d8ca;
-$green--two: #edf6eb;
-$green--three: #a3d39c;
-$green--four: #e6f0f4;
-$green--five: #6fcf97;
-$green--six: #149447;
-$green--seven: #cbe1ac;
-$green--eight: #f3f8db;
 $blue--one: #334eac;
 $blue--two: #7096d1;
-$blue--three: #7eb7e6;
-$blue--four: #6d7f96;
-$blue--five: #404969;
-$blue--six: #172026;
-$blue--seven: #2f80ed;
-$blue--eight: #418fde;
-$yellow--one: #dd9933;
-$yellow--two: #f5cc26;
-$yellow--three: #f8f5de;
-$yellow--four: #ddb759;
-$yellow--five: #b4931f;
-$orange--one: #f26522;
-$orange--two: RGBA(249, 160, 0, 0.1);
-$orange: #fe4a00;
-$brown--one: #7a403a;
-
-$product-item-hover-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-  rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 // z-index
 $z-index--sidebar: 999;

@@ -29,10 +29,10 @@ const CalendarView = () => {
       <div className="flex esm:flex-wrap justify-between items-center">
         <div className="flex items-center esm:justify-between esm:w-full">
           <div className="flex flex-col">
-            <p className="font-semibold text-[#081f5c] text-4xl esm:text-3xl">
+            <p className="font-semibold text-primary text-4xl esm:text-3xl">
               Lịch hoạt động
             </p>
-            <p className="font-semibold text-[#081f5c] text-4xl esm:text-3xl uppercase">
+            <p className="font-semibold text-primary text-4xl esm:text-3xl uppercase">
               {/* Tháng */}
               {/* Hane */}
               {new Date().getFullYear()}
@@ -42,7 +42,7 @@ const CalendarView = () => {
           <strong className="month">{currentMonth}</strong>
         </div>
         <div className="flex gap-4">
-          <p className="text-[#081f5c] font-semibold">Xem dạng</p>
+          <p className="text-primary font-semibold">Xem dạng</p>
           <div className="flex gap-2">
             <button
               onClick={() => setGridType(false)}

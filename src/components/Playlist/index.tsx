@@ -277,7 +277,7 @@ const Playlist = () => {
                     <Link
                       target={"_blank"}
                       href={item.spotifyLink}
-                      className="w-10 h-10 flex items-center justify-center rounded-full border-[0.5px] border-[#081F5C] p-2"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border-[0.5px] border-primary p-2"
                     >
                       <Image
                         src={"/icons/spotify-primary.png"}
@@ -289,7 +289,7 @@ const Playlist = () => {
                     <Link
                       target={"_blank"}
                       href={item.youtubeLink}
-                      className="w-10 h-10 flex items-center justify-center rounded-full border-[0.5px] border-[#081F5C] p-2"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border-[0.5px] border-primary p-2"
                     >
                       <Image
                         src={"/icons/youtube-primary.png"}
@@ -301,7 +301,7 @@ const Playlist = () => {
                     <Link
                       target={"_blank"}
                       href={item.appleMusicLink}
-                      className="w-10 h-10 flex items-center justify-center rounded-full border-[0.5px] border-[#081F5C] p-2"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border-[0.5px] border-primary p-2"
                     >
                       <Image
                         src={"/icons/apple-music-primary.png"}

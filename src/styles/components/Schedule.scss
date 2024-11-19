@@ -3,7 +3,7 @@
     z-index: 24;
   }
   &--item {
-    border-bottom: 1px solid $black-five;
+    border-bottom: 1px solid $black-three;
     width: fit-content;
     padding: 16px;
   }
@@ -124,7 +124,7 @@
   .nav-link {
     position: relative;
     font-weight: bold;
-    color: $black-five;
+    color: $black-three;
     text-decoration: underline;
     font-size: 1rem;
   }
@@ -137,14 +137,14 @@
     content: "←";
     position: absolute;
     left: -1.2em;
-    color: $black-five;
+    color: $black-three;
   }
 
   .nav-link.next::after {
     content: "→";
     position: absolute;
     right: -1.2em;
-    color: $black-five;
+    color: $black-three;
   }
 
   .event-card {
