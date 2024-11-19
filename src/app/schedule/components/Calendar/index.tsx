@@ -8,20 +8,25 @@ import ListCalendar from "./ListCalendar";
 const CalendarView = () => {
   const [gridType, setGridType] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth() + 1);
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const calendarRef = useRef<any>(undefined);
 
   function goNext() {
     const calendarApi = calendarRef.current.getApi();
     calendarApi.next();
     const activeMonth = calendarApi.getDate().getMonth();
+    const activeYear = calendarApi.getDate().getFullYear();
     setCurrentMonth(activeMonth + 1);
+    setCurrentYear(activeYear);
   }
 
   function goPrev() {
     const calendarApi = calendarRef.current.getApi();
     calendarApi.prev();
     const activeMonth = calendarApi.getDate().getMonth();
+    const activeYear = calendarApi.getDate().getFullYear();
     setCurrentMonth(activeMonth + 1);
+    setCurrentYear(activeYear);
   }
 
   return (
@@ -33,10 +38,7 @@ const CalendarView = () => {
               Lịch hoạt động
             </p>
             <p className="font-semibold text-primary text-4xl esm:text-3xl uppercase">
-              {/* Tháng */}
-              {/* Hane */}
-              {new Date().getFullYear()}
-              {/* Hane */}
+              {currentYear}
             </p>
           </div>
           <strong className="month">{currentMonth}</strong>
