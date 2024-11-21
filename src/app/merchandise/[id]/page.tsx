@@ -25,7 +25,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
   return (
     <Container>
       <div
-        className="flex esm:flex-wrap gap-12 my-12 esm:my-0 justify-center"
+        className="flex esm:flex-wrap gap-12 esm:gap-0 my-12 esm:my-0 justify-center"
         id="merchandise-detail"
       >
         <div className="esm:w-full">
@@ -36,7 +36,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
           />
         </div>
 
-        <div className="content basis-[50%] esm:basis-full">
+        <div className="content basis-[50%] esm:basis-full esm:mb-7">
           <h1 className="font-semibold text-2xl mb-4">
             {+id === 2 ? "Áo 9M" : "Túi tote"}
           </h1>

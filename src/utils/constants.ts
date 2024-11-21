@@ -42,3 +42,9 @@ export const SOCIAL_LINKS = [
     ],
   },
 ];
+
+export const DEVICE = {
+  MOBILE: 'mobile',
+  TABLET: 'tablet',
+  DESKTOP: 'desktop',
+}
