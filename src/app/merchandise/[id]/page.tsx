@@ -1,4 +1,5 @@
 "use client";
+import useDetectDevice from "@/hooks/useDetectDevice";
 import Container from "@/themes/Container";
 import { formatPrice } from "@/utils/functions";
 import ImageGallery from "react-image-gallery";
@@ -22,6 +23,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
         "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731842716/462473598_846713767625801_8362309805917196511_n.jpg_s5xdrl.jpg",
     },
   ];
+  const { device } = useDetectDevice();
   return (
     <Container>
       <div
@@ -33,6 +35,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
             items={+id === 2 ? images2 : images}
             showBullets
             showPlayButton={false}
+            showThumbnails={device === "mobile" ? false : true}
           />
         </div>
 
