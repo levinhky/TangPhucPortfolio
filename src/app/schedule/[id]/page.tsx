@@ -42,9 +42,9 @@ Bạn mong chờ màn song ca nào? 😉`
       ? `Hãy cùng đắm chìm trong những bản tình ca lãng mạn da diết với giọng hát của Tăng Phúc cùng khách mời Phương Anh Idol giữa xứ sở Đà Lạt mộng mơ.`
       : `Đêm diễn thứ 2 tại sân khấu Sol8. Đến để thưởng thức sự kết hợp bùng nổ giữa Tăng Phúc với các anh tài: Neko Lê, BB Trần, Duy Khánh`;
   return (
-    <Container id="schedule-detail" style="mt-10">
-      <header className="flex gap-10">
-        <div className="info basis-2/4">
+    <Container id="schedule-detail" style="mt-10 esm:mt-5">
+      <header className="flex gap-10 esm:gap-5 esm:flex-wrap">
+        <div className="info basis-2/4 esm:basis-full">
           <h1 className="main-title">{title}</h1>
           <div className="category">{type}</div>
           <div className="flex gap-4 mt-3">
@@ -71,13 +71,13 @@ Bạn mong chờ màn song ca nào? 😉`
             Đặt vé
           </button>
         </div>
-        <div className="image basis-2/4">
+        <div className="image basis-2/4 esm:basis-full">
           <Image src={thumb} width={717} height={300} alt="placeholder" />
         </div>
       </header>
 
-      <div className="flex gap-10 my-12">
-        <div className="content basis-2/3">
+      <div className="flex gap-10 my-12 esm:my-7 esm:flex-wrap">
+        <div className="content basis-2/3 esm:basis-full">
           <h1 className="main-title">Giới thiệu</h1>
           <p className="mb-5">{desc}</p>
           <Image
@@ -88,7 +88,7 @@ Bạn mong chờ màn song ca nào? 😉`
           />
         </div>
 
-        <div className="ticket-info basis-1/3">
+        <div className="ticket-info basis-1/3 esm:basis-full">
           <h1 className="main-title">Thông tin vé</h1>
           <div className="flex pb-5 border-b-[1px] border-b-secondary items-center justify-between">
             <p className="font-semibold">Vé loại A</p>
