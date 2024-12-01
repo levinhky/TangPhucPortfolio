@@ -42,7 +42,7 @@ Bạn mong chờ màn song ca nào? 😉`
       ? `Hãy cùng đắm chìm trong những bản tình ca lãng mạn da diết với giọng hát của Tăng Phúc cùng khách mời Phương Anh Idol giữa xứ sở Đà Lạt mộng mơ.`
       : `Đêm diễn thứ 2 tại sân khấu Sol8. Đến để thưởng thức sự kết hợp bùng nổ giữa Tăng Phúc với các anh tài: Neko Lê, BB Trần, Duy Khánh`;
   return (
-    <Container id="schedule-detail" style="mt-10 esm:mt-5">
+    <Container id="schedule-detail" style="mt-[7%] esm:mt-5">
       <header className="flex gap-10 esm:gap-5 esm:flex-wrap">
         <div className="info basis-2/4 esm:basis-full">
           <h1 className="main-title">{title}</h1>

@@ -6,8 +6,8 @@ import Schedule from "@/components/Schedule";
 export default function Home() {
   return (
     <React.Fragment>
-      <HeroBanner />
       <Playlist />
+      <HeroBanner />
       <Schedule />
     </React.Fragment>
   );

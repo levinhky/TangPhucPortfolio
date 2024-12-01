@@ -1,5 +1,5 @@
 .navbar-modal {
-  background-color: $secondary-color !important;
+  background: url("/modal-background.png") !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,11 +21,42 @@
   font-family: $bodoni-moda;
   font-style: italic;
 }
+#navbar-modal-artist {
+  #modal-background-artist {
+    width: 400px;
+    position: relative;
+    margin-top: -17%;
+    margin-left: 20%;
+  }
+  .name {
+    font-size: 200px;
+    color: $white;
+    font-family: $bodoni-moda;
+    font-style: italic;
+
+    @include respond(extra-small-mobile) {
+      font-size: 100px;
+    }
+
+    &:nth-of-type(1) {
+      top: 30%;
+      left: 50%;
+    }
+    &:nth-of-type(2) {
+      z-index: 21;
+      left: 70%;
+      top: 70%;
+      @include respond(extra-small-mobile) {
+        left: 75%;
+      }
+    }
+  }
+}
+
 .navbar-modal-wrapper {
   position: absolute;
   top: 0;
-  left: 150%;
-  margin: 0 0 0 -25px;
+  left: 200%;
   width: max-content;
 
   @include respond(extra-small-mobile) {
@@ -34,14 +65,21 @@
     width: fit-content;
   }
 }
-.navbar-modal-link > a {
-  color: $primary-color;
-  font-weight: 700;
-  font-family: $bodoni-moda;
-  font-size: 62px;
+.navbar-modal-link {
+  text-align: right;
+  a {
+    color: $text-secondary;
+    font-weight: 700;
+    font-family: $bodoni-moda;
+    font-size: 62px;
+    font-style: italic;
 
-  @include respond(extra-small-mobile) {
-   font-size: 52px;
+    @include respond(extra-small-mobile) {
+      font-size: 52px;
+    }
+  }
+  .active {
+    color: $text-primary;
   }
 }
 
@@ -61,7 +99,7 @@
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   -o-animation-duration: 1s;
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 
 .fadeInRight {
@@ -80,5 +118,5 @@
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   -o-animation-duration: 1s;
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }

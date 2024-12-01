@@ -5,6 +5,7 @@ import FullCalendar from "@fullcalendar/react";
 import listPlugin from "@fullcalendar/list";
 
 import { formatDate } from "@/utils/functions";
+import Image from "next/image";
 
 const ListCalendar = ({
   calendarRef,
@@ -16,7 +17,7 @@ const ListCalendar = ({
     const { address, category, id } = extendedProps || {};
     return (
       <div className="event-card">
-        <div className="flex">
+        <div className="flex items-center">
           <div className="event-date">{formatDate(start)}</div>
           <button className="event-type w-[100px]">{category}</button>
         </div>
@@ -25,10 +26,20 @@ const ListCalendar = ({
             <Link href={`/schedule/${id}`} className="event-name">
               {title}
             </Link>
-            <div className="event-address">{address}</div>
+            <div className="event-address !text-textSecondaryTwo">{address}</div>
           </div>
-          <Link href={`/schedule/${id}`} className="event-info flex items-center justify-center esm:my-3">
+          <Link
+            href={`/schedule/${id}`}
+            className="event-info flex items-center justify-center esm:my-3"
+          >
             Xem thông tin
+            <Image
+              src={"/icons/arrow-right-primary.png"}
+              width={24}
+              height={24}
+              alt="arrow-right"
+              className="ml-2"
+            />
           </Link>
         </div>
       </div>
@@ -73,6 +84,15 @@ const ListCalendar = ({
             address: "Hà Nội",
             category: "MINISHOW",
             id: 3,
+          },
+        },
+        {
+          title: '"Từ Đây... Từ Nay..." Slay Hà Nội (đêm 1)',
+          start: "2024-12-24",
+          extendedProps: {
+            address: "Hà Nội",
+            category: "MINISHOW",
+            id: 4,
           },
         },
       ]}

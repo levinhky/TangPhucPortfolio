@@ -1,11 +1,11 @@
 .playlist-item {
   background: linear-gradient(
-    117.54deg,
-    rgba(255, 255, 255, 0.8) 14.14%,
-    rgba(255, 255, 255, 0.05) 94.3%
+    162.68deg,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.2) 100%
   );
 
-  border-radius: 20px;
+  border-radius: 12px;
 
   &-thumbnail > img {
     width: 100%;
@@ -65,13 +65,11 @@ input[type="range"] {
   &--play-btn {
     width: 40px;
     height: 40px;
-    background-color: $primary-color;
+    background-color: $blue--three;
   }
 }
 
 .buttonSlider {
-  width: 64px;
-  height: 64px;
   background-color: $white;
   position: absolute;
   top: 50%;

@@ -4,7 +4,6 @@
   }
   &--item {
     border-bottom: 1px solid $black-three;
-    width: fit-content;
     padding: 16px;
   }
   &--time {
@@ -21,35 +20,22 @@
 .shedule-button {
   &--view-more {
     & > a {
-      font-size: 20px;
-      font-weight: 600;
-      color: $primary-color;
-      text-decoration: underline;
+      font-size: 18px;
+      font-weight: 500;
+      color: $white;
+      background-color: $primary-color;
+      border-radius: 8px;
       margin-top: 32px;
       margin-bottom: 64px;
+      height: 40px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       @include respond(extra-small-mobile) {
         font-size: 16px;
       }
     }
-  }
-}
-
-.schedule--float-text {
-  position: absolute;
-  right: -25%;
-  bottom: 5%;
-  p {
-    font-size: 100px;
-    font-family: $bodoni-moda;
-    font-style: italic;
-    color: $white;
-    @include respond(extra-small-mobile) {
-      font-size: 70px;
-    }
-  }
-
-  @include respond(extra-small-mobile) {
-   bottom: 10%;
   }
 }
 
@@ -67,7 +53,7 @@
 
     @include respond(extra-small-mobile) {
       font-size: 62px;
-     }
+    }
   }
 
   .floating-text-2 {
@@ -83,19 +69,19 @@
 
     @include respond(extra-small-mobile) {
       font-size: 62px;
-     }
+    }
   }
 
   .month {
     font-family: $bodoni-moda;
     font-style: italic;
     font-weight: 600;
-    font-size: 180px;
+    font-size: 120px;
     color: $primary-color;
 
     @include respond(extra-small-mobile) {
       font-size: 90px;
-     }
+    }
   }
 
   .calendar-view {
@@ -122,7 +108,9 @@
   }
 
   .nav-link {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     font-weight: bold;
     color: $black-three;
     text-decoration: underline;
@@ -133,17 +121,17 @@
     text-decoration: underline;
   }
 
-  .nav-link.prev::before {
-    content: "←";
-    position: absolute;
-    left: -1.2em;
+  .nav-link.prev {
+    left: 20%;
     color: $black-three;
+
+    img {
+      transform: rotate(180deg);
+    }
   }
 
-  .nav-link.next::after {
-    content: "→";
-    position: absolute;
-    right: -1.2em;
+  .nav-link.next {
+    right: 20%;
     color: $black-three;
   }
 
@@ -154,36 +142,36 @@
     border-radius: 8px;
     font-family: Arial, sans-serif;
     @include respond(extra-small-mobile) {
-     padding: 0;
-     display: block;
-     }
+      padding: 0;
+      display: block;
+    }
   }
 
   .event-date {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+    color: $text-secondary--two;
+    font-style: italic;
+    font-family: $bodoni-moda;
     margin-right: 16px;
-  }
-
-  .event-date::before {
-    content: "◆";
-    font-size: 1.2rem;
-    margin-right: 5px;
   }
 
   .event-type,
   .event-info {
-    padding: 5px 10px;
+    padding: 0px 16px;
+    height: 40px;
     border: 1px solid #000;
     border-radius: 4px;
     font-size: 0.9rem;
     font-weight: bold;
-    color: #000;
+    color: $text-secondary--two;
     background-color: transparent;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
   }
 

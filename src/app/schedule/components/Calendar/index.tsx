@@ -30,62 +30,78 @@ const CalendarView = () => {
   }
 
   return (
-    <div id="schedule-list" className="mt-[50px]">
-      <div className="flex esm:flex-wrap justify-between items-center">
-        <div className="flex items-center esm:justify-between esm:w-full">
-          <div className="flex flex-col">
-            <p className="font-semibold text-primary text-4xl esm:text-3xl">
-              Lịch hoạt động
-            </p>
-            <p className="font-semibold text-primary text-4xl esm:text-3xl uppercase">
-              {currentYear}
-            </p>
-          </div>
-          <strong className="month">{currentMonth}</strong>
-        </div>
-        <div className="flex gap-4">
-          <p className="text-primary font-semibold">Xem dạng</p>
-          <div className="flex gap-2">
-            <button
-              onClick={() => setGridType(false)}
-              style={{ background: !gridType ? "#fff" : "" }}
-              className="border border-black flex items-center justify-center px-2"
-            >
-              <Image
-                src={"/icons/round-menu.png"}
-                width={14}
-                height={14}
-                alt="round-menu"
-              />
-            </button>
-            <button
-              onClick={() => setGridType(true)}
-              style={{ background: gridType ? "#fff" : "" }}
-              className="border border-black flex items-center justify-center px-2"
-            >
-              <Image
-                src={"/icons/grid-menu.png"}
-                width={14}
-                height={14}
-                alt="grid-menu"
-              />
-            </button>
-          </div>
+    <div id="schedule-list">
+      <div className="flex flex-col mx-auto items-center esm:justify-between esm:w-full relative">
+        <strong className="month">Tháng {currentMonth}</strong>
+        <p className="font-semibold text-textSecondaryTwo text-2xl esm:text-3xl">
+          Lịch hoạt động
+        </p>
+        <div className="nav-container">
+          <button
+            className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white prev"
+            onClick={goPrev}
+          >
+            <Image
+              src={"/icons/next.png"}
+              width={20}
+              height={20}
+              alt="grid-menu"
+            />
+          </button>
+          <button
+            className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white next"
+            onClick={goNext}
+          >
+            <Image
+              src={"/icons/next.png"}
+              width={20}
+              height={20}
+              alt="grid-menu"
+            />
+          </button>
         </div>
       </div>
 
-      {!gridType && <GridCalendar calendarRef={calendarRef} />}
-
-      {gridType && <ListCalendar calendarRef={calendarRef} />}
-
-      <div className="nav-container">
-        <button className="nav-link prev" onClick={goPrev}>
-          Trang trước
-        </button>
-        <button className="nav-link next" onClick={goNext}>
-          Trang sau
-        </button>
+      <div className="flex justify-end items-center gap-4 mt-5 mb-10">
+        <p className="text-primary font-semibold">Xem dạng</p>
+        <div className="flex gap-2">
+          <button
+            onClick={() => setGridType(false)}
+            style={{ background: !gridType ? "#000B6E" : "#fff" }}
+            className="rounded-lg flex h-10 w-10 items-center justify-center"
+          >
+            <Image
+              src={
+                !gridType
+                  ? "/icons/list-menu-white.png"
+                  : "/icons/list-menu-primary.png"
+              }
+              width={20}
+              height={20}
+              alt="round-menu"
+            />
+          </button>
+          <button
+            onClick={() => setGridType(true)}
+            style={{ background: gridType ? "#000B6E" : "#fff" }}
+            className="rounded-lg flex h-10 w-10 items-center justify-center"
+          >
+            <Image
+              src={
+                gridType
+                  ? "/icons/grid-menu-white.png"
+                  : "/icons/grid-menu-primary.png"
+              }
+              width={20}
+              height={20}
+              alt="grid-menu"
+            />
+          </button>
+        </div>
       </div>
+
+      {!gridType && <ListCalendar calendarRef={calendarRef} />}
+      {gridType && <GridCalendar calendarRef={calendarRef} />}
     </div>
   );
 };

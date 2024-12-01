@@ -1,7 +1,8 @@
 import Container from "@/themes/Container";
-import { SOCIAL_LINKS } from "@/utils/constants";
+import { NAV_LINKS, SOCIAL_LINKS } from "@/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { memo } from "react";
 
 const NavbarModal = ({
@@ -11,6 +12,8 @@ const NavbarModal = ({
   toggleShowModal: () => void;
   isShowModal: boolean;
 }) => {
+  const pathname = usePathname();
+
   return (
     <div
       className={`navbar-modal -translate-x-full ${
@@ -20,24 +23,37 @@ const NavbarModal = ({
       <Container>
         <div className="relative">
           <div className="rotate-text-wrapper">
-            <h1 className="rotate-text esm:hidden">Tăng Phúc</h1>
+            <div
+              id="navbar-modal-artist"
+            >
+              <Image
+                src={"/modal-background2.png"}
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="z-10"
+                id="modal-background-artist"
+                alt="modal-background"
+              />
+              <h1 className="name center-abs">Tăng</h1>
+              <h1 className="name center-abs">Phúc</h1>
+            </div>
             <div className="navbar-modal-wrapper">
               <ul>
-                <li onClick={toggleShowModal} className="navbar-modal-link">
-                  <Link href="/">Home</Link>
-                </li>
-                <li onClick={toggleShowModal} className="navbar-modal-link">
-                  <Link href="/about">About</Link>
-                </li>
-                <li onClick={toggleShowModal} className="navbar-modal-link">
-                  <Link href="/schedule">Schedule</Link>
-                </li>
-                <li onClick={toggleShowModal} className="navbar-modal-link">
-                  <Link href="/merchandise">Merchandise</Link>
-                </li>
-                <li onClick={toggleShowModal} className="navbar-modal-link">
-                  <Link href="/contact">Contact</Link>
-                </li>
+                {NAV_LINKS.map((link, index) => (
+                  <li
+                    key={index}
+                    onClick={toggleShowModal}
+                    className="navbar-modal-link"
+                  >
+                    <Link
+                      className={pathname === link.href ? "active" : ""}
+                      href={link.href}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
               {SOCIAL_LINKS.map((item, index) => {
                 return (
@@ -69,11 +85,14 @@ const NavbarModal = ({
             </div>
           </div>
           <div className="h-32 flex justify-end items-start pt-4">
-            <button onClick={toggleShowModal}>
+            <button
+              onClick={toggleShowModal}
+              className="bg-white w-10 h-10 flex items-center justify-center rounded-lg"
+            >
               <Image
                 src={"/icons/close.png"}
-                width={32}
-                height={32}
+                width={20}
+                height={20}
                 alt="hamburger-icon"
               />
             </button>

@@ -4,12 +4,10 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-// import required modules
+
 import { Navigation } from "swiper/modules";
-import Link from "next/link";
 
 const MOCK_DATA = [
   {
@@ -175,14 +173,13 @@ const Playlist = () => {
   };
 
   const sliderBackground = {
-    background: `linear-gradient(to right, #081F5C ${
+    background: `linear-gradient(to right, #003EA0 ${
       (sliderValue / 100) * 100
-    }%, #7096D1 ${(sliderValue / 100) * 100}%)`,
+    }%, #E4E4E4 ${(sliderValue / 100) * 100}%)`,
   };
 
   return (
-    <Container style="relative px-[100px] esm:px-0">
-      <p className="main-title text-center">Sản phẩm âm nhạc</p>
+    <Container style="relative px-[100px] mt-[5%] esm:px-0">
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -195,17 +192,18 @@ const Playlist = () => {
             slidesPerView: 1,
           },
           "768": {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
         }}
         onInit={() => setInit(true)}
         loop={true}
         modules={[Navigation]}
+        className="w-[90%]"
       >
         {MOCK_DATA.map((item, index) => {
           return (
             <SwiperSlide>
-              <div className="playlist-item flex flex-col p-7 h-[auto] min-h-[600px]">
+              <div className="playlist-item flex flex-col p-5 pt-0 h-[auto] min-h-[486px]">
                 <div className="playlist-item-thumbnail m-auto">
                   <Image
                     src={item.image}
@@ -213,22 +211,9 @@ const Playlist = () => {
                     height={290}
                     alt="thumbnail"
                   />
+                  <h1 className="sub-title--bold mt-3">{item.songName}</h1>
                 </div>
                 <div className="playlist-item-content--bottom mt-auto">
-                  <div className="playlist-item-info flex justify-between items-center">
-                    <div className="playlist-item-info--name">
-                      <h1 className="sub-title--bold">{item.songName}</h1>
-                      <h2 className="sub-title--small">Tăng Phúc</h2>
-                    </div>
-                    <div className="playlist-item-info--wishlist">
-                      <Image
-                        src={"/icons/heart.png"}
-                        width={25}
-                        height={25}
-                        alt="wishlist-icon"
-                      />
-                    </div>
-                  </div>
                   <div className="playlist-item-volume">
                     <input
                       type="range"
@@ -273,44 +258,6 @@ const Playlist = () => {
                       />
                     </button>
                   </div>
-                  <div className="playlist-item-links flex items-center justify-center gap-3 pt-5">
-                    <Link
-                      target={"_blank"}
-                      href={item.spotifyLink}
-                      className="w-10 h-10 flex items-center justify-center rounded-full border-[0.5px] border-primary p-2"
-                    >
-                      <Image
-                        src={"/icons/spotify-primary.png"}
-                        width={24}
-                        height={24}
-                        alt="spotify-icon"
-                      />
-                    </Link>
-                    <Link
-                      target={"_blank"}
-                      href={item.youtubeLink}
-                      className="w-10 h-10 flex items-center justify-center rounded-full border-[0.5px] border-primary p-2"
-                    >
-                      <Image
-                        src={"/icons/youtube-primary.png"}
-                        width={24}
-                        height={24}
-                        alt="youtube-icon"
-                      />
-                    </Link>
-                    <Link
-                      target={"_blank"}
-                      href={item.appleMusicLink}
-                      className="w-10 h-10 flex items-center justify-center rounded-full border-[0.5px] border-primary p-2"
-                    >
-                      <Image
-                        src={"/icons/apple-music-primary.png"}
-                        width={17}
-                        height={17}
-                        alt="apple-music-icon"
-                      />
-                    </Link>
-                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -318,22 +265,22 @@ const Playlist = () => {
         })}
       </Swiper>
       <button
-        className="buttonSlider buttonSliderLeft rounded-full flex items-center justify-center"
+        className="buttonSlider buttonSliderLeft rounded-lg flex w-10 h-10 items-center justify-center"
         ref={prevRef}
       >
         <Image
           className="rotate-180"
           src={"/icons/next.png"}
-          width={40}
-          height={40}
+          width={24}
+          height={24}
           alt="prev-icon"
         />
       </button>
       <button
-        className="buttonSlider buttonSliderRight rounded-full flex items-center justify-center"
+        className="buttonSlider buttonSliderRight rounded-lg flex w-10 h-10 items-center justify-center"
         ref={nextRef}
       >
-        <Image src={"/icons/next.png"} width={40} height={40} alt="next-icon" />
+        <Image src={"/icons/next.png"} width={24} height={24} alt="next-icon" />
       </button>
     </Container>
   );

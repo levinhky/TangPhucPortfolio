@@ -32,23 +32,12 @@ const MerchandiseList = () => {
 
   return (
     <Container style="py-7 merchandise">
-      <div className="relative">
-        <Image
-          src={"/merchandise-list-banner.png"}
-          width={900}
-          height={400}
-          alt="placeholder"
-          className="mx-auto"
-        />
-        <h6 className="floating-text">Merchandise</h6>
-      </div>
-
-      <div className="merchandise-list mt-[100px] esm:mt-12">
+      <div className="merchandise-list  esm:mt-12">
         <div className="flex items-center justify-center gap-4">
           <div
             className={`category ${
               categoryActive === "all" ? "category--active" : ""
-            } sub-title--small py-3 px-4`}
+            } sub-title--small h-10 px-5 flex items-center justify-center`}
             onClick={handleActiveCategory("all")}
           >
             Tất cả
@@ -56,7 +45,7 @@ const MerchandiseList = () => {
           <button
             className={`category ${
               categoryActive === "hat" ? "category--active" : ""
-            } sub-title--small py-3 px-4`}
+            } sub-title--small h-10 px-5 flex items-center justify-center`}
             onClick={handleActiveCategory("hat")}
           >
             Nón
@@ -64,7 +53,7 @@ const MerchandiseList = () => {
           <button
             className={`category ${
               categoryActive === "shirt" ? "category--active" : ""
-            } sub-title--small py-3 px-4`}
+            } sub-title--small h-10 px-5 flex items-center justify-center`}
             onClick={handleActiveCategory("shirt")}
           >
             Áo
@@ -72,7 +61,7 @@ const MerchandiseList = () => {
           <button
             className={`category ${
               categoryActive === "bag" ? "category--active" : ""
-            } sub-title--small py-3 px-4`}
+            } sub-title--small h-10 px-5 flex items-center justify-center`}
             onClick={handleActiveCategory("bag")}
           >
             Túi
@@ -112,9 +101,18 @@ const MerchandiseList = () => {
                 } items-center justify-between`}
                 onClick={() => toggleCollapsible(index)}
               >
-                <div className="flex items-center">
-                  <strong className="text-3xl mr-4">Q</strong>
-                  {question}
+                <div className="flex items-center justify-between w-full">
+                  <p className="w-[80%]">{question}</p>
+                  <Image
+                    src={
+                      activeIndex === index
+                        ? "/icons/minus.png"
+                        : "/icons/plus.png"
+                    }
+                    width={24}
+                    height={24}
+                    alt="plus"
+                  />
                 </div>
               </button>
             }
@@ -123,7 +121,7 @@ const MerchandiseList = () => {
             contentInnerClassName="bg-white p-4"
             open={activeIndex === index}
           >
-            <p>{answers[index]}</p>
+            <p className="text-textSecondaryTwo">{answers[index]}</p>
           </Collapsible>
         ))}
       </div>

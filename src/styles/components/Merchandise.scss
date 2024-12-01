@@ -13,16 +13,22 @@
     opacity: 0.8;
 
     @include respond(extra-small-mobile) {
-     font-size: 62px;
-     }
+      font-size: 62px;
+    }
   }
 
   .merchandise-list {
     .category {
-      background-color: $grey;
+      background: linear-gradient(
+        162.68deg,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
+      border-radius: 8px;
 
       &--active {
-        background-color: $secondary-color;
+        background: $primary-color;
+        color: $white;
       }
     }
   }
@@ -41,7 +47,7 @@
     }
 
     .active {
-      background-color: $blue--two;
+      background-color: $blue--three;
       color: $white;
     }
 
@@ -50,18 +56,19 @@
       opacity: 0.8;
     }
 
-    .collapsible:after {
-      content: "\002B";
-      color: $black--two;
-      font-weight: bold;
-      float: right;
-      margin-left: 5px;
-    }
+    // .collapsible:after {
+    //   content: "\002B";
+    //   color: $black--two;
+    //   font-weight: bold;
+    //   float: right;
+    //   font-size: 24px;
+    //   margin-left: 5px;
+    // }
 
-    .active:after {
-      content: "\2212";
-      color: $white;
-    }
+    // .active:after {
+    //   content: "\2212";
+    //   color: $white;
+    // }
 
     .content {
       max-height: 0;

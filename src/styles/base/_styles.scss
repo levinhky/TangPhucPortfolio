@@ -18,6 +18,11 @@
     color: $primary-color;
   }
 
+  &--semi {
+    font-weight: 600;
+    color: $primary-color;
+  }
+
   &--bold {
     font-weight: 700;
     color: $primary-color;
@@ -28,4 +33,8 @@
   padding: 8px 16px;
   border-radius: 5px;
   color: $white;
+}
+
+#mouseScroll {
+  animation: bounceUpDown 1s infinite alternate;
 }

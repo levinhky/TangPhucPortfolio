@@ -44,7 +44,15 @@ export const SOCIAL_LINKS = [
 ];
 
 export const DEVICE = {
-  MOBILE: 'mobile',
-  TABLET: 'tablet',
-  DESKTOP: 'desktop',
-}
+  MOBILE: "mobile",
+  TABLET: "tablet",
+  DESKTOP: "desktop",
+};
+
+export const NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/schedule", label: "Schedule" },
+  { href: "/merchandise", label: "Merchandise" },
+  { href: "/contact", label: "Contact" },
+];
