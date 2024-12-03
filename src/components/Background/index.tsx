@@ -47,7 +47,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
           <SwiperSlide>
             <div className="w-full h-full">
               <Image
-                src={"/header-banner.png"}
+                src={"https://res.cloudinary.com/dwmpmry2n/image/upload/v1733255909/FullSizeRender_6_puqwiv.jpg"}
                 alt="Background"
                 fill
                 className="object-cover"
@@ -58,7 +58,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
           <SwiperSlide>
             <div className="w-full h-full">
               <Image
-                src={"/header-banner.png"}
+                src={"https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256055/z5877654697071_40516958389f1c322d44e5f3523db66d_yb9mlm.jpg"}
                 alt="Background"
                 fill
                 className="object-cover"
