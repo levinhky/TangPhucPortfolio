@@ -55,7 +55,7 @@ const Navbar = () => {
   };
 
   return (
-    <Container style="mt-4">
+    <Container style="mt-4 relative">
       {/* <div className="flex justify-end header"></div> */}
       <div className="menu bg-white w-10 h-10 rounded-lg">
         <button onClick={toggleShowModal}>
