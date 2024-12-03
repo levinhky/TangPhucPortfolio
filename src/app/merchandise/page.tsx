@@ -69,10 +69,28 @@ const MerchandiseList = () => {
         </div>
         <div className="items grid grid-cols-3 esm:grid-cols-1 mt-12 gap-5">
           <MerchandiseItem
+          image={
+            "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256405/TDTNPre1_bkxn0p.jpg"
+          }
+            category={"Album"}
+            productName={"EP Từ Đây Từ Nay"}
+            price={599000}
+            id={1}
+          />
+          <MerchandiseItem
+          image={
+            "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256404/pinTVMP1_baucid.jpg"
+          }
+            category={"Merch"}
+            productName={"Pin TVMP"}
+            price={349000}
+            id={2}
+          />
+          <MerchandiseItem
             category={"Chín Muồi"}
             productName={"Chín Vừa Tee"}
             price={349000}
-            id={2}
+            id={3}
           />
           <MerchandiseItem
             image={
@@ -82,7 +100,7 @@ const MerchandiseList = () => {
             productName={"Túi Tote"}
             price={225000}
             stockStatus={"out-stock"}
-            id={1}
+            id={4}
           />
         </div>
       </div>

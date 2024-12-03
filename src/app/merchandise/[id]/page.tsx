@@ -8,6 +8,7 @@ import ImageGallery from "react-image-gallery";
 
 const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
   const { id } = params || {};
+  
   const images = [
     {
       original:
