@@ -168,8 +168,35 @@ const GridCalendar = ({
             },
           },
           {
-            title: '"Từ Đây... Từ Nay..." Slay Hà Nội (đêm 1)',
-            start: "2024-12-24",
+            title: '"Từ Đây... Từ Nay..." Slay Hà Nội (đêm 2)',
+            start: "2024-11-25",
+            extendedProps: {
+              address: "Hà Nội",
+              category: "MINISHOW",
+              id: 3,
+            },
+          },
+          {
+            title: 'Echoes of Love',
+            start: "2024-11-30",
+            extendedProps: {
+              address: "Paris Garden, T.P Hồ Chí Minh ",
+              category: "MINISHOW",
+              id: 3,
+            },
+          },
+          {
+            title: 'ATVNCG',
+            start: "2024-12-14",
+            extendedProps: {
+              address: "Hà Nội",
+              category: "CONCERT",
+              id: 3,
+            },
+          },
+          {
+            title: '"Từ Đây... Từ Nay..." Slay Sài Gòn (đêm 1)',
+            start: "2024-12-20",
             extendedProps: {
               address: "Hà Nội",
               category: "MINISHOW",
