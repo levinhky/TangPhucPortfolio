@@ -1,5 +1,7 @@
 .navbar-modal {
   background: url("/modal-background.png") !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
   position: fixed;
   top: 0;
   left: 0;

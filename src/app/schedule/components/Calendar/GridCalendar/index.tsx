@@ -4,24 +4,14 @@ import { LegacyRef, memo, useState } from "react";
 
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-const Modal = ({ date, events, onClose, tram }: any) => {
-  console.log("🚀 ~ Modal ~ tram:", tram);
-  const x = tram.jsEvent.x / 4;
-  const y = tram.jsEvent.y / 3;
+const Modal = ({ date, events, onClose, calendarInfo }: any) => {
   return (
-    <div
-      className="relative w-full z-10"
-      style={{
-        top: y + "px",
-        right: -x + "px",
-      }}
-    >
+    <div className="relative w-full z-10">
       {/* Popup Modal */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-full max-w-2xl bg-white rounded-lg shadow-lg border border-gray-200">
+      <div className="absolute bottom-10 left-[60%] transform -translate-x-1/2 w-full max-w-2xl bg-white rounded-lg shadow-lg border border-gray-200">
         {/* Header */}
         <div className="p-4 flex justify-between items-center border-b border-gray-200">
           <h3 className="text-lg flex gap-2 items-center justify-center font-semibold text-gray-800">
@@ -78,7 +68,7 @@ const Modal = ({ date, events, onClose, tram }: any) => {
                   </p>
                 </div>
                 <Link
-                  href={`/schedule/${tram.event.extendedProps.id}`}
+                  href={`/schedule/${calendarInfo.event.extendedProps.id}`}
                   className="h-10 border-[#003EA0] border px-4 rounded-lg  flex gap-2 items-center justify-center text-textSecondaryTwo text-sm font-medium"
                 >
                   Xem chi tiết
@@ -103,10 +93,9 @@ const GridCalendar = ({
 }: {
   calendarRef: LegacyRef<FullCalendar>;
 }) => {
-  const router = useRouter();
-  const [tram, setTram] = useState<any>(null);
+  const [calendarInfo, setCalendarInfo] = useState<any>(null);
 
-  const onClose = () => setTram(false);
+  const onClose = () => setCalendarInfo(false);
 
   const date = "Thứ 3, 28 tháng 10";
   const events = [
@@ -120,6 +109,15 @@ const GridCalendar = ({
   ];
   return (
     <div className="w-4/5 esm:w-full esm:mt-5 mx-auto">
+      <div className="grid grid-cols-7 mb-7 rounded-lg border border-[#003EA0]">
+        <div className="text-center relative day-header py-2">Thứ hai</div>
+        <div className="text-center relative day-header py-2">Thứ ba</div>
+        <div className="text-center relative day-header py-2">Thứ tư</div>
+        <div className="text-center relative day-header py-2">Thứ năm</div>
+        <div className="text-center relative day-header py-2">Thứ sáu</div>
+        <div className="text-center relative day-header py-2">Thứ bảy</div>
+        <div className="text-center relative day-header py-2">Chủ nhật</div>
+      </div>
       <FullCalendar
         ref={calendarRef}
         plugins={[dayGridPlugin]}
@@ -129,16 +127,16 @@ const GridCalendar = ({
         dayHeaderFormat={{ weekday: "long" }}
         headerToolbar={false}
         dayHeaderClassNames={
-          "!py-2 font-semibold bg-custom-gradient !align-middle !border-[#7096D1]"
+          "!py-2 font-semibold bg-custom-gradient !align-middle hidden !border-[#7096D1]"
         }
         dayCellClassNames={"bg-custom-gradient"}
         viewClassNames={"grid-calendar-view"}
-        eventClassNames={"bg-transparent border-0"}
+        eventClassNames={"bg-transparent border-0 relative"}
         eventTextColor={"#000054"}
         showNonCurrentDates={false}
         height={700}
         eventClick={(eventInfo) => {
-          setTram(eventInfo);
+          setCalendarInfo(eventInfo);
           // router.push(`/schedule/${eventInfo.event.extendedProps.id}`)
         }}
         events={[
@@ -181,8 +179,13 @@ const GridCalendar = ({
         ]}
       />
 
-      {tram && (
-        <Modal date={date} events={events} tram={tram} onClose={onClose} />
+      {calendarInfo && (
+        <Modal
+          date={date}
+          events={events}
+          calendarInfo={calendarInfo}
+          onClose={onClose}
+        />
       )}
     </div>
   );

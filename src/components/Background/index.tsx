@@ -68,7 +68,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
           </SwiperSlide>
         </Swiper>
         {isHomeType && (
-          <div className="z-10 flex flex-col items-center w-full justify-center absolute bottom-2">
+          <div className="z-10 flex flex-col items-center absolute bottom-2 left-2/4 -translate-x-2/4">
             <Image
               src={"/icons/mouse-scroll.png"}
               width={24}

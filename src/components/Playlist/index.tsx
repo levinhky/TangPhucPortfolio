@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
+import Link from "next/link";
 
 const MOCK_DATA = [
   {
@@ -241,14 +242,19 @@ const Playlist = () => {
                         alt="play-prev-icon"
                       />
                     </button>
-                    <button className="playlist-item-control--play-btn rounded-full flex items-center justify-center p-3">
+                    <Link
+                      href={item.youtubeLink}
+                      className="playlist-item-control--play-btn rounded-full flex items-center justify-center p-3"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Image
                         src={"/icons/play.png"}
                         width={24}
                         height={24}
                         alt="play-icon"
                       />
-                    </button>
+                    </Link>
                     <button>
                       <Image
                         src={"/icons/play-next.png"}

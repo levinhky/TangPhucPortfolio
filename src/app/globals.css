@@ -40,6 +40,7 @@
   width: unset !important;
   color: #000;
 }
+
 .fc .fc-daygrid-day-top {
   flex-direction: row !important;
   padding: 0 8px;
@@ -52,13 +53,25 @@
   background: transparent !important;
 }
 .grid-calendar-view {
-  border-left: 1px solid #7096d1 !important;
-  border-top: 1px solid #7096d1 !important;
+  border: 1px solid #7096d1 !important;
+  border-radius: 8px;
+}
+.fc-theme-standard .fc-scrollgrid {
+  border-width: 0 !important;
 }
 .list-calendar-view > .fc-scroller {
   border: 0px solid red !important;
 }
-.grid-calendar-view td,
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-color: #7096d1 !important;
+  border-right-color: transparent !important;
+}
+.fc-theme-standard td:last-child,
+.fc-theme-standard th:last-child {
+  border-bottom-color: transparent !important;
+}
+.grid-calendar-view td:not(:last-child),
 .grid-calendar-view th {
   border-color: #7096d1 !important;
 }
