@@ -83,15 +83,10 @@ const MerchandiseList = () => {
           }
             category={"Merch"}
             productName={"Pin TVMP"}
-            price={349000}
+            price={149000}
             id={7}
           />
-          <MerchandiseItem
-            category={"Chín Muồi"}
-            productName={"Chín Vừa Tee"}
-            price={349000}
-            id={8}
-          />
+          
            <MerchandiseItem
             image={
               "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/4_xar3nt.jpg"
@@ -114,13 +109,29 @@ const MerchandiseList = () => {
           />
             <MerchandiseItem
             image={
-              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256404/pinTVMP1_baucid.jpg"
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/2_gno5mi.jpg"
             }
             category={"TVMP"}
-            productName={"Pin TVMP"}
+            productName={"Sổ Tay TDTN"}
             price={99000}
             // stockStatus={"out-stock"}
             id={7}
+          />
+          <MerchandiseItem
+            image={
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/3_odtyvr.jpg"
+            }
+            category={"TVMP"}
+            productName={"Bộ dây TDTN"}
+            price={99000}
+            // stockStatus={"out-stock"}
+            id={7}
+          />
+          <MerchandiseItem
+            category={"Chín Muồi"}
+            productName={"Chín Vừa Tee"}
+            price={349000}
+            id={8}
           />
         </div>
       </div>
