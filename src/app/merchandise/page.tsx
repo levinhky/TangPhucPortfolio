@@ -92,15 +92,35 @@ const MerchandiseList = () => {
             price={349000}
             id={8}
           />
-          <MerchandiseItem
+           <MerchandiseItem
             image={
-              "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg"
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/4_xar3nt.jpg"
             }
             category={"Từ Đây… Từ Nay…"}
             productName={"Túi Tote"}
             price={225000}
             stockStatus={"out-stock"}
             id={9}
+          />
+           <MerchandiseItem
+            image={
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/z6095929752842_19a8cd219f714d974007bb5ed8691029_meszcf.jpg"
+            }
+            category={"TDTN"}
+            productName={"Khăn Bandana TDTN"}
+            price={229000}
+            // stockStatus={"out-stock"}
+            id={5}
+          />
+            <MerchandiseItem
+            image={
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256404/pinTVMP1_baucid.jpg"
+            }
+            category={"TVMP"}
+            productName={"Pin TVMP"}
+            price={99000}
+            // stockStatus={"out-stock"}
+            id={6}
           />
         </div>
       </div>
