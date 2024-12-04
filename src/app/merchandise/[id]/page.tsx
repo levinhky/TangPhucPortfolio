@@ -140,6 +140,32 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
           },
         ],
       },
+      {
+        id: "10",
+        title: "Sổ Tay TDTN",
+        price: 99000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/2_gno5mi.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/2_gno5mi.jpg",
+          },
+        ],
+      },
+      {
+        id: "11",
+        title: "Bộ dây TDTN",
+        price: 99000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/3_odtyvr.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/3_odtyvr.jpg",
+          },
+        ],
+      },
     ];
 
     const selectedItem = items.find((item) => item.id === id);

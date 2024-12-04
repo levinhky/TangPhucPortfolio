@@ -115,7 +115,7 @@ const MerchandiseList = () => {
             productName={"Sổ Tay TDTN"}
             price={99000}
             // stockStatus={"out-stock"}
-            id={7}
+            id={10}
           />
           <MerchandiseItem
             image={
@@ -125,7 +125,7 @@ const MerchandiseList = () => {
             productName={"Bộ dây TDTN"}
             price={99000}
             // stockStatus={"out-stock"}
-            id={7}
+            id={11}
           />
           <MerchandiseItem
             category={"Chín Muồi"}
