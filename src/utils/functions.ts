@@ -18,8 +18,11 @@ export const formatDateWithSlash = (date: any) => {
 };
 
 export const getScheduleHomeList = (events: any) => {
+  const todayDate = new Date();
+
   return events
-    .sort((a: any, b: any) => +new Date(b.start) - +new Date(a.start)) // Sort by date descending
+    .filter((event: any) => new Date(event.start) > todayDate) // Keep only future events
+    .sort((a: any, b: any) => +new Date(a.start) - +new Date(b.start)) // Sort by ascending date
     .slice(0, 3);
 };
 
