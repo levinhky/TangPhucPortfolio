@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MerchandiseItem from "../MerchandiseItem";
 import { MOCK_DATA_EVENTS } from "@/utils/constants";
-import { formatDateWithSlash } from "@/utils/functions";
+import { formatDateWithSlash, getScheduleHomeList } from "@/utils/functions";
 
 const Schedule = () => {
   return (
@@ -11,21 +11,23 @@ const Schedule = () => {
       <div className="schedule-news relative">
         <h6 className="main-title text-center">Sự kiện sắp tới</h6>
         <div className="schedule-list">
-          {MOCK_DATA_EVENTS.slice(-3).map((event, index) => {
-            return (
-              <div key={index} className="schedule-list--item flex gap-10">
-                <p className="schedule-list--time">
-                  {formatDateWithSlash(event.start)}
-                </p>
-                <div className="schedule-list--info max-w-[600px]">
-                  <h4>{event.extendedProps.category}</h4>
-                  <Link href={"/schedule/1"} className="sub-title--bold">
-                    {event.title}
-                  </Link>
+          {getScheduleHomeList(MOCK_DATA_EVENTS)
+            .slice(-3)
+            .map((event: any, index: number) => {
+              return (
+                <div key={index} className="schedule-list--item flex gap-10">
+                  <p className="schedule-list--time">
+                    {formatDateWithSlash(event.start)}
+                  </p>
+                  <div className="schedule-list--info max-w-[600px]">
+                    <h4>{event.extendedProps.category}</h4>
+                    <Link href={"/schedule/1"} className="sub-title--bold">
+                      {event.title}
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
         <div className="shedule-button--view-more flex items-center justify-center">
           <Link href="/schedule">

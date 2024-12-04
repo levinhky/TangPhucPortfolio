@@ -17,6 +17,12 @@ export const formatDateWithSlash = (date: any) => {
   return `${day}/${month}`;
 };
 
+export const getScheduleHomeList = (events: any) => {
+  return events
+    .sort((a: any, b: any) => +new Date(b.start) - +new Date(a.start)) // Sort by date descending
+    .slice(0, 3);
+};
+
 export const formatVietnameseDate = (dateString: any) => {
   const days = [
     "Chủ nhật",
