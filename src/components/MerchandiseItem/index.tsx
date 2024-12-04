@@ -23,9 +23,17 @@ const MerchandiseItem = (props: MerchandiseItemProps) => {
   } = props;
   return (
     <div className="merchandise-item flex flex-col">
-      <Link href={`/merchandise/${id}`} className="image">
-        <Image src={image} width={400} height={400} alt="ao" />
-      </Link>
+      <div className="m-auto">
+        <Link href={`/merchandise/${id}`} className="image">
+          <Image
+            src={image}
+            width={400}
+            height={400}
+            className="rounded-lg"
+            alt="ao"
+          />
+        </Link>
+      </div>
 
       <div className="info">
         <h6 className="category">{category}</h6>

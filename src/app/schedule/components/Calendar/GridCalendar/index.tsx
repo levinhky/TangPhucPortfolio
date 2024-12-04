@@ -12,10 +12,18 @@ import { formatVietnameseDate } from "@/utils/functions";
 const Modal = ({ onClose, calendarInfo }: any) => {
   const { title, start, extendedProps } = calendarInfo?.event || {};
   const { address, category, id, time } = extendedProps || {};
+  const x = calendarInfo.jsEvent.x / 4;
+  const y = calendarInfo.jsEvent.y / 3;
   return (
     <div className="relative w-full z-10">
       {/* Popup Modal */}
-      <div className="absolute bottom-10 left-[60%] transform -translate-x-1/2 w-full max-w-2xl bg-white rounded-lg shadow-lg border border-gray-200">
+      <div
+        style={{
+          bottom: 10,
+          left: "70%",
+        }}
+        className="absolute transform -translate-x-1/2 w-full max-w-2xl bg-white rounded-lg shadow-lg border border-gray-200"
+      >
         {/* Header */}
         <div className="p-4 flex justify-between items-center border-b border-gray-200">
           <h3 className="text-lg flex gap-2 items-center justify-center font-semibold text-gray-800">
