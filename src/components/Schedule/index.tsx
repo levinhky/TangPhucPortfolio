@@ -54,7 +54,7 @@ const Schedule = () => {
 
       <div className="schedule-promotions">
         <h6 className="main-title text-center">Merchandise</h6>
-        <div className="schedule-promotions__list grid grid-cols-3 esm:grid-cols-1 gap-4">
+        <div className="schedule-promotions__list grid grid-cols-3 esm:grid-cols-1 gap-7">
           <MerchandiseItem
           image={
             "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256405/TDTNPre1_bkxn0p.jpg"

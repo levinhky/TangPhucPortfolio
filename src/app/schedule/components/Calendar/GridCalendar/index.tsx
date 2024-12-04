@@ -12,10 +12,8 @@ import { formatVietnameseDate } from "@/utils/functions";
 const Modal = ({ onClose, calendarInfo }: any) => {
   const { title, start, extendedProps } = calendarInfo?.event || {};
   const { address, category, id, time } = extendedProps || {};
-  const x = calendarInfo.jsEvent.x / 4;
-  const y = calendarInfo.jsEvent.y / 3;
   return (
-    <div className="relative w-full z-10">
+    <div className="absolute w-full z-10">
       {/* Popup Modal */}
       <div
         style={{
@@ -133,6 +131,10 @@ const GridCalendar = ({
         viewClassNames={"grid-calendar-view"}
         eventClassNames={"bg-transparent border-0 relative"}
         eventTextColor={"#000054"}
+        eventDidMount={(eventInfo) => {
+          console.log("🚀 ~ eventInfo:", eventInfo);
+          return <Modal calendarInfo={eventInfo} onClose={onClose} />;
+        }}
         showNonCurrentDates={false}
         height={700}
         eventClick={(eventInfo) => {

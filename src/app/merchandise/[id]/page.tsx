@@ -4,11 +4,22 @@ import Container from "@/themes/Container";
 import { formatPrice } from "@/utils/functions";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import ImageGallery from "react-image-gallery";
 
 const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
   const { id } = params || {};
-  
+
+  // TODO: remove when have api
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState(0);
+  const [gallery, setGallery] = useState([
+    {
+      original: "",
+      thumbnail: "",
+    },
+  ]);
+
   const images = [
     {
       original:
@@ -27,6 +38,140 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
     },
   ];
   const { device } = useDetectDevice();
+
+  // TODO: remove when have api
+  useEffect(() => {
+    const items = [
+      {
+        id: "1",
+        title: "PRE-Order EP TDTN",
+        price: 349000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256405/TDTNPre1_bkxn0p.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256405/TDTNPre1_bkxn0p.jpg",
+          },
+        ],
+      },
+      {
+        id: "2",
+        title: "Sổ Tay TDTN",
+        price: 99000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/2_gno5mi.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/2_gno5mi.jpg",
+          },
+        ],
+      },
+      {
+        id: "3",
+        title: "Dây Thẻ TDTN",
+        price: 99000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/3_odtyvr.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/3_odtyvr.jpg",
+          },
+        ],
+      },
+      {
+        id: "4",
+        title: "Túi tote TDTN",
+        price: 99000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/4_xar3nt.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/4_xar3nt.jpg",
+          },
+        ],
+      },
+      {
+        id: "5",
+        title: "Khăn Bandada TDTN",
+        price: 99000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/z6095929752842_19a8cd219f714d974007bb5ed8691029_meszcf.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/z6095929752842_19a8cd219f714d974007bb5ed8691029_meszcf.jpg",
+          },
+        ],
+      },
+      {
+        id: "6",
+        title: "EP Từ Đây Từ Nay",
+        price: 599000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256405/TDTNPre1_bkxn0p.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256405/TDTNPre1_bkxn0p.jpg",
+          },
+        ],
+      },
+      {
+        id: "7",
+        title: "Pin TVMP",
+        price: 349000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256404/pinTVMP1_baucid.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256404/pinTVMP1_baucid.jpg",
+          },
+        ],
+      },
+      {
+        id: "8",
+        title: "Chín Vừa Tee",
+        price: 349000,
+        images: [
+          {
+            original: "/aochinmuoi.png",
+            thumbnail: "/aochinmuoi.png",
+          },
+        ],
+      },
+      {
+        id: "9",
+        title: "Túi Tote",
+        price: 225000,
+        images: [
+          {
+            original:
+              "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg",
+            thumbnail:
+              "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg",
+          },
+        ],
+      },
+    ];
+
+    const selectedItem = items.find((item) => item.id === id);
+
+    if (selectedItem) {
+      setTitle(selectedItem.title);
+      setPrice(selectedItem.price);
+      setGallery(selectedItem.images);
+    } else {
+      setTitle("");
+      setPrice(0);
+      setGallery([]);
+    }
+  }, [id]);
+
   return (
     <Container style="mt-[7%]">
       <div
@@ -52,7 +197,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
             Trả về trang sản phẩm
           </Link>
           <ImageGallery
-            items={+id === 2 ? images2 : images}
+            items={gallery}
             showBullets
             showPlayButton={false}
             showThumbnails={device === "mobile" ? false : true}
@@ -61,18 +206,14 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
         </div>
 
         <div className="content basis-[50%] esm:basis-full esm:mb-7 mt-[10%]">
-          <h1 className="font-semibold text-2xl mb-4">
-            {+id === 2 ? "Áo 9M" : "Túi tote"}
-          </h1>
+          <h1 className="font-semibold text-2xl mb-4">{title}</h1>
           <h2 className="sub-title--small !text-textSecondaryTwo">
             Lorem ipsum dolor sit amet consectetur. Vitae velit volutpat aliquam
             sed id odio. Sagittis lectus nulla aliquet tortor venenatis mi. Ut
             aenean lectus aliquam mattis curabitur quisque commodo sed in.
             Suspendisse ullamcorper nunc nulla rutrum.
           </h2>
-          <h3 className="text-3xl font-semibold my-4">
-            {+id === 2 ? formatPrice(349000) : formatPrice(225000)}
-          </h3>
+          <h3 className="text-3xl font-semibold my-4">{formatPrice(price)}</h3>
           <div className="flex gap-[10%]">
             <div className="flex flex-col">
               <p className="font-semibold">Màu sắc</p>
