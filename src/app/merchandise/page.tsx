@@ -68,39 +68,63 @@ const MerchandiseList = () => {
           </button>
         </div>
         <div className="items grid grid-cols-3 esm:grid-cols-1 mt-12 gap-5">
-          <MerchandiseItem
+        <MerchandiseItem
           image={
             "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256405/TDTNPre1_bkxn0p.jpg"
           }
-            category={"Album"}
-            productName={"EP Từ Đây Từ Nay"}
-            price={599000}
+            category={"TDTN"}
+            productName={"PRE-Order EP TDTN"}
+            price={349000}
             id={1}
           />
           <MerchandiseItem
-          image={
-            "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256404/pinTVMP1_baucid.jpg"
-          }
-            category={"Merch"}
-            productName={"Pin TVMP"}
-            price={349000}
+            image={
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/2_gno5mi.jpg"
+            }
+            category={"TDTN"}
+            productName={"Sổ Tay TDTN"}
+            price={99000}
+            // stockStatus={"out-stock"}
             id={2}
           />
           <MerchandiseItem
-            category={"Chín Muồi"}
-            productName={"Chín Vừa Tee"}
-            price={349000}
+            image={
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/3_odtyvr.jpg"
+            }
+            category={"TDTN"}
+            productName={"Dây Thẻ TDTN"}
+            price={99000}
+            // stockStatus={"out-stock"}
             id={3}
           />
-          <MerchandiseItem
+           <MerchandiseItem
             image={
-              "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg"
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/4_xar3nt.jpg"
             }
-            category={"Từ Đây… Từ Nay…"}
-            productName={"Túi Tote"}
-            price={225000}
-            stockStatus={"out-stock"}
+            category={"TDTN"}
+            productName={"Túi tote TDTN"}
+            price={229000}
+            // stockStatus={"out-stock"}
             id={4}
+          />
+           <MerchandiseItem
+            image={
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/z6095929752842_19a8cd219f714d974007bb5ed8691029_meszcf.jpg"
+            }
+            category={"TDTN"}
+            productName={"Khăn Bandana TDTN"}
+            price={229000}
+            // stockStatus={"out-stock"}
+            id={5}
+            <MerchandiseItem
+            image={
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256404/pinTVMP1_baucid.jpg"
+            }
+            category={"TVMP"}
+            productName={"Pin TVMP"}
+            price={99000}
+            // stockStatus={"out-stock"}
+            id={6}
           />
         </div>
       </div>
