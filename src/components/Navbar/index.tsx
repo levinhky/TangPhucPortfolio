@@ -37,7 +37,8 @@ const Navbar = () => {
     if (
       pathname.includes("/merchandise/") ||
       pathname === "/contact" ||
-      pathname.includes("/schedule/")
+      pathname.includes("/schedule/") ||
+      pathname.includes("/about")
     ) {
       return null;
     }
@@ -59,7 +60,8 @@ const Navbar = () => {
     if (
       pathname.includes("/merchandise/") ||
       pathname === "/contact" ||
-      pathname.includes("/schedule/")
+      pathname.includes("/schedule/") ||
+      pathname.includes("/about")
     ) {
       setHaveBackground(false);
     } else {
