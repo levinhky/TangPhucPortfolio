@@ -6,10 +6,15 @@ export const formatPrice = (price: number) => {
   return `${price.toLocaleString("vi-VN")} VNĐ`;
 };
 
-export const formatDate = (date: any) => {
+export const formatDateWithDot = (date: any) => {
   const day = date.getDate().toString().padStart(2, "0");
   const month = (date.getMonth() + 1).toString().padStart(2, "0");
   return `${day}.${month}`;
+};
+
+export const formatDateWithSlash = (date: any) => {
+  const [year, month, day] = date.split("-");
+  return `${day}/${month}`;
 };
 
 export const formatVietnameseDate = (dateString: any) => {

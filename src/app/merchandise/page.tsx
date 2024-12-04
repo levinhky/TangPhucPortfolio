@@ -120,7 +120,7 @@ const MerchandiseList = () => {
             productName={"Pin TVMP"}
             price={99000}
             // stockStatus={"out-stock"}
-            id={6}
+            id={7}
           />
         </div>
       </div>

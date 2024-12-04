@@ -20,23 +20,6 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
     },
   ]);
 
-  const images = [
-    {
-      original:
-        "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg",
-      thumbnail:
-        "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg",
-    },
-  ];
-
-  const images2 = [
-    {
-      original:
-        "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731842716/462473598_846713767625801_8362309805917196511_n.jpg_s5xdrl.jpg",
-      thumbnail:
-        "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731842716/462473598_846713767625801_8362309805917196511_n.jpg_s5xdrl.jpg",
-    },
-  ];
   const { device } = useDetectDevice();
 
   // TODO: remove when have api
@@ -151,9 +134,9 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
         images: [
           {
             original:
-              "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg",
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/4_xar3nt.jpg",
             thumbnail:
-              "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731831577/463620900_946517870830211_4163009015280798425_n.jpg_yabvmy.jpg",
+              "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/4_xar3nt.jpg",
           },
         ],
       },
@@ -173,7 +156,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
   }, [id]);
 
   return (
-    <Container style="mt-[7%]">
+    <Container style="mt-[5%]">
       <div
         className="flex esm:flex-wrap gap-12 esm:gap-0 my-12 esm:my-0 justify-center"
         id="merchandise-detail"

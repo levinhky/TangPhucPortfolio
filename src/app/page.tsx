@@ -1,7 +1,7 @@
 import React from "react";
 import HeroBanner from "@/components/HeroBanner";
 import Playlist from "@/components/Playlist";
-import Schedule from "@/components/Schedule";
+import Schedule from "@/components/ScheduleHome";
 
 export default function Home() {
   return (

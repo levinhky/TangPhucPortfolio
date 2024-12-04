@@ -97,7 +97,10 @@
 .fc-direction-ltr .fc-list-table .fc-list-event-graphic {
   display: none;
 }
-
+.fc .fc-scroller-liquid-absolute,
+.fc .fc-scroller-harness {
+  overflow: visible !important;
+}
 #homeSlider .swiper-pagination-horizontal {
   left: 90%;
   width: fit-content;

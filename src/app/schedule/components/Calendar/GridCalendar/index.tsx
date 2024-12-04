@@ -12,83 +12,69 @@ import { formatVietnameseDate } from "@/utils/functions";
 const Modal = ({ onClose, calendarInfo }: any) => {
   const { title, start, extendedProps } = calendarInfo?.event || {};
   const { address, category, id, time } = extendedProps || {};
-  return (
-    <div className="absolute w-full z-10">
-      {/* Popup Modal */}
-      <div
-        style={{
-          bottom: 10,
-          left: "70%",
-        }}
-        className="absolute transform -translate-x-1/2 w-full max-w-2xl bg-white rounded-lg shadow-lg border border-gray-200"
-      >
-        {/* Header */}
-        <div className="p-4 flex justify-between items-center border-b border-gray-200">
-          <h3 className="text-lg flex gap-2 items-center justify-center font-semibold text-gray-800">
-            <Image
-              src={"/icons/calendar-blank.png"}
-              width={24}
-              height={24}
-              alt="calendar-blank"
-            />
-            {formatVietnameseDate(start)}
-          </h3>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-gray-700"
-          >
-            <Image
-              src={"/icons/close.png"}
-              width={24}
-              height={24}
-              alt="close"
-            />
-          </button>
-        </div>
+  if (!calendarInfo) {
+    return null;
+  }
 
-        {/* Events */}
-        <div className="p-4 space-y-4">
-          <div className="p-4 pt-0">
-            <h4 className="text-base font-semibold text-gray-800 mb-2">
-              {title}
-            </h4>
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-gray-600 flex items-center gap-2">
-                  <Image
-                    src={"/icons/clock.png"}
-                    width={24}
-                    height={24}
-                    alt="clock"
-                  />
-                  {time}
-                </p>
-                <p className="text-sm text-gray-600 flex items-center  gap-2 mt-1">
-                  <Image
-                    src={"/icons/marker.png"}
-                    width={24}
-                    height={24}
-                    alt="marker"
-                  />
-                  {address}
-                </p>
-                {/* <p className="text-sm text-gray-500 mt-1 ml-7">
-                    {address}
-                  </p> */}
-              </div>
-              <Link
-                href={`/schedule/${id}`}
-                className="h-10 border-[#003EA0] border px-4 rounded-lg  flex gap-2 items-center justify-center text-textSecondaryTwo text-sm font-medium"
-              >
-                Xem chi tiết
+  return (
+    <div className="absolute transform -translate-x-1/2 w-[500px] max-w-2xl bg-white rounded-lg shadow-lg border border-gray-200">
+      <div className="p-4 flex justify-between items-center border-b border-gray-200">
+        <h3 className="text-lg flex gap-2 items-center justify-center font-semibold text-gray-800">
+          <Image
+            src={"/icons/calendar-blank.png"}
+            width={24}
+            height={24}
+            alt="calendar-blank"
+          />
+          {formatVietnameseDate(start)}
+        </h3>
+        <button onClick={onClose} className="text-gray-400 hover:text-gray-700">
+          <Image src={"/icons/close.png"} width={24} height={24} alt="close" />
+        </button>
+      </div>
+
+      {/* Events */}
+      <div className="p-4 space-y-4">
+        <div className="p-4 pt-0">
+          <h4 className="text-base font-semibold text-gray-800 mb-2">
+            {title}
+          </h4>
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm text-gray-600 flex items-center gap-2">
                 <Image
-                  src={"/icons/arrow-right-primary.png"}
+                  src={"/icons/clock.png"}
                   width={24}
                   height={24}
-                  alt="arrow-right"
+                  alt="clock"
                 />
-              </Link>
+                {time}
+              </p>
+              <p className="text-sm text-gray-600 flex items-center  gap-2 mt-1">
+                <Image
+                  src={"/icons/marker.png"}
+                  width={24}
+                  height={24}
+                  alt="marker"
+                />
+                {address}
+              </p>
+              {/* <p className="text-sm text-gray-500 mt-1 ml-7">
+                    {address}
+                  </p> */}
             </div>
+            <Link
+              href={`/schedule/${id}`}
+              className="h-10 border-[#003EA0] border px-4 rounded-lg  flex gap-2 items-center justify-center text-textSecondaryTwo text-sm font-medium"
+            >
+              Xem chi tiết
+              <Image
+                src={"/icons/arrow-right-primary.png"}
+                width={24}
+                height={24}
+                alt="arrow-right"
+              />
+            </Link>
           </div>
         </div>
       </div>
@@ -129,11 +115,28 @@ const GridCalendar = ({
         }
         dayCellClassNames={"bg-custom-gradient"}
         viewClassNames={"grid-calendar-view"}
-        eventClassNames={"bg-transparent border-0 relative"}
+        eventClassNames={(eventInfo) => {
+          return [
+            `bg-transparent border-0 ${
+              calendarInfo &&
+              eventInfo.event._instance?.instanceId ===
+                calendarInfo.event._instance?.instanceId &&
+              "!z-[10]"
+            }`,
+          ];
+        }}
         eventTextColor={"#000054"}
-        eventDidMount={(eventInfo) => {
-          console.log("🚀 ~ eventInfo:", eventInfo);
-          return <Modal calendarInfo={eventInfo} onClose={onClose} />;
+        eventContent={(eventInfo) => {
+          return (
+            <>
+              <p className="overflow-hidden z-[4]">{eventInfo.event.title}</p>
+              {calendarInfo &&
+                eventInfo.event._instance?.instanceId ===
+                  calendarInfo.event._instance?.instanceId && (
+                  <Modal calendarInfo={calendarInfo} onClose={onClose} />
+                )}
+            </>
+          );
         }}
         showNonCurrentDates={false}
         height={700}
@@ -142,8 +145,6 @@ const GridCalendar = ({
         }}
         events={MOCK_DATA_EVENTS}
       />
-
-      {calendarInfo && <Modal calendarInfo={calendarInfo} onClose={onClose} />}
     </div>
   );
 };

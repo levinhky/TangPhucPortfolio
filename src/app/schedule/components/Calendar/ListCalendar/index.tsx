@@ -4,7 +4,7 @@ import Link from "next/link";
 import FullCalendar from "@fullcalendar/react";
 import listPlugin from "@fullcalendar/list";
 
-import { formatDate } from "@/utils/functions";
+import { formatDateWithDot } from "@/utils/functions";
 import Image from "next/image";
 import { MOCK_DATA_EVENTS } from "@/utils/constants";
 
@@ -19,7 +19,7 @@ const ListCalendar = ({
     return (
       <div className="event-card">
         <div className="flex items-center w-1/4 gap-10 justify-center">
-          <div className="event-date w-2/12">{formatDate(start)}</div>
+          <div className="event-date w-2/12">{formatDateWithDot(start)}</div>
           <button className="event-type w-[100px]">{category}</button>
         </div>
         <div className="flex esm:mt-3 esm:flex-wrap justify-between flex-1">

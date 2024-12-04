@@ -11,6 +11,7 @@ import MerchandiseBG from "./components/MerchandiseBG";
 const Navbar = () => {
   const [isShowModal, setShowModal] = useState<boolean>(false);
   const [isClicked, setClicked] = useState<boolean>(false);
+  const [haveBackground, setHaveBackground] = useState<boolean>(true);
   const pathname = usePathname();
 
   const toggleShowModal = useCallback(() => {
@@ -54,8 +55,20 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    if (
+      pathname.includes("/merchandise/") ||
+      pathname === "/contact" ||
+      pathname.includes("/schedule/")
+    ) {
+      setHaveBackground(false);
+    } else {
+      setHaveBackground(true);
+    }
+  }, [pathname]);
+
   return (
-    <Container style="mt-4 relative">
+    <Container style={`mt-4 relative ${!haveBackground ? "h-1" : "h-auto"}`}>
       {/* <div className="flex justify-end header"></div> */}
       <div className="menu bg-white w-10 h-10 rounded-lg">
         <button onClick={toggleShowModal}>
