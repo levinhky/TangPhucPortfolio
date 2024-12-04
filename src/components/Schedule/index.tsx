@@ -99,7 +99,7 @@ const Schedule = () => {
               "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733284295/z6095929752842_19a8cd219f714d974007bb5ed8691029_meszcf.jpg"
             }
             category={"TDTN"}
-            productName={"Khăn Bandada TDTN"}
+            productName={"Khăn Bandana TDTN"}
             price={99000}
             // stockStatus={"out-stock"}
             id={5}
