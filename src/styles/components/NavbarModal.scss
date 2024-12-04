@@ -11,8 +11,7 @@
 }
 .rotate-text-wrapper {
   position: absolute;
-  top: 50%;
-  margin-top: -25px;
+  top: 100%;
 }
 .rotate-text {
   writing-mode: vertical-lr;
@@ -57,7 +56,7 @@
 
 .navbar-modal-wrapper {
   position: absolute;
-  top: 0;
+  top: -10%;
   left: 200%;
   width: max-content;
 

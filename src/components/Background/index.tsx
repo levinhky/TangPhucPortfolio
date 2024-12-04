@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 const Background = ({ isHomeType }: { isHomeType: boolean }) => {
   return (
@@ -28,9 +28,10 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
           loop
           className="h-full"
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           id={isHomeType ? "homeSlider" : "backgroundSlider"}
         >
           <SwiperSlide>
