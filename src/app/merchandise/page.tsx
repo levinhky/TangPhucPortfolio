@@ -116,6 +116,7 @@ const MerchandiseList = () => {
             price={229000}
             // stockStatus={"out-stock"}
             id={5}
+          />
             <MerchandiseItem
             image={
               "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256404/pinTVMP1_baucid.jpg"
