@@ -130,6 +130,15 @@ const GridCalendar = ({
 
           return (
             <>
+              <div
+                  className="event-content rounded-md p-2"
+                  style={{
+                    backgroundColor: eventInfo.event.extendedProps.bgColor || "#FFF8DC", // Set custom background color
+                    border: "1px solid #ccc",
+                    borderRadius: "8px",
+                    position: "relative",
+                  }}
+                >
               <p className="break-words overflow-hidden z-[4]"
               style={{
                 wordWrap: "break-word",
