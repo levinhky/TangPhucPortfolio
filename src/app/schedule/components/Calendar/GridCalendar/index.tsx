@@ -127,9 +127,10 @@ const GridCalendar = ({
         }}
         eventTextColor={"#000054"}
         eventContent={(eventInfo) => {
+
           return (
             <>
-              <p className="overflow-hidden z-[4]">{eventInfo.event.title}</p>
+              <p className="break-words overflow-hidden z-[4]">{eventInfo.event.title}</p>
               {calendarInfo &&
                 eventInfo.event._instance?.instanceId ===
                   calendarInfo.event._instance?.instanceId && (
