@@ -125,27 +125,12 @@ const GridCalendar = ({
             }`,
           ];
         }}
-        eventTextColor={"#3A6C80"}
+        eventTextColor={"#722211"}
         eventContent={(eventInfo) => {
 
           return (
             <>
-            <div
-            className="event-content rounded-md p-2"
-            style={{
-              backgroundColor: eventInfo.event.extendedProps.bgColor || "#FFF8DC", // Set custom background color
-              border: "1px solid #ccc",
-              borderRadius: "8px",
-              position: "relative",
-            }}
-            >
-
-            </div>
               <p className="break-words overflow-hidden z-[4]"
-              style={{
-                wordWrap: "break-word",
-                color: eventInfo.event.extendedProps.textColor || "#3A6C80",
-              }}
               >{eventInfo.event.title}</p>
               {calendarInfo &&
                 eventInfo.event._instance?.instanceId ===
