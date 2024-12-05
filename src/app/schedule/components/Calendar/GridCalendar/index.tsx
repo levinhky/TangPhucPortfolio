@@ -130,13 +130,12 @@ const GridCalendar = ({
 
           return (
             <>
-            <div
-            className="event-content bg-blue-100 rounded-md p-2"
-            style={{
-              backgroundColor: eventInfo.event.extendedProps.bgColor || "#3A6C80", // Use event-specific color if provided
-            }}
-            ></div>
-              <p className="break-words overflow-hidden z-[4]">{eventInfo.event.title}</p>
+              <p className="break-words overflow-hidden z-[4]"
+              style={{
+                wordWrap: "break-word",
+                color: eventInfo.event.extendedProps.textColor || "#FFC96D",
+              }}
+              >{eventInfo.event.title}</p>
               {calendarInfo &&
                 eventInfo.event._instance?.instanceId ===
                   calendarInfo.event._instance?.instanceId && (
