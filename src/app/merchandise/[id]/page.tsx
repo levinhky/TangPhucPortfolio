@@ -214,7 +214,14 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
             />
             Trả về trang sản phẩm
           </Link>
-          <div className="w-full flex">
+          <ImageGallery
+            items={gallery}
+            showBullets
+            showPlayButton={false}
+            showThumbnails={device === "mobile" ? false : true}
+            showFullscreenButton={false}
+          />
+          {/* <div className="w-full flex">
             <Swiper
               loop={true}
               spaceBetween={10}
@@ -239,10 +246,10 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
                   </div>
                 </SwiperSlide>
               ))}
-            </Swiper>
+            </Swiper> */}
 
             {/* Thumbnail */}
-            <Swiper
+            {/* <Swiper
               onSwiper={setThumbsSwiper}
               loop={true}
               spaceBetween={12}
@@ -265,8 +272,8 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
                   </button>
                 </SwiperSlide>
               ))}
-            </Swiper>
-          </div>
+            </Swiper> */}
+          {/* </div> */}
         </div>
 
         <div className="content basis-[50%] esm:basis-full esm:mb-7 mt-[10%]">
