@@ -79,7 +79,6 @@
 .grid-calendar-view .fc-scrollgrid-sync-table tbody tr td,
 .grid-calendar-view .fc-scrollgrid-sync-table tbody tr th {
   border-color: #7096d1 !important;
-  height: 150px;
 }
 .grid-calendar-view .fc-scrollgrid-sync-table tbody tr:last-child td:last-child,
 .grid-calendar-view th:last-child {
