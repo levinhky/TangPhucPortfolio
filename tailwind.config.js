@@ -14,6 +14,9 @@ module.exports = {
         "custom-gradient":
           "linear-gradient(162.68deg, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%)",
       },
+      aspectRatio: {
+        "360/360": "360/360",
+      },
       screens: {
         esm: { min: "320px", max: "768px" }, // extra small mobile
       },

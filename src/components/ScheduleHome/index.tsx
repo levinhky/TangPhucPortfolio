@@ -8,7 +8,7 @@ import { formatDateWithSlash, getScheduleHomeList } from "@/utils/functions";
 const Schedule = () => {
   return (
     <Container style="mt-10 esm:mt-5 flex items-center flex-col">
-      <div className="schedule-news relative">
+      <div className="schedule-news">
         <h6 className="main-title text-center">Sự kiện sắp tới</h6>
         <div className="schedule-list">
           {getScheduleHomeList(MOCK_DATA_EVENTS)

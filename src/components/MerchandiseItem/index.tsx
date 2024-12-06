@@ -22,14 +22,14 @@ const MerchandiseItem = (props: MerchandiseItemProps) => {
     stockStatus = "in-stock",
   } = props;
   return (
-    <div className="merchandise-item flex flex-col">
+    <div className="merchandise-item flex flex-col max-w-[360px] mb-5">
       <div className="m-auto">
         <Link href={`/merchandise/${id}`} className="image">
           <Image
             src={image}
-            width={400}
-            height={400}
-            className="rounded-lg"
+            width={360}
+            height={360}
+            className="rounded-lg aspect-360/360"
             alt="ao"
           />
         </Link>

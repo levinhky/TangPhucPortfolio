@@ -7,6 +7,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ImageGallery from "react-image-gallery";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
 const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
   const { id } = params || {};
 
@@ -19,6 +27,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
       thumbnail: "",
     },
   ]);
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
   const { device } = useDetectDevice();
 
@@ -205,13 +214,59 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
             />
             Trả về trang sản phẩm
           </Link>
-          <ImageGallery
-            items={gallery}
-            showBullets
-            showPlayButton={false}
-            showThumbnails={device === "mobile" ? false : true}
-            showFullscreenButton={false}
-          />
+          <div className="w-full flex">
+            <Swiper
+              loop={true}
+              spaceBetween={10}
+              navigation={true}
+              thumbs={{
+                swiper:
+                  thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+              }}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="h-96 w-full rounded-lg"
+            >
+              {gallery.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex h-full w-full items-center justify-center">
+                    <Image
+                      width={100}
+                      height={100}
+                      src={image.original}
+                      alt={image.thumbnail}
+                      className="block h-full w-full object-cover"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            {/* Thumbnail */}
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              loop={true}
+              spaceBetween={12}
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="thumbs mt-3 h-32 w-full rounded-lg"
+            >
+              {gallery.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <button className="flex h-full w-full items-center justify-center">
+                    <Image
+                      width={100}
+                      height={100}
+                      src={image.original}
+                      alt={image.thumbnail}
+                      className="block h-full w-full object-cover"
+                    />
+                  </button>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
 
         <div className="content basis-[50%] esm:basis-full esm:mb-7 mt-[10%]">
