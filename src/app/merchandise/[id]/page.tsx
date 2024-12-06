@@ -214,13 +214,15 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
             />
             Trả về trang sản phẩm
           </Link>
-          <ImageGallery
+        <div>
+        <ImageGallery
             items={gallery}
             showBullets
             showPlayButton={false}
             showThumbnails={device === "mobile" ? false : true}
             showFullscreenButton={false}
           />
+        </div>
           {/* <div className="w-full flex">
             <Swiper
               loop={true}
