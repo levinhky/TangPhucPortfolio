@@ -29,7 +29,7 @@ const MerchandiseItem = (props: MerchandiseItemProps) => {
             src={image}
             width={360}
             height={360}
-            className="rounded-lg aspect-360/360"
+            className="rounded-xl aspect-360/360"
             alt="ao"
           />
         </Link>

@@ -205,11 +205,12 @@ const Playlist = () => {
           return (
             <SwiperSlide>
               <div className="playlist-item flex flex-col p-5 pt-0 h-[auto] min-h-[486px]">
-                <div className="playlist-item-thumbnail m-auto">
+                <div className="playlist-item-thumbnail mt-5">
                   <Image
                     src={item.image}
-                    width={290}
-                    height={290}
+                    width={280}
+                    height={280}
+                    className="rounded-lg aspect-280/280"
                     alt="thumbnail"
                   />
                   <h1 className="sub-title--bold mt-3">{item.songName}</h1>

@@ -16,6 +16,7 @@ module.exports = {
       },
       aspectRatio: {
         "360/360": "360/360",
+        "280/280": "280/280",
       },
       screens: {
         esm: { min: "320px", max: "768px" }, // extra small mobile
