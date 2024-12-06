@@ -1,5 +1,6 @@
-import Container from "@/themes/Container";
 import Image from "next/image";
+
+import Container from "@/themes/Container";
 
 const AboutPage = () => {
   return (
@@ -10,7 +11,7 @@ const AboutPage = () => {
             src={"/pages/about/tudaytunay.png"}
             width={440}
             height={588}
-            className="rounded-[20px]"
+            className="rounded-[20px] aspect-438/588"
             alt="image"
           />
         </div>
@@ -61,16 +62,10 @@ const AboutPage = () => {
               </td>
             </tr>
           </table>
-          <div
-            className="px-6 py-10 rounded-lg shadow-lg mr-14 relative"
-            style={{
-              background:
-                "linear-gradient(162.68deg, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%)",
-            }}
-          >
+          <div className="px-6 py-10 rounded-lg shadow-lg mr-14 relative bg-custom-gradient">
             <strong className="font-semibold text-textPrimary">
               [Quote/Slogan]
-            </strong>{" "}
+            </strong>
             <br />
             <p className="font-normal text-textSecondaryTwo">
               Cố gắng vì nhau và vui vẻ mỗi ngày nha !

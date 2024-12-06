@@ -17,8 +17,8 @@ const Modal = ({ onClose, calendarInfo }: any) => {
   }
 
   return (
-    <div className="absolute transform -translate-x-1/2 w-[500px] max-w-2xl bg-white rounded-lg shadow-lg border border-gray-200">
-      <div className="p-4 flex justify-between items-center border-b border-gray-200">
+    <div className="absolute transform -top-10 -translate-x-1/2 w-[500px] max-w-2xl bg-custom-gradient rounded-lg shadow-lg border border-[#7096D1] backdrop-blur-md">
+      <div className="p-4 flex justify-between items-center border-b border-[#7096D1]">
         <h3 className="text-lg flex gap-2 items-center justify-center font-semibold text-gray-800">
           <Image
             src={"/icons/calendar-blank.png"}
@@ -93,7 +93,7 @@ const GridCalendar = ({
 
   return (
     <div className="w-4/5 esm:w-full esm:mt-5 mx-auto">
-      <div className="grid grid-cols-7 mb-7 rounded-lg border border-[#003EA0]">
+      <div className="grid grid-cols-7 mb-7 rounded-lg border bg-custom-gradient border-[#003EA0]">
         <div className="text-center relative day-header py-2">Thứ hai</div>
         <div className="text-center relative day-header py-2">Thứ ba</div>
         <div className="text-center relative day-header py-2">Thứ tư</div>
@@ -111,9 +111,8 @@ const GridCalendar = ({
         dayHeaderFormat={{ weekday: "long" }}
         headerToolbar={false}
         dayHeaderClassNames={
-          "!py-2 font-semibold bg-custom-gradient !align-middle hidden !border-[#7096D1]"
+          "!py-2 font-semibold !align-middle hidden !border-[#7096D1]"
         }
-        dayCellClassNames={"bg-custom-gradient"}
         viewClassNames={"grid-calendar-view"}
         eventClassNames={(eventInfo) => {
           return [
@@ -125,13 +124,13 @@ const GridCalendar = ({
             }`,
           ];
         }}
-        eventTextColor={"#722211"}
+        eventTextColor={"#000054"}
         eventContent={(eventInfo) => {
-
           return (
             <>
-              <p className="break-words overflow-hidden z-[4]"
-              >{eventInfo.event.title}</p>
+              <p className="break-words overflow-hidden z-[4]">
+                {eventInfo.event.title}
+              </p>
               {calendarInfo &&
                 eventInfo.event._instance?.instanceId ===
                   calendarInfo.event._instance?.instanceId && (

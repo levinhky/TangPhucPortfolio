@@ -40,7 +40,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
                 src={"/header-banner.png"}
                 alt="Background"
                 fill
-                className="object-cover"
+                className="object-cover aspect-1376/770"
                 priority
               />
             </div>
@@ -51,7 +51,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
                 src={"https://res.cloudinary.com/dwmpmry2n/image/upload/v1733255909/FullSizeRender_6_puqwiv.jpg"}
                 alt="Background"
                 fill
-                className="object-cover"
+                className="object-cover aspect-1376/770"
                 priority
               />
             </div>
@@ -62,7 +62,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
                 src={"https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256055/z5877654697071_40516958389f1c322d44e5f3523db66d_yb9mlm.jpg"}
                 alt="Background"
                 fill
-                className="object-cover"
+                className="object-cover aspect-1376/770"
                 priority
               />
             </div>

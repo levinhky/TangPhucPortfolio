@@ -79,6 +79,7 @@
 .grid-calendar-view .fc-scrollgrid-sync-table tbody tr td,
 .grid-calendar-view .fc-scrollgrid-sync-table tbody tr th {
   border-color: #7096d1 !important;
+  height: 150px;
 }
 .grid-calendar-view .fc-scrollgrid-sync-table tbody tr:last-child td:last-child,
 .grid-calendar-view th:last-child {
@@ -106,6 +107,7 @@
   width: fit-content;
 }
 
+#swiperGallery .swiper-pagination-bullet,
 #homeSlider .swiper-pagination-bullet,
 #backgroundSlider .swiper-pagination-bullet {
   width: 12px;
@@ -114,7 +116,17 @@
   opacity: 1;
 }
 
+#swiperGallery .swiper-pagination-bullet-active,
 #homeSlider .swiper-pagination-bullet-active,
 #backgroundSlider .swiper-pagination-bullet-active {
   background: #fff;
+}
+.fc .fc-daygrid-day-frame {
+  background-color: #f7f9fc !important;
+}
+.fc-daygrid-event {
+  white-space: normal !important;
+  align-items: normal !important;
+  padding: 0 16px;
+  margin-top: 16px !important;
 }
