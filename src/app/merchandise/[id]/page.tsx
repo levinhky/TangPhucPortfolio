@@ -14,6 +14,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import ReactImageGallery from "react-image-gallery";
 
 const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
   const { id } = params || {};
@@ -215,7 +216,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
             Trả về trang sản phẩm
           </Link>
         <div>
-        <ImageGallery
+        <ReactImageGallery
             items={gallery}
             showBullets
             showPlayButton={false}
