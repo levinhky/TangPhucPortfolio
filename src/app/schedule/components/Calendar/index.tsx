@@ -62,7 +62,7 @@ const CalendarView = () => {
         </div>
       </div>
 
-      <div className="flex justify-end items-center gap-4 mt-5 mb-10">
+      <div className={`flex justify-end items-center gap-4 mb-5 ${gridType ? 'w-[90%]' : 'w-full'}`}>
         <p className="text-primary font-semibold">Xem dạng</p>
         <div className="flex gap-2">
           <button

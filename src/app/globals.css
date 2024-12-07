@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -78,7 +79,11 @@
 }
 .grid-calendar-view .fc-scrollgrid-sync-table tbody tr td,
 .grid-calendar-view .fc-scrollgrid-sync-table tbody tr th {
-  border-color: #7096d1 !important;
+  border: 1px solid #7096d1 !important;
+}
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-width: 0;
 }
 .grid-calendar-view .fc-scrollgrid-sync-table tbody tr:last-child td:last-child,
 .grid-calendar-view th:last-child {
@@ -101,11 +106,54 @@
 .fc .fc-scroller-harness {
   overflow: visible !important;
 }
+.fc
+  .fc-scrollgrid-section
+  table
+  tbody
+  tr:first-child
+  td:first-child
+  .fc-daygrid-day-frame:first-child {
+  border-top-left-radius: 8px;
+}
+
+.fc
+  .fc-scrollgrid-section
+  table
+  tbody
+  tr:first-child
+  td:last-child
+  .fc-daygrid-day-frame:last-child {
+  border-top-right-radius: 8px;
+}
+.fc
+  .fc-scrollgrid-section
+  table
+  tbody
+  tr:last-child
+  td:first-child
+  .fc-daygrid-day-frame:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.fc
+  .fc-scrollgrid-section
+  table
+  tbody
+  tr:last-child
+  td:last-child
+  .fc-daygrid-day-frame:last-child {
+  border-bottom-right-radius: 8px;
+}
+.fc .fc-scrollgrid-section,
+.fc .fc-scrollgrid-section table,
+.fc .fc-scrollgrid-section > td {
+  height: 0 !important;
+}
+
 #homeSlider .swiper-pagination-horizontal {
   left: 90%;
   width: fit-content;
 }
-
 #swiperGallery .swiper-pagination-bullet,
 #homeSlider .swiper-pagination-bullet,
 #backgroundSlider .swiper-pagination-bullet {
@@ -122,6 +170,13 @@
 }
 .fc .fc-daygrid-day-frame {
   background-color: #f7f9fc !important;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fc .fc-daygrid-body-natural .fc-daygrid-day-events {
+  margin-top: auto !important;
 }
 .fc-daygrid-event {
   white-space: normal !important;

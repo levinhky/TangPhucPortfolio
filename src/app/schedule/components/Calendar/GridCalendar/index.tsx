@@ -140,7 +140,7 @@ const GridCalendar = ({
           );
         }}
         showNonCurrentDates={false}
-        height={700}
+        height={'auto'}
         eventClick={(eventInfo) => {
           setCalendarInfo(eventInfo);
         }}
