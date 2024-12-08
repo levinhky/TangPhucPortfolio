@@ -49,7 +49,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
             height={100}
             src={image.original}
             alt={image.thumbnail}
-            className="aspect-100/100 rounded-xl"
+            className="aspect-100/100 rounded-xl cursor-pointer"
           />
         </SwiperSlide>
       ))}
@@ -71,7 +71,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
         />
       </button>
       <button
-        className="w-10 h-10 bg-white rounded-lg flex items-center justify-center cursor-pointer"
+        className="w-10 h-10 bg-white rounded-lg flex items-center justify-center"
         onClick={handleNext}
       >
         <Image src={"/icons/next.png"} width={24} height={24} alt="next-icon" />
