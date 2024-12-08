@@ -68,7 +68,7 @@ const NavbarModal = ({
             {SOCIAL_LINKS.map((item, index) => {
               return (
                 <React.Fragment key={`keyNoteCham${index}`}>
-                  <div className="social-links flex esm:flex-wrap gap-4 mt-4">
+                  <div className="social-links flex flex-wrap gap-4 mt-4">
                     {item.links.map((item, index) => {
                       return (
                         <a
