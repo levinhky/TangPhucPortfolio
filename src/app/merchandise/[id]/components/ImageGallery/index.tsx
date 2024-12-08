@@ -71,7 +71,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
         />
       </button>
       <button
-        className="w-10 h-10 bg-white rounded-lg flex items-center justify-center"
+        className="w-10 h-10 bg-white rounded-lg flex items-center justify-center cursor-pointer"
         onClick={handleNext}
       >
         <Image src={"/icons/next.png"} width={24} height={24} alt="next-icon" />
