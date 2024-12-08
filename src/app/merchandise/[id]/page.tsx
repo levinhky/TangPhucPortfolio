@@ -220,7 +220,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
   );
 
   const renderVariants = () => (
-    <div className="flex gap-[10%]">
+    <div className="flex gap-[10%] esm:flex-wrap">
       <div className="flex flex-col">
         <p className="font-semibold">Màu sắc</p>
         <div className="flex gap-4">
@@ -261,7 +261,7 @@ const MerchandiseDetail = ({ params }: { params: { id: string } }) => {
           <ImageGallery images={gallery} />
         </div>
 
-        <div className="content basis-[50%] esm:basis-full esm:mb-7 mt-[10%]">
+        <div className="content basis-[50%] esm:basis-full esm:mb-7 mt-[10%] esm:mt-0">
           <h1 className="font-semibold text-2xl mb-4">{title}</h1>
           <h2 className="sub-title--small !text-textSecondaryTwo">
             Lorem ipsum dolor sit amet consectetur. Vitae velit volutpat aliquam

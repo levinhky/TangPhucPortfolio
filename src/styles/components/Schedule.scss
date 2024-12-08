@@ -80,7 +80,7 @@
     color: $primary-color;
 
     @include respond(extra-small-mobile) {
-      font-size: 90px;
+      font-size: 50px;
     }
   }
 
@@ -125,6 +125,10 @@
     left: 20%;
     color: $black-three;
 
+    @include respond(extra-small-mobile) {
+      left: 0%;
+    }
+
     img {
       transform: rotate(180deg);
     }
@@ -133,6 +137,10 @@
   .nav-link.next {
     right: 20%;
     color: $black-three;
+
+    @include respond(extra-small-mobile) {
+      right: 0%;
+    }
   }
 
   .event-card {
@@ -143,7 +151,6 @@
     font-family: Arial, sans-serif;
     @include respond(extra-small-mobile) {
       padding: 0;
-      display: block;
     }
   }
 

@@ -204,7 +204,7 @@ const Playlist = () => {
         {MOCK_DATA.map((item, index) => {
           return (
             <SwiperSlide>
-              <div className="playlist-item flex flex-col p-5 pt-0 h-[auto] min-h-[486px]">
+              <div className="playlist-item flex flex-col p-5 pt-0 h-[auto]">
                 <div className="playlist-item-thumbnail mt-5">
                   <Image
                     src={item.image}
@@ -215,7 +215,7 @@ const Playlist = () => {
                   />
                   <h1 className="sub-title--bold mt-3">{item.songName}</h1>
                 </div>
-                <div className="playlist-item-content--bottom mt-auto">
+                <div className="playlist-item-content--bottom">
                   <div className="playlist-item-volume">
                     <input
                       type="range"
@@ -225,7 +225,7 @@ const Playlist = () => {
                       onChange={handleSliderChange}
                       style={sliderBackground}
                     />
-                    <div className="flex justify-between">
+                    <div className="flex justify-between my-2">
                       <span id="current-time" className="sub-title--small">
                         0:00
                       </span>

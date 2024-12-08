@@ -31,7 +31,7 @@ const MerchandiseList = () => {
   const handleActiveCategory = (type: string) => () => setCategoryActive(type);
 
   return (
-    <Container style="py-7 merchandise flex flex-col items-center">
+    <Container style="py-7 esm:pt-0 merchandise flex flex-col items-center">
       <div className="merchandise-list  esm:mt-12">
         <div className="flex items-center justify-center gap-4">
           <div

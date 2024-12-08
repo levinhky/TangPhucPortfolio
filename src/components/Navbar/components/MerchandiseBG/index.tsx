@@ -3,7 +3,7 @@ import Image from "next/image";
 const MerchandiseBG = () => {
   return (
     <div
-      className="wrapper flex items-center justify-center relative container mx-auto mb-5"
+      className="wrapper flex items-center justify-center relative container mx-auto mb-5 esm:mb-0"
       id="hero-banner"
     >
       <Image
@@ -14,7 +14,7 @@ const MerchandiseBG = () => {
         className="hero-image !w-[470px]"
         alt="hero-banner"
       />
-      <h1 className="artist-name center-abs !left-1/2 !top-[80%]">Merchandise</h1>
+      <h1 className="artist-name center-abs !left-1/2 !top-[80%] esm:!text-6xl">Merchandise</h1>
     </div>
   );
 };

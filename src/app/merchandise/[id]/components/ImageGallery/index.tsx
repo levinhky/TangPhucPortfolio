@@ -101,7 +101,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 height={438}
                 src={image.original}
                 alt={image.thumbnail}
-                className="aspect-438/438"
+                className="aspect-438/438 esm:aspect-auto"
               />
             </div>
           </SwiperSlide>

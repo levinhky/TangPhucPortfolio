@@ -36,33 +36,35 @@ const CalendarView = () => {
         <p className="font-semibold text-textSecondaryTwo text-2xl esm:text-3xl">
           Lịch hoạt động
         </p>
-        <div className="nav-container">
-          <button
-            className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white prev"
-            onClick={goPrev}
-          >
-            <Image
-              src={"/icons/next.png"}
-              width={20}
-              height={20}
-              alt="grid-menu"
-            />
-          </button>
-          <button
-            className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white next"
-            onClick={goNext}
-          >
-            <Image
-              src={"/icons/next.png"}
-              width={20}
-              height={20}
-              alt="grid-menu"
-            />
-          </button>
-        </div>
+        <button
+          className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white prev"
+          onClick={goPrev}
+        >
+          <Image
+            src={"/icons/next.png"}
+            width={20}
+            height={20}
+            alt="grid-menu"
+          />
+        </button>
+        <button
+          className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white next"
+          onClick={goNext}
+        >
+          <Image
+            src={"/icons/next.png"}
+            width={20}
+            height={20}
+            alt="grid-menu"
+          />
+        </button>
       </div>
 
-      <div className={`flex justify-end items-center gap-4 mb-5 ${gridType ? 'w-[90%]' : 'w-full'}`}>
+      <div
+        className={`flex justify-end items-center gap-4 mb-5 ${
+          gridType ? "w-[90%]" : "w-full"
+        }`}
+      >
         <p className="text-primary font-semibold">Xem dạng</p>
         <div className="flex gap-2">
           <button

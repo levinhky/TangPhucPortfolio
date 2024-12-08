@@ -11,7 +11,7 @@ const ScheduleBG = () => {
         width={0}
         height={0}
         sizes="100vw"
-        className="hero-image !w-[470px] relative left-[20%]"
+        className="hero-image !w-[470px] relative left-[20%] esm:left-0"
         alt="hero-banner"
       />
       <h1 className="artist-name center-abs !left-[40%]">Next</h1>

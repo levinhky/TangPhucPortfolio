@@ -71,13 +71,13 @@ const Navbar = () => {
 
   return (
     <Container style={`mt-4 relative ${!haveBackground ? "h-1" : "h-auto"}`}>
-      {/* <div className="flex justify-end header"></div> */}
-      <div className="menu bg-white w-10 h-10 rounded-lg">
+      <div className="menu bg-white w-10 h-10 esm:w-[20px] esm:h-[20px] rounded-lg esm:rounded-md esm:!-top-[10px] esm:!-right-[10px]">
         <button onClick={toggleShowModal}>
           <Image
             src={"/icons/hamburger.png"}
             width={20}
             height={20}
+            className="esm: w-[10px] esm:h-[10px]"
             alt="hamburger-icon"
           />
         </button>

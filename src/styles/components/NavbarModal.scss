@@ -9,31 +9,18 @@
   bottom: 0;
   z-index: 999;
 }
-.rotate-text-wrapper {
-  position: absolute;
-  top: 100%;
-}
-.rotate-text {
-  writing-mode: vertical-lr;
-  transform: rotate(360);
-  color: $primary-color;
-  opacity: 0.6;
-  font-size: 125px;
-  font-family: $bodoni-moda;
-  font-style: italic;
-}
 #navbar-modal-artist {
-  #modal-background-artist {
-    width: 400px;
+  #modal-background-image {
+    width: 500px;
     position: relative;
     margin-top: -17%;
-    margin-left: 20%;
   }
   .name {
     font-size: 200px;
     color: $white;
     font-family: $bodoni-moda;
     font-style: italic;
+    font-weight: 500;
 
     @include respond(extra-small-mobile) {
       font-size: 100px;
@@ -41,31 +28,25 @@
 
     &:nth-of-type(1) {
       top: 30%;
-      left: 50%;
+      left: 25%;
+
+      @include respond(extra-small-mobile) {
+        top: 20%;
+        left: 40%;
+      }
     }
     &:nth-of-type(2) {
       z-index: 21;
-      left: 70%;
+      left: 30%;
       top: 70%;
       @include respond(extra-small-mobile) {
-        left: 75%;
+        left: 50%;
+        top: 40%;
       }
     }
   }
 }
 
-.navbar-modal-wrapper {
-  position: absolute;
-  top: -10%;
-  left: 200%;
-  width: max-content;
-
-  @include respond(extra-small-mobile) {
-    left: 0;
-    top: 15%;
-    width: fit-content;
-  }
-}
 .navbar-modal-link {
   text-align: right;
   a {
