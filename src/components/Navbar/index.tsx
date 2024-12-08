@@ -77,7 +77,7 @@ const Navbar = () => {
             src={"/icons/hamburger.png"}
             width={20}
             height={20}
-            className="esm: w-[10px] esm:h-[10px]"
+            className="esm:w-[10px] esm:h-[10px]"
             alt="hamburger-icon"
           />
         </button>
