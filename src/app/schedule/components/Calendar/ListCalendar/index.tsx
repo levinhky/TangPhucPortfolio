@@ -18,7 +18,7 @@ const ListCalendar = ({
     const { address, category, id } = extendedProps || {};
     return (
       <div className="event-card">
-        <div className="flex items-center w-[20%] gap-10 justify-between">
+        <div className="flex items-center w-[20%] esm:w-full gap-10 justify-between">
           <div className="event-date w-2/12">{formatDateWithDot(start)}</div>
           <button className="event-type w-[100px]">{category}</button>
         </div>

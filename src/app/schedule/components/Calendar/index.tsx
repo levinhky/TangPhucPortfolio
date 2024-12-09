@@ -31,9 +31,9 @@ const CalendarView = () => {
 
   return (
     <div id="schedule-list">
-      <div className="flex flex-col mx-auto items-center esm:justify-between esm:w-full relative">
+      <div className="flex flex-col mx-auto items-center esm:justify-between esm:w-full esm:mb-5 relative">
         <strong className="month">Tháng {currentMonth}</strong>
-        <p className="font-semibold text-textSecondaryTwo text-2xl esm:text-3xl">
+        <p className="font-semibold text-textSecondaryTwo text-2xl esm:text-xl">
           Lịch hoạt động
         </p>
         <button
@@ -62,7 +62,7 @@ const CalendarView = () => {
 
       <div
         className={`flex justify-end items-center gap-4 mb-5 ${
-          gridType ? "w-[90%]" : "w-full"
+          gridType ? "w-[90%] esm:w-full" : "w-full"
         }`}
       >
         <p className="text-primary font-semibold">Xem dạng</p>

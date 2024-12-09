@@ -184,3 +184,14 @@
   padding: 0 16px;
   margin-top: 16px !important;
 }
+
+@media only screen and (max-width: 479px) {
+  .fc .fc-daygrid-day-frame {
+    height: 75px;
+  }
+
+  .fc-daygrid-event {
+    margin-top: 0px !important;
+    white-space: nowrap !important;
+  }
+}
