@@ -199,3 +199,13 @@ export const MOCK_DATA_EVENTS = [
     },
   },
 ];
+
+export const DAYS_OF_WEEK = [
+  { full: "Thứ hai", short: "Hai" },
+  { full: "Thứ ba", short: "Ba" },
+  { full: "Thứ tư", short: "Tư" },
+  { full: "Thứ năm", short: "Năm" },
+  { full: "Thứ sáu", short: "Sáu" },
+  { full: "Thứ bảy", short: "Bảy" },
+  { full: "Chủ nhật", short: "CN" },
+];

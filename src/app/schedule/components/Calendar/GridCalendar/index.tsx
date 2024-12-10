@@ -6,8 +6,9 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import Image from "next/image";
 import Link from "next/link";
-import { MOCK_DATA_EVENTS } from "@/utils/constants";
+import { DAYS_OF_WEEK, MOCK_DATA_EVENTS } from "@/utils/constants";
 import { formatVietnameseDate } from "@/utils/functions";
+import useDetectDevice from "@/hooks/useDetectDevice";
 
 const Modal = ({ onClose, calendarInfo }: any) => {
   const { title, start, extendedProps } = calendarInfo?.event || {};
@@ -91,16 +92,18 @@ const GridCalendar = ({
 
   const onClose = () => setCalendarInfo(false);
 
+  const { device } = useDetectDevice();
+
   return (
     <div className="w-4/5 esm:w-full esm:mt-5 mx-auto">
       <div className="grid grid-cols-7 mb-7 rounded-lg border bg-custom-gradient border-[#003EA0]">
-        <div className="text-center relative day-header py-2">Thứ hai</div>
-        <div className="text-center relative day-header py-2">Thứ ba</div>
-        <div className="text-center relative day-header py-2">Thứ tư</div>
-        <div className="text-center relative day-header py-2">Thứ năm</div>
-        <div className="text-center relative day-header py-2">Thứ sáu</div>
-        <div className="text-center relative day-header py-2">Thứ bảy</div>
-        <div className="text-center relative day-header py-2">Chủ nhật</div>
+        {DAYS_OF_WEEK.map((day) => {
+          return (
+            <div className="text-center relative day-header py-2">
+              {device === "mobile" ? day.short : day.full}
+            </div>
+          );
+        })}
       </div>
       <FullCalendar
         ref={calendarRef}
@@ -140,7 +143,7 @@ const GridCalendar = ({
           );
         }}
         showNonCurrentDates={false}
-        height={'auto'}
+        height={"auto"}
         eventClick={(eventInfo) => {
           setCalendarInfo(eventInfo);
         }}
