@@ -64,8 +64,20 @@ export const MOCK_DATA_EVENTS = [
     extendedProps: {
       address: "TP. HCM",
       category: "MINISHOW",
-      time: "17:00 - 18:00",
-      id: 1,
+      time: "20:00 - 22:00",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165089/2111_te0gc5.jpg',
+      posterLink: 'https://www.facebook.com/share/p/1DWUqANkiQ/?mibextid=WC7FNe'
+    },
+  },
+  {
+    title: "Mini Fan Meeting with Kay Tran",
+    start: "2024-11-21",
+    extendedProps: {
+      address: "TP. Da Lat",
+      category: "FanMeeting",
+      time: "18:00 - 20:00",
+      posterUrl: '..',
+      posterLink: '..'
     },
   },
   {
@@ -74,8 +86,9 @@ export const MOCK_DATA_EVENTS = [
     extendedProps: {
       address: "Đà Lạt",
       category: "MINISHOW",
-      time: "17:00 - 18:30",
-      id: 2,
+      time: "17:00 - 20:30",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165253/mlt2311_jvwbqc.png',
+      posterLink: 'https://maylangthang.com.vn/mp_show/tp-2311/'
     },
   },
   {
@@ -84,8 +97,9 @@ export const MOCK_DATA_EVENTS = [
     extendedProps: {
       address: "Hà Nội",
       category: "MINISHOW",
-      time: "17:00 - 18:30",
-      id: 3,
+      time: "20:00 - 23:00",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165485/slay1_ofhrte.jpg',
+      posterLink: 'https://www.facebook.com/profile.php?id=61562460471546'
     },
   },
   {
@@ -94,8 +108,9 @@ export const MOCK_DATA_EVENTS = [
     extendedProps: {
       address: "Hà Nội",
       category: "MINISHOW",
-      time: "17:00 - 18:30",
-      id: 4,
+      time: "21:00 - 23:30",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165574/slay2_apg2pg.jpg',
+      posterLink: 'https://www.facebook.com/profile.php?id=61562460471546'
     },
   },
   {
@@ -105,7 +120,8 @@ export const MOCK_DATA_EVENTS = [
       address: "Paris Garden, T.P Hồ Chí Minh ",
       category: "MINISHOW",
       time: "17:00 - 18:30",
-      id: 5,
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166616/3011_keaout.jpg',
+      posterLink: '....'
     },
   },
   {
@@ -115,7 +131,8 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh ",
       category: "OTHER",
       time: "17:00 - 18:30",
-      id: 6,
+      posterUrl: '.....',
+      posterLink: '....'
     },
   },
   {
@@ -125,7 +142,8 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh",
       category: "OTHER",
       time: "17:00 - 18:30",
-      id: 7,
+      posterUrl: '.....',
+      posterLink: '....'
     },
   },
   {
@@ -135,7 +153,8 @@ export const MOCK_DATA_EVENTS = [
       address: "Hà Nội",
       category: "CONCERT",
       time: "17:00 - 18:30",
-      id: 8,
+      posterUrl: '.....',
+      posterLink: '....'
     },
   },
   {
@@ -145,7 +164,8 @@ export const MOCK_DATA_EVENTS = [
       address: "Hà Nội",
       category: "OTHER",
       time: "17:00 - 18:30",
-      id: 9,
+      posterUrl: '.....',
+      posterLink: '....'
     },
   },
   {
@@ -155,7 +175,8 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh",
       category: "MINISHOW",
       time: "17:00 - 18:30",
-      id: 10,
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165674/slay3_l1c7hj.jpg',
+      posterLink: 'https://metaticket.com.vn/show/671d15f75a85647986197ca9'
     },
   },
   {
@@ -165,7 +186,8 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh",
       category: "MINISHOW",
       time: "17:00 - 18:30",
-      id: 11,
+      posterUrl: '.....',
+      posterLink: '....'
     },
   },
   {
@@ -175,7 +197,8 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh",
       category: "MINISHOW",
       time: "17:00 - 18:30",
-      id: 12,
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165814/2212_zhbupj.jpg',
+      posterLink: '....'
     },
   },
   {
@@ -185,7 +208,8 @@ export const MOCK_DATA_EVENTS = [
       address: "Đà Nẵng",
       category: "MINISHOW",
       time: "17:00 - 18:30",
-      id: 13,
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166124/2612_iaeeh5.jpg',
+      posterLink: 'https://www.facebook.com/profile.php?id=61562460471546'
     },
   },
   {
@@ -194,8 +218,9 @@ export const MOCK_DATA_EVENTS = [
     extendedProps: {
       address: "T.P Đà Lạt",
       category: "CONCERT",
-      time: "17:00 - 18:30",
-      id: 14,
+      time: "18:00 - 22:00",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166335/2812_smo4dj.jpg',
+      posterLink: 'https://cticket.vn/event/dalatchill-bomuayeu-1511-281231'
     },
   },
 ];
