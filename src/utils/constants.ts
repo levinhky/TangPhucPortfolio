@@ -71,13 +71,13 @@ export const MOCK_DATA_EVENTS = [
   },
   {
     title: "Mini Fan Meeting with Kay Tran",
-    start: "2024-11-21",
+    start: "2024-11-22",
     extendedProps: {
       address: "TP. Da Lat",
       category: "FanMeeting",
       time: "18:00 - 20:00",
-      posterUrl: '..',
-      posterLink: '..'
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/22112024_onikzz.jpg',
+      posterLink: 'https://www.facebook.com/story.php?story_fbid=875279604769217&id=100068615573817&mibextid=WC7FNe&rdid=N1iSA8Xv6ob3HQ3b#'
     },
   },
   {
@@ -119,19 +119,30 @@ export const MOCK_DATA_EVENTS = [
     extendedProps: {
       address: "Paris Garden, T.P Hồ Chí Minh ",
       category: "MINISHOW",
-      time: "17:00 - 18:30",
+      time: "20:00",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166616/3011_keaout.jpg',
       posterLink: '....'
     },
   },
   {
-    title: "LiveStream Shoppee",
+    title: "LiveStream Shopee",
     start: "2024-12-06",
     extendedProps: {
       address: "T.P Hồ Chí Minh ",
       category: "OTHER",
-      time: "17:00 - 18:30",
-      posterUrl: '.....',
+      time: "20:00",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/livewNkshopee_tc9e28.jpg',
+      posterLink: '....'
+    },
+  },
+  {
+    title: "Booth Special BIA SAIGON",
+    start: "2024-12-06",
+    extendedProps: {
+      address: "T.P Hồ Chí Minh ",
+      category: "EVENT",
+      time: "18:00 - 19:00",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/07122024_hus6za.jpg',
       posterLink: '....'
     },
   },
@@ -141,8 +152,8 @@ export const MOCK_DATA_EVENTS = [
     extendedProps: {
       address: "T.P Hồ Chí Minh",
       category: "OTHER",
-      time: "17:00 - 18:30",
-      posterUrl: '.....',
+      time: "20:00",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/11122024_py1ebq.jpg',
       posterLink: '....'
     },
   },
@@ -162,9 +173,9 @@ export const MOCK_DATA_EVENTS = [
     start: "2024-12-17",
     extendedProps: {
       address: "Hà Nội",
-      category: "OTHER",
-      time: "17:00 - 18:30",
-      posterUrl: '.....',
+      category: "FMT",
+      time: "18:00 - 21:30",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734725553/17122024_ohkdz0.jpg',
       posterLink: '....'
     },
   },
@@ -174,7 +185,7 @@ export const MOCK_DATA_EVENTS = [
     extendedProps: {
       address: "T.P Hồ Chí Minh",
       category: "MINISHOW",
-      time: "17:00 - 18:30",
+      time: "20:00 - 23:30",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165674/slay3_l1c7hj.jpg',
       posterLink: 'https://metaticket.com.vn/show/671d15f75a85647986197ca9'
     },
@@ -185,9 +196,9 @@ export const MOCK_DATA_EVENTS = [
     extendedProps: {
       address: "T.P Hồ Chí Minh",
       category: "MINISHOW",
-      time: "17:00 - 18:30",
-      posterUrl: '.....',
-      posterLink: '....'
+      time: "19:00 - 22:30",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734725868/21122024_vxlqp6.jpg',
+      posterLink: 'https://metaticket.com.vn/show/6749d6ab2765ae76e3e76424'
     },
   },
   {
@@ -221,6 +232,39 @@ export const MOCK_DATA_EVENTS = [
       time: "18:00 - 22:00",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166335/2812_smo4dj.jpg',
       posterLink: 'https://cticket.vn/event/dalatchill-bomuayeu-1511-281231'
+    },
+  },
+  {
+    title: "LULULOLA SHOW TĂNG PHÚC - PHAN ĐÌNH TÙNG | KẺ QUA ĐƯỜNG",
+    start: "2025-01-04",
+    extendedProps: {
+      address: "T.P Đà Lạt",
+      category: "MINISHOW",
+      time: "17h30 - 19h30",
+      posterUrl: '--',
+      posterLink: 'https://ticketbox.vn/lululola-show-tang-phuc-phan-dinh-tung-23505'
+    },
+  },
+  {
+    title: "Trixie & Tăng Phúc",
+    start: "2025-01-05",
+    extendedProps: {
+      address: "Hà Nội",
+      category: "MINISHOW",
+      time: "21h00 : 23h30",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734724277/05012025_zr5cnv.png',
+      posterLink: 'https://trixie.com.vn/minishow-tang-phuc-05-01-2025-E79685310.html'
+    },
+  },
+  {
+    title: "𝐑𝐈𝐕𝐄𝐑 𝐅𝐋𝐎𝐖𝐒 𝐈𝐍 𝐘𝐎𝐔 - 𝐆𝐀𝐈 𝐂𝐎𝐍𝐂𝐄𝐑𝐓",
+    start: "2025-01-05",
+    extendedProps: {
+      address: "TP. HCM",
+      category: "MINISHOW",
+      time: "20h00 : 23h30",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/11012025_puopqm.jpg',
+      posterLink: 'http://gaiconcert-rfiy-bndmedia.1zone.vn'
     },
   },
 ];
