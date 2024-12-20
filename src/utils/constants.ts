@@ -74,7 +74,7 @@ export const MOCK_DATA_EVENTS = [
     start: "2024-11-22",
     extendedProps: {
       address: "TP. Da Lat",
-      category: "FanMeeting",
+      category: "FMT",
       time: "18:00 - 20:00",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/22112024_onikzz.jpg',
       posterLink: 'https://www.facebook.com/story.php?story_fbid=875279604769217&id=100068615573817&mibextid=WC7FNe&rdid=N1iSA8Xv6ob3HQ3b#'
@@ -258,7 +258,7 @@ export const MOCK_DATA_EVENTS = [
   },
   {
     title: "𝐑𝐈𝐕𝐄𝐑 𝐅𝐋𝐎𝐖𝐒 𝐈𝐍 𝐘𝐎𝐔 - 𝐆𝐀𝐈 𝐂𝐎𝐍𝐂𝐄𝐑𝐓",
-    start: "2025-01-05",
+    start: "2025-01-11",
     extendedProps: {
       address: "TP. HCM",
       category: "MINISHOW",
