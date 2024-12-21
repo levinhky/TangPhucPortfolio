@@ -150,8 +150,9 @@
   height: 0 !important;
 }
 
-.fc .fc-list-day-cushion, .fc .fc-list-table td:hover{
-  background: rgba(213, 223, 248, 0.61)!important;
+.fc .fc-list-day-cushion,
+.fc .fc-list-table td:hover {
+  background: rgba(213, 223, 248, 0.61);
 }
 
 .popup-overlay {
@@ -202,7 +203,6 @@
   border-radius: 8px;
 }
 
-
 /* General Button Style */
 .event-button {
   padding: 10px 20px;
@@ -235,15 +235,14 @@
 
 /* Mua Vé Button Style */
 .buy-ticket-enabled {
-  color: #FFFFFF !important; /* Text color */
-  background-color: #001F77; /* Background color */
-  border: 1px solid #001F77; /* Border matches background */
-
+  color: #ffffff !important; /* Text color */
+  background-color: #001f77; /* Background color */
+  border: 1px solid #001f77; /* Border matches background */
 }
 
 .buy-ticket-enabled:hover {
-  background-color: #001F77; /* Darker shade for hover effect */
-  color: #FFC96D !important; /* Lighter text on hover */
+  background-color: #001f77; /* Darker shade for hover effect */
+  color: #ffc96d !important; /* Lighter text on hover */
 }
 
 .video-container {
