@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ContactPage = () => {
   return (
-    <Container style="my-12 px-12 esm:px-0 mt-[5%]">
+    <Container style="my-12 px-12 esm:px-0 mt-[7%] esm:mb-10">
       <div className="flex esm:flex-wrap">
         <div className="basis-2/5 esm:basis-full">
           <h6 className="text-4xl font-semibold text-primary">

@@ -14,7 +14,7 @@
     font-style: italic;
 
     @include respond(extra-small-mobile) {
-      font-size: 100px;
+      font-size: 80px;
     }
 
     &:nth-of-type(1) {

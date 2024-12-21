@@ -43,16 +43,16 @@ const Schedule = () => {
         </div>
       </div>
 
-      <div className="video-container">
-      <iframe
-        src={`https://www.youtube.com/embed/MfvuNYlLaM8`}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
-
+      <div className="video-container w-[70%] esm:w-full esm:h-80 esm:mb-10 h-[500px] mb-12">
+        <iframe
+          src={`https://www.youtube.com/embed/MfvuNYlLaM8`}
+          className="w-full h-full"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
     </Container>
   );
 };

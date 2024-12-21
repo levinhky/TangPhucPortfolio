@@ -29,6 +29,62 @@ const CalendarView = () => {
     setCurrentYear(activeYear);
   }
 
+  const renderPrevButton = (
+    <button
+      className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white prev"
+      onClick={goPrev}
+    >
+      <Image src={"/icons/next.png"} width={20} height={20} alt="grid-menu" />
+    </button>
+  );
+
+  const renderNextButton = (
+    <button
+      className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white next"
+      onClick={goNext}
+    >
+      <Image src={"/icons/next.png"} width={20} height={20} alt="grid-menu" />
+    </button>
+  );
+
+  const renderListButton = (
+    <button
+      onClick={() => setGridType(false)}
+      style={{ background: !gridType ? "#000B6E" : "#fff" }}
+      className="rounded-lg flex h-10 w-10 items-center justify-center"
+    >
+      <Image
+        src={
+          !gridType
+            ? "/icons/list-menu-white.png"
+            : "/icons/list-menu-primary.png"
+        }
+        width={20}
+        height={20}
+        alt="round-menu"
+      />
+    </button>
+  );
+
+  const renderGridButton = (
+    <button
+      onClick={() => setGridType(true)}
+      style={{ background: gridType ? "#000B6E" : "#fff" }}
+      className="rounded-lg flex h-10 w-10 items-center justify-center"
+    >
+      <Image
+        src={
+          gridType
+            ? "/icons/grid-menu-white.png"
+            : "/icons/grid-menu-primary.png"
+        }
+        width={20}
+        height={20}
+        alt="grid-menu"
+      />
+    </button>
+  );
+
   return (
     <div id="schedule-list">
       <div className="flex flex-col mx-auto items-center esm:justify-between esm:w-full esm:mb-5 relative">
@@ -36,69 +92,19 @@ const CalendarView = () => {
         <p className="font-semibold text-textSecondaryTwo text-2xl esm:text-xl">
           Lịch hoạt động
         </p>
-        <button
-          className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white prev"
-          onClick={goPrev}
-        >
-          <Image
-            src={"/icons/next.png"}
-            width={20}
-            height={20}
-            alt="grid-menu"
-          />
-        </button>
-        <button
-          className="nav-link flex items-center justify-center rounded-lg w-10 h-10 bg-white next"
-          onClick={goNext}
-        >
-          <Image
-            src={"/icons/next.png"}
-            width={20}
-            height={20}
-            alt="grid-menu"
-          />
-        </button>
+        {renderPrevButton}
+        {renderNextButton}
       </div>
 
       <div
-        className={`flex justify-end items-center gap-4 mb-5 ${
+        className={`flex justify-end items-center gap-4 mb-5 esm:mb-0 ${
           gridType ? "w-[90%] esm:w-full" : "w-full"
         }`}
       >
         <p className="text-primary font-semibold">Xem dạng</p>
         <div className="flex gap-2">
-          <button
-            onClick={() => setGridType(false)}
-            style={{ background: !gridType ? "#000B6E" : "#fff" }}
-            className="rounded-lg flex h-10 w-10 items-center justify-center"
-          >
-            <Image
-              src={
-                !gridType
-                  ? "/icons/list-menu-white.png"
-                  : "/icons/list-menu-primary.png"
-              }
-              width={20}
-              height={20}
-              alt="round-menu"
-            />
-          </button>
-          <button
-            onClick={() => setGridType(true)}
-            style={{ background: gridType ? "#000B6E" : "#fff" }}
-            className="rounded-lg flex h-10 w-10 items-center justify-center"
-          >
-            <Image
-              src={
-                gridType
-                  ? "/icons/grid-menu-white.png"
-                  : "/icons/grid-menu-primary.png"
-              }
-              width={20}
-              height={20}
-              alt="grid-menu"
-            />
-          </button>
+          {renderListButton}
+          {renderGridButton}
         </div>
       </div>
 

@@ -71,13 +71,13 @@ const Navbar = () => {
 
   return (
     <Container style={`mt-4 relative ${!haveBackground ? "h-1" : "h-auto"}`}>
-      <div className="menu bg-white w-10 h-10 esm:w-[20px] esm:h-[20px] rounded-lg esm:rounded-md esm:!-top-[10px] esm:!-right-[10px]">
+      <div className="menu bg-white w-10 h-10 esm:w-[30px] esm:h-[30px] rounded-lg esm:rounded-md esm:!-top-[10px] esm:!-right-[10px]">
         <button onClick={toggleShowModal}>
           <Image
             src={"/icons/hamburger.png"}
             width={20}
             height={20}
-            className="esm:w-[10px] esm:h-[10px]"
+            className="esm:w-[15px] esm:h-[15px]"
             alt="hamburger-icon"
           />
         </button>

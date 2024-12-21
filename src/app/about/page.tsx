@@ -4,9 +4,9 @@ import Container from "@/themes/Container";
 
 const AboutPage = () => {
   return (
-    <Container style="my-12 esm:my-0 esm:mt-10">
-      <div className="flex esm:flex-wrap items-center my-[75px]">
-        <div className="basis-2/4 flex items-center justify-center">
+    <Container style="my-12 esm:my-0 esm:mt-0">
+      <div className="flex esm:flex-wrap esm:justify-center items-center my-[75px] esm:mt-5">
+        <div className="basis-2/4 esm:basis-full flex items-center justify-center">
           <Image
             src={"/pages/about/tudaytunay.png"}
             width={440}
@@ -15,7 +15,7 @@ const AboutPage = () => {
             alt="image"
           />
         </div>
-        <div className="basis-2/4">
+        <div className="basis-2/4 esm:basis-full">
           <h6 className="sub-title--semi text-2xl mb-3">
             Giới thiệu ngắn về anh
           </h6>
@@ -32,7 +32,7 @@ const AboutPage = () => {
             <tr>
               <td className="text-textSecondaryTwo">Họ Tên</td>
               <td>
-                <strong className="ml-10 font-medium text-textPrimary">
+                <strong className="ml-10 esm:ml-0 font-medium text-textPrimary">
                   Tăng Vũ Minh Phúc
                 </strong>
               </td>
@@ -40,7 +40,7 @@ const AboutPage = () => {
             <tr>
               <td className="text-textSecondaryTwo">Sinh Nhật</td>
               <td>
-                <strong className="ml-10 font-medium text-textPrimary">
+                <strong className="ml-10 esm:ml-0 font-medium text-textPrimary">
                   22/05/1990
                 </strong>
               </td>
@@ -48,7 +48,7 @@ const AboutPage = () => {
             <tr>
               <td className="text-textSecondaryTwo">Lĩnh vực hoạt động</td>
               <td>
-                <strong className="ml-10 font-medium text-textPrimary">
+                <strong className="ml-10 esm:ml-0 font-medium text-textPrimary">
                   Ca Sĩ
                 </strong>
               </td>
@@ -56,13 +56,13 @@ const AboutPage = () => {
             <tr>
               <td className="text-textSecondaryTwo">Số năm hoạt động</td>
               <td>
-                <strong className="ml-10 font-medium text-textPrimary">
+                <strong className="ml-10 esm:ml-0 font-medium text-textPrimary">
                   7 năm
                 </strong>
               </td>
             </tr>
           </table>
-          <div className="px-6 py-10 rounded-lg shadow-lg mr-14 relative bg-custom-gradient">
+          <div className="px-6 py-10 rounded-lg shadow-lg mr-14 esm:mr-0 relative bg-custom-gradient">
             <strong className="font-semibold text-textPrimary">
               [Quote/Slogan]
             </strong>

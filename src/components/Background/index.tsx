@@ -1,12 +1,17 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Pagination, Autoplay } from "swiper/modules";
+import useDetectDevice from "@/hooks/useDetectDevice";
+
+import { DEVICE, HERO_SWIPERS } from "@/utils/constants";
 
 const Background = ({ isHomeType }: { isHomeType: boolean }) => {
+  const { device } = useDetectDevice();
+
   return (
     <svg
       width="100%"
@@ -23,7 +28,11 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
           />
         </mask>
       </defs>
-      <foreignObject width="100%" height="100%" mask="url(#svgMask)">
+      <foreignObject
+        width="100%"
+        height="100%"
+        mask={device === DEVICE.MOBILE ? "" : "url(#svgMask)"}
+      >
         <Swiper
           pagination={{
             clickable: true,
@@ -34,39 +43,21 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           id={isHomeType ? "homeSlider" : "backgroundSlider"}
         >
-          <SwiperSlide>
-            <div className="w-full h-full">
-              <Image
-                src={"/header-banner.png"}
-                alt="Background"
-                fill
-                className="object-cover aspect-1376/770"
-                priority
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full h-full">
-              <Image
-                src={"https://res.cloudinary.com/dwmpmry2n/image/upload/v1733255909/FullSizeRender_6_puqwiv.jpg"}
-                alt="Background"
-                fill
-                className="object-cover aspect-1376/770"
-                priority
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full h-full">
-              <Image
-                src={"https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256055/z5877654697071_40516958389f1c322d44e5f3523db66d_yb9mlm.jpg"}
-                alt="Background"
-                fill
-                className="object-cover aspect-1376/770"
-                priority
-              />
-            </div>
-          </SwiperSlide>
+          {HERO_SWIPERS.map((item, index) => {
+            return (
+              <SwiperSlide key={`keySwiperSlide${index}`}>
+                <div className="w-full h-full">
+                  <Image
+                    src={item.src}
+                    alt="Background"
+                    fill
+                    className="object-cover aspect-1376/770"
+                    priority
+                  />
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
         {isHomeType && (
           <div className="z-10 flex flex-col items-center absolute bottom-2 left-2/4 -translate-x-2/4">
