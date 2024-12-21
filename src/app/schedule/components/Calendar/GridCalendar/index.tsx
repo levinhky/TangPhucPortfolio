@@ -6,7 +6,7 @@ import Image from "next/image";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 
-import { DAYS_OF_WEEK, MOCK_DATA_EVENTS } from "@/utils/constants";
+import { DAYS_OF_WEEK, DEVICE, MOCK_DATA_EVENTS } from "@/utils/constants";
 import { formatVietnameseDate } from "@/utils/functions";
 
 import useDetectDevice from "@/hooks/useDetectDevice";
@@ -101,7 +101,7 @@ const GridCalendar = ({
         {DAYS_OF_WEEK.map((day) => {
           return (
             <div className="text-center relative day-header py-2">
-              {device === "mobile" ? day.short : day.full}
+              {device === DEVICE.MOBILE ? day.short : day.full}
             </div>
           );
         })}

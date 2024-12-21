@@ -57,6 +57,18 @@ export const NAV_LINKS = [
   { href: "/contact", label: "Contact" },
 ];
 
+export const HERO_SWIPERS = [
+  {
+    src: "https://res.cloudinary.com/dahnkbdxi/image/upload/v1734787627/header-banner_p98qv0.png",
+  },
+  {
+    src: "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733255909/FullSizeRender_6_puqwiv.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256055/z5877654697071_40516958389f1c322d44e5f3523db66d_yb9mlm.jpg",
+  },
+];
+
 export const MOCK_DATA_EVENTS = [
   {
     title: "Ừ em xin lỗi kỳ vọng sai lầm",
@@ -65,8 +77,10 @@ export const MOCK_DATA_EVENTS = [
       address: "TP. HCM",
       category: "MINISHOW",
       time: "20:00 - 22:00",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165089/2111_te0gc5.jpg',
-      posterLink: 'https://www.facebook.com/share/p/1DWUqANkiQ/?mibextid=WC7FNe'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165089/2111_te0gc5.jpg",
+      posterLink:
+        "https://www.facebook.com/share/p/1DWUqANkiQ/?mibextid=WC7FNe",
     },
   },
   {
@@ -76,8 +90,10 @@ export const MOCK_DATA_EVENTS = [
       address: "TP. Da Lat",
       category: "FMT",
       time: "18:00 - 20:00",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/22112024_onikzz.jpg',
-      posterLink: 'https://www.facebook.com/story.php?story_fbid=875279604769217&id=100068615573817&mibextid=WC7FNe&rdid=N1iSA8Xv6ob3HQ3b#'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/22112024_onikzz.jpg",
+      posterLink:
+        "https://www.facebook.com/story.php?story_fbid=875279604769217&id=100068615573817&mibextid=WC7FNe&rdid=N1iSA8Xv6ob3HQ3b#",
     },
   },
   {
@@ -87,8 +103,9 @@ export const MOCK_DATA_EVENTS = [
       address: "Đà Lạt",
       category: "MINISHOW",
       time: "17:00 - 20:30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165253/mlt2311_jvwbqc.png',
-      posterLink: 'https://maylangthang.com.vn/mp_show/tp-2311/'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165253/mlt2311_jvwbqc.png",
+      posterLink: "https://maylangthang.com.vn/mp_show/tp-2311/",
     },
   },
   {
@@ -98,8 +115,9 @@ export const MOCK_DATA_EVENTS = [
       address: "Hà Nội",
       category: "MINISHOW",
       time: "20:00 - 23:00",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165485/slay1_ofhrte.jpg',
-      posterLink: 'https://www.facebook.com/profile.php?id=61562460471546'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165485/slay1_ofhrte.jpg",
+      posterLink: "https://www.facebook.com/profile.php?id=61562460471546",
     },
   },
   {
@@ -109,8 +127,9 @@ export const MOCK_DATA_EVENTS = [
       address: "Hà Nội",
       category: "MINISHOW",
       time: "21:00 - 23:30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165574/slay2_apg2pg.jpg',
-      posterLink: 'https://www.facebook.com/profile.php?id=61562460471546'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165574/slay2_apg2pg.jpg",
+      posterLink: "https://www.facebook.com/profile.php?id=61562460471546",
     },
   },
   {
@@ -120,8 +139,9 @@ export const MOCK_DATA_EVENTS = [
       address: "Paris Garden, T.P Hồ Chí Minh ",
       category: "MINISHOW",
       time: "20:00",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166616/3011_keaout.jpg',
-      posterLink: ''
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166616/3011_keaout.jpg",
+      posterLink: "",
     },
   },
   {
@@ -131,8 +151,9 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh ",
       category: "OTHER",
       time: "20:00",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/livewNkshopee_tc9e28.jpg',
-      posterLink: ''
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/livewNkshopee_tc9e28.jpg",
+      posterLink: "",
     },
   },
   {
@@ -142,8 +163,9 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh ",
       category: "EVENT",
       time: "18:00 - 19:00",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/07122024_hus6za.jpg',
-      posterLink: ''
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/07122024_hus6za.jpg",
+      posterLink: "",
     },
   },
   {
@@ -153,8 +175,9 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh",
       category: "OTHER",
       time: "20:00",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/11122024_py1ebq.jpg',
-      posterLink: ''
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/11122024_py1ebq.jpg",
+      posterLink: "",
     },
   },
   {
@@ -164,8 +187,8 @@ export const MOCK_DATA_EVENTS = [
       address: "Hà Nội",
       category: "CONCERT",
       time: "17:00 - 18:30",
-      posterUrl: '',
-      posterLink: ''
+      posterUrl: "",
+      posterLink: "",
     },
   },
   {
@@ -175,8 +198,9 @@ export const MOCK_DATA_EVENTS = [
       address: "Hà Nội",
       category: "FMT",
       time: "18:00 - 21:30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734725553/17122024_ohkdz0.jpg',
-      posterLink: ''
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734725553/17122024_ohkdz0.jpg",
+      posterLink: "",
     },
   },
   {
@@ -186,8 +210,9 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh",
       category: "MINISHOW",
       time: "20:00 - 23:30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165674/slay3_l1c7hj.jpg',
-      posterLink: 'https://metaticket.com.vn/show/671d15f75a85647986197ca9'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165674/slay3_l1c7hj.jpg",
+      posterLink: "https://metaticket.com.vn/show/671d15f75a85647986197ca9",
     },
   },
   {
@@ -197,8 +222,9 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh",
       category: "MINISHOW",
       time: "19:00 - 22:30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734725868/21122024_vxlqp6.jpg',
-      posterLink: 'https://metaticket.com.vn/show/6749d6ab2765ae76e3e76424'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734725868/21122024_vxlqp6.jpg",
+      posterLink: "https://metaticket.com.vn/show/6749d6ab2765ae76e3e76424",
     },
   },
   {
@@ -208,8 +234,9 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hồ Chí Minh",
       category: "MINISHOW",
       time: "17:00 - 18:30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165814/2212_zhbupj.jpg',
-      posterLink: ''
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1732165814/2212_zhbupj.jpg",
+      posterLink: "",
     },
   },
   {
@@ -219,8 +246,10 @@ export const MOCK_DATA_EVENTS = [
       address: "Hà Nội",
       category: "MINISHOW",
       time: "19:00 - 22:30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734772571/24122024_dvbjuc.jpg',
-      posterLink: 'https://www.facebook.com/story.php?story_fbid=983927900440931&id=100064711897118&mibextid=qi2Omg&rdid=fKr1AgEq6Q096i6N#'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734772571/24122024_dvbjuc.jpg",
+      posterLink:
+        "https://www.facebook.com/story.php?story_fbid=983927900440931&id=100064711897118&mibextid=qi2Omg&rdid=fKr1AgEq6Q096i6N#",
     },
   },
   {
@@ -230,8 +259,9 @@ export const MOCK_DATA_EVENTS = [
       address: "Đà Nẵng",
       category: "MINISHOW",
       time: "17:00 - 18:30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166124/2612_iaeeh5.jpg',
-      posterLink: 'https://www.facebook.com/profile.php?id=61562460471546'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166124/2612_iaeeh5.jpg",
+      posterLink: "https://www.facebook.com/profile.php?id=61562460471546",
     },
   },
   {
@@ -241,8 +271,9 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Đà Lạt",
       category: "CONCERT",
       time: "18:00 - 22:00",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166335/2812_smo4dj.jpg',
-      posterLink: 'https://cticket.vn/event/dalatchill-bomuayeu-1511-281231'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1732166335/2812_smo4dj.jpg",
+      posterLink: "https://cticket.vn/event/dalatchill-bomuayeu-1511-281231",
     },
   },
   {
@@ -252,8 +283,10 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Hà Nội",
       category: "Event",
       time: "10h30 - 22h00",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734772572/03012025_xd3nfz.jpg',
-      posterLink: 'https://www.facebook.com/story.php?story_fbid=895823836072763&id=100069354641643&mibextid=wwXIfr&rdid=rjEPWfZ1xYi9yfqM'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734772572/03012025_xd3nfz.jpg",
+      posterLink:
+        "https://www.facebook.com/story.php?story_fbid=895823836072763&id=100069354641643&mibextid=wwXIfr&rdid=rjEPWfZ1xYi9yfqM",
     },
   },
   {
@@ -263,8 +296,9 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Đà Lạt",
       category: "MINISHOW",
       time: "17h30 - 19h30",
-      posterUrl: '',
-      posterLink: 'https://ticketbox.vn/lululola-show-tang-phuc-phan-dinh-tung-23505'
+      posterUrl: "",
+      posterLink:
+        "https://ticketbox.vn/lululola-show-tang-phuc-phan-dinh-tung-23505",
     },
   },
   {
@@ -274,8 +308,10 @@ export const MOCK_DATA_EVENTS = [
       address: "Hà Nội",
       category: "MINISHOW",
       time: "21h00 : 23h30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734724277/05012025_zr5cnv.png',
-      posterLink: 'https://trixie.com.vn/minishow-tang-phuc-05-01-2025-E79685310.html'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734724277/05012025_zr5cnv.png",
+      posterLink:
+        "https://trixie.com.vn/minishow-tang-phuc-05-01-2025-E79685310.html",
     },
   },
   {
@@ -285,8 +321,9 @@ export const MOCK_DATA_EVENTS = [
       address: "TP. HCM",
       category: "MINISHOW",
       time: "20h00 : 23h30",
-      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/11012025_puopqm.jpg',
-      posterLink: 'http://gaiconcert-rfiy-bndmedia.1zone.vn'
+      posterUrl:
+        "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/11012025_puopqm.jpg",
+      posterLink: "http://gaiconcert-rfiy-bndmedia.1zone.vn",
     },
   },
 ];
