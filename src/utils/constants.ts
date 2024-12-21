@@ -132,7 +132,7 @@ export const MOCK_DATA_EVENTS = [
       category: "OTHER",
       time: "20:00",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/livewNkshopee_tc9e28.jpg',
-      posterLink: ''
+      posterLink: '....'
     },
   },
   {
@@ -143,7 +143,7 @@ export const MOCK_DATA_EVENTS = [
       category: "EVENT",
       time: "18:00 - 19:00",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/07122024_hus6za.jpg',
-      posterLink: ''
+      posterLink: '....'
     },
   },
   {
@@ -154,7 +154,7 @@ export const MOCK_DATA_EVENTS = [
       category: "OTHER",
       time: "20:00",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/11122024_py1ebq.jpg',
-      posterLink: ''
+      posterLink: '....'
     },
   },
   {
@@ -176,7 +176,7 @@ export const MOCK_DATA_EVENTS = [
       category: "FMT",
       time: "18:00 - 21:30",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734725553/17122024_ohkdz0.jpg',
-      posterLink: ''
+      posterLink: '....'
     },
   },
   {
@@ -241,7 +241,7 @@ export const MOCK_DATA_EVENTS = [
       address: "T.P Đà Lạt",
       category: "MINISHOW",
       time: "17h30 - 19h30",
-      posterUrl: '',
+      posterUrl: '--',
       posterLink: 'https://ticketbox.vn/lululola-show-tang-phuc-phan-dinh-tung-23505'
     },
   },
