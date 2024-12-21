@@ -155,7 +155,7 @@
   background: rgba(213, 223, 248, 0.61);
 }
 
-.popup-overlay {
+.poster-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -166,95 +166,6 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-}
-
-.popup-content {
-  background: white;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  text-align: center;
-}
-
-.popup-header {
-  padding: 10px;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.close-button {
-  background: none;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.popup-body {
-  padding: 20px;
-}
-
-.popup-poster {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* General Button Style */
-.event-button {
-  padding: 10px 20px;
-  border: 1px solid #000; /* Match border style */
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  text-align: center;
-  transition: 0.3s;
-}
-
-/* Enabled "Xem Thông Tin" Button */
-.enabled-button {
-  color: #000;
-  background-color: #fff; /* White background */
-}
-
-.enabled-button:hover {
-  background-color: #f0f0f0;
-}
-
-/* Disabled Button Style */
-.disabled-button {
-  color: #9e9e9e;
-  background-color: #e0e0e0;
-  border-color: #ccc;
-  cursor: not-allowed;
-}
-
-/* Mua Vé Button Style */
-.buy-ticket-enabled {
-  color: #ffffff !important; /* Text color */
-  background-color: #001f77; /* Background color */
-  border: 1px solid #001f77; /* Border matches background */
-}
-
-.buy-ticket-enabled:hover {
-  background-color: #001f77; /* Darker shade for hover effect */
-  color: #ffc96d !important; /* Lighter text on hover */
-}
-
-.video-container {
-  width: 70%;
-  height: 500px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-
-.video-container iframe {
-  width: 100%;
-  height: 100%;
 }
 
 #homeSlider .swiper-pagination-horizontal {

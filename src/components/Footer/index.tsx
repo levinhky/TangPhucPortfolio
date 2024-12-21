@@ -7,7 +7,7 @@ import { SOCIAL_LINKS } from "@/utils/constants";
 const Footer = () => {
   return (
     <div className="footer-wrapper">
-      <Container style="flex esm:flex-col justify-between py-12">
+      <Container style="flex esm:flex-col justify-between py-12 esm:py-8">
         <div className="company-info flex flex-col gap-4 max-w-96">
           <h6 className="sub-title">Công ty GSN Production</h6>
           <div className="flex gap-2">
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
 
         <ul className="footer-links flex flex-col gap-4">
-          <li>
+          <li className="esm:mt-5">
             <Link className="sub-title" href="/about">
               Giới thiệu
             </Link>
@@ -57,7 +57,7 @@ const Footer = () => {
               Merchandise
             </Link>
           </li>
-          <li>
+          <li className="esm:mb-2">
             <Link className="sub-title" href="/contact">
               Liên hệ
             </Link>

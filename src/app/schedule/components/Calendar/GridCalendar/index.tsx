@@ -1,13 +1,14 @@
 "use client";
-
 import { LegacyRef, memo, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import Image from "next/image";
-import Link from "next/link";
+
 import { DAYS_OF_WEEK, MOCK_DATA_EVENTS } from "@/utils/constants";
 import { formatVietnameseDate } from "@/utils/functions";
+
 import useDetectDevice from "@/hooks/useDetectDevice";
 
 const Modal = ({ onClose, calendarInfo }: any) => {
