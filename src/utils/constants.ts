@@ -132,7 +132,7 @@ export const MOCK_DATA_EVENTS = [
       category: "OTHER",
       time: "20:00",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/livewNkshopee_tc9e28.jpg',
-      posterLink: '....'
+      posterLink: ''
     },
   },
   {
@@ -143,7 +143,7 @@ export const MOCK_DATA_EVENTS = [
       category: "EVENT",
       time: "18:00 - 19:00",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723916/07122024_hus6za.jpg',
-      posterLink: '....'
+      posterLink: ''
     },
   },
   {
@@ -154,7 +154,7 @@ export const MOCK_DATA_EVENTS = [
       category: "OTHER",
       time: "20:00",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734723917/11122024_py1ebq.jpg',
-      posterLink: '....'
+      posterLink: ''
     },
   },
   {
@@ -176,7 +176,7 @@ export const MOCK_DATA_EVENTS = [
       category: "FMT",
       time: "18:00 - 21:30",
       posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734725553/17122024_ohkdz0.jpg',
-      posterLink: '....'
+      posterLink: ''
     },
   },
   {
@@ -213,6 +213,17 @@ export const MOCK_DATA_EVENTS = [
     },
   },
   {
+    title: "Winter Fest",
+    start: "2024-12-24",
+    extendedProps: {
+      address: "Hà Nội",
+      category: "MINISHOW",
+      time: "19:00 - 22:30",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734772571/24122024_dvbjuc.jpg',
+      posterLink: 'https://www.facebook.com/story.php?story_fbid=983927900440931&id=100064711897118&mibextid=qi2Omg&rdid=fKr1AgEq6Q096i6N#'
+    },
+  },
+  {
     title: '"Từ Đây... Từ Nay..." Slay Đà Nẵng',
     start: "2024-12-26",
     extendedProps: {
@@ -235,13 +246,24 @@ export const MOCK_DATA_EVENTS = [
     },
   },
   {
-    title: "LULULOLA SHOW TĂNG PHÚC - PHAN ĐÌNH TÙNG | KẺ QUA ĐƯỜNG",
+    title: "VNPAY Super Sale",
+    start: "2025-01-03",
+    extendedProps: {
+      address: "T.P Hà Nội",
+      category: "Event",
+      time: "10h30 - 22h00",
+      posterUrl: 'https://res.cloudinary.com/dwmpmry2n/image/upload/v1734772572/03012025_xd3nfz.jpg',
+      posterLink: 'https://www.facebook.com/story.php?story_fbid=895823836072763&id=100069354641643&mibextid=wwXIfr&rdid=rjEPWfZ1xYi9yfqM'
+    },
+  },
+  {
+    title: "LULULOLA Show  Tăng Phúc - Phan Đình Tùng | Kẻ Qua Đường",
     start: "2025-01-04",
     extendedProps: {
       address: "T.P Đà Lạt",
       category: "MINISHOW",
       time: "17h30 - 19h30",
-      posterUrl: '--',
+      posterUrl: '',
       posterLink: 'https://ticketbox.vn/lululola-show-tang-phuc-phan-dinh-tung-23505'
     },
   },
@@ -257,7 +279,7 @@ export const MOCK_DATA_EVENTS = [
     },
   },
   {
-    title: "𝐑𝐈𝐕𝐄𝐑 𝐅𝐋𝐎𝐖𝐒 𝐈𝐍 𝐘𝐎𝐔 - 𝐆𝐀𝐈 𝐂𝐎𝐍𝐂𝐄𝐑𝐓",
+    title: "River Flows In You - Gai Concert",
     start: "2025-01-11",
     extendedProps: {
       address: "TP. HCM",
