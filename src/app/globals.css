@@ -200,7 +200,7 @@
   white-space: normal !important;
   align-items: normal !important;
   padding: 0 16px;
-  margin-top: 16px !important;
+  margin-top: auto !important;
 }
 
 @media only screen and (max-width: 479px) {
