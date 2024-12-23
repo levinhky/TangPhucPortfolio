@@ -1,3 +1,55 @@
+import exp from "constants";
+import Papa from "papaparse";
+
+/**
+ * Fetch and parse CSV data from a given URL.
+ * @param {string} url - The path or URL to the CSV file.
+ * @returns {Promise<any[]>} - Parsed data as an array of objects.
+ */
+export const fetchCSVData = async (url: string): Promise<any[]> => {
+  return new Promise((resolve, reject) => {
+    fetch(url) // Use the provided URL
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch CSV file: ${response.statusText}`);
+        }
+        return response.text();
+      })
+      .then((text) => {
+        Papa.parse(text, {
+          header: true, // Treat the first row as headers
+          skipEmptyLines: true, // Ignore empty lines
+          complete: (results) => resolve(results.data), // Return parsed data
+          error: (err: any) => reject(err), // Handle parsing errors
+        });
+      })
+      .catch((error) => reject(error)); // Handle network errors
+  });
+};
+
+const fetchCSVData_ = async (url: string): Promise<any[]> => {
+  return new Promise((resolve, reject) => {
+    fetch(url) // Use the provided URL
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch CSV file: ${response.statusText}`);
+        }
+        return response.text();
+      })
+      .then((text) => {
+        Papa.parse(text, {
+          header: true, // Treat the first row as headers
+          skipEmptyLines: true, // Ignore empty lines
+          complete: (results) => resolve(results.data), // Return parsed data
+          error: (err: any) => reject(err), // Handle parsing errors
+        });
+      })
+      .catch((error) => reject(error)); // Handle network errors
+  });
+};
+
+export const EVENTS_DATA = fetchCSVData_("/data/TP_events.csv");
+
 export const SOCIAL_LINKS = [
   {
     title: "Bạn có thể tìm Tăng Phúc ở:",
@@ -68,6 +120,20 @@ export const HERO_SWIPERS = [
     src: "https://res.cloudinary.com/dwmpmry2n/image/upload/v1733256055/z5877654697071_40516958389f1c322d44e5f3523db66d_yb9mlm.jpg",
   },
 ];
+
+export const MOCK_DATA_GAMESHOWS = [
+  {
+    title: "Ở đây có ai? Tập 3 Official - Kay Trần nắm giữ bí mật \"động trời\" khiến Tăng Phúc phải cầu cứu",
+    date: "2024-08-18",
+    extendedProps: {
+      category: "PV",
+      showDescript:
+        "Kay vs Phúc hỏi đáp trong Ở Đây Có Ai?",
+      showLink:
+        "https://youtu.be/E-jFsGWb06E?si=sHbOrPFaL-rzjVLY",
+    },
+  },
+] 
 
 export const MOCK_DATA_EVENTS = [
   {

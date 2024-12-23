@@ -1,8 +1,36 @@
+"use client";
+import '../globals.css';
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
 import Container from "@/themes/Container";
+import {fetchCSVData} from "@/utils/constants";
 
 const AboutPage = () => {
+  // State to store fetched data
+  const [gameShows, setGameShows] = useState<any[]>([]);
+  const [isClient, setIsClient] = useState(false);
+  // const [gameShows, setGameShows] = useState(typeof window !== 'undefined' ? 'Peter' : 'Rick');
+
+  
+  // Fetch data when the component loads
+  useEffect(() => {
+    setIsClient(true); // Marks the component as rendered on the client
+    const loadGameShows = async () => {
+      try {
+        const data = await fetchCSVData("/data/gameShow.csv");
+        setGameShows(data); // Set fetched data
+        // console.log("Fetched Data:", data);
+      } catch (error) {
+        console.error("Failed to fetch game shows:", error);
+      }
+    };
+    loadGameShows();
+  }, []);
+
+  // Avoid rendering on the server side to fix hydration mismatch
+  if (!isClient) return null;
+
   return (
     <Container style="my-12 esm:my-0 esm:mt-0">
       <div className="flex esm:flex-wrap esm:justify-center items-center my-[75px] esm:mt-5">
@@ -86,7 +114,7 @@ const AboutPage = () => {
           <div className="timeline-info !flex justify-end">
             <Image
               src={
-                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956171/dcan_cup2v1.png"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/2017_c9yhga.png"
               }
               width={300}
               height={300}
@@ -111,7 +139,7 @@ const AboutPage = () => {
           <div className="timeline-info">
             <Image
               src={
-                "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731829160/485e62dfdc68f22a44fdd320cd8f4364-Copy_eon1by.jpg"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/Screenshot_2024-12-22_at_8.27.48_AM_xvbhik.png"
               }
               width={300}
               height={300}
@@ -138,7 +166,7 @@ const AboutPage = () => {
           <div className="timeline-info !flex justify-end">
             <Image
               src={
-                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956801/clkcn_bkvz26.png"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/Screenshot_2024-12-22_at_8.28.21_AM_nsqy8b.png"
               }
               width={300}
               height={300}
@@ -167,7 +195,7 @@ const AboutPage = () => {
           <div className="timeline-info">
             <Image
               src={
-                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956965/kvsl_luzsnp.png"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/Screenshot_2024-12-22_at_8.28.42_AM_pgwyxo.png"
               }
               width={300}
               height={300}
@@ -192,7 +220,7 @@ const AboutPage = () => {
           <div className="timeline-info !flex justify-end">
             <Image
               src={
-                "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731828968/437713403_122139125180199321_5545351752770108522_n.jpg_bzypju.jpg"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/Screenshot_2024-12-22_at_8.29.47_AM_wks9jb.png"
               }
               width={300}
               height={300}
@@ -218,7 +246,59 @@ const AboutPage = () => {
           </div>
         </li>
       </ul>
+
+      <div className="py-10 px-5 bg-[#FDFBF7] flex justify-center">
+      <div className="w-[80%]"> {/* Shrinks width to 70% */}
+        <h2 className="text-center text-xl italic mb-2">Tìm hiểu về Phúc nè!</h2>
+        <h1 className="text-center text-4xl font-semibold mb-10">Tăng Phúc</h1>
+
+        {/* Scrollable Container */}
+        <div className="bg-white shadow-lg rounded-md h-[500px] overflow-y-auto">
+          {gameShows.map((show, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-between border-b last:border-none p-6"
+            >
+              {/* Left Section - Date, Role, Title, Description */}
+              <div className="flex items-center space-x-6 w-[75%]"> {/* Adjusted width */}
+                {/* Date Section */}
+                <div className="w-[15%] text-sm font-semibold text-gray-800 whitespace-nowrap">
+                  {show.date}
+                </div>
+
+                {/* Role Section */}
+                <div className="w-[15%] text-sm font-medium text-gray-600 whitespace-nowrap">
+                  {show.role}
+                </div>
+
+                {/* Title and Description - Displayed Vertically */}
+                <div className="w-[70%] flex flex-col">
+                  <h3 className="text-lg font-bold uppercase mb-1">{show.title}</h3>
+                  <p className="text-gray-500">{show.descipt}</p>
+                </div>
+              </div>
+
+              {/* Right Section - Button */}
+              <div className="ml-3"> {/* Reduced margin-left for button spacing */}
+                <a
+                  href={show.showLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 bg-black text-white uppercase text-sm font-semibold rounded-md hover:bg-gray-800 whitespace-nowrap"
+                >
+                  Xem Ngay
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+
     </Container>
+
+    
   );
 };
 
