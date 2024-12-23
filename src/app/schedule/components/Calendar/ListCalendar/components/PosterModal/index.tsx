@@ -20,14 +20,17 @@ const PosterModal = ({ onCloseModal, posterSrc }: PosterModalProps) => {
           height={600}
           className="w-full rounded-lg"
         />
-        <button className="absolute -top-4 -right-4" onClick={onCloseModal}>
+        <button
+          className="absolute -top-4 -right-4 bg-black rounded-[50%] p-2"
+          onClick={onCloseModal}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            fill="#fff"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-10"
+            stroke="white"
+            className="size-5 fill-white"
           >
             <path
               strokeLinecap="round"

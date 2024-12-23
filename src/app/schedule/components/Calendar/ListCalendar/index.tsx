@@ -2,14 +2,14 @@
 
 import { LegacyRef, memo, useState, useEffect } from "react";
 
-import PosterModal from "../../PosterModal";
-import dynamic from "next/dynamic";
+import PosterModal from "./components/PosterModal";
 
 import FullCalendar from "@fullcalendar/react";
 import listPlugin from "@fullcalendar/list";
 
 import { formatDateWithDot } from "@/utils/functions";
 import { fetchCSVData } from "@/utils/constants"; // Import fetchCSVData
+import ListCalendarItem from "./components/ListCalendarItem";
 
 // Helper Function: Parse and Convert Date to ISO Format
 const parseDateToISO = (dateStr: string) => {
@@ -69,6 +69,7 @@ const ListCalendar = ({
     loadEvents(); // Load events on mount
   }, []);
 
+
   const onOpenModal = (posterUrl: string) => () => {
     setSelectedPoster(posterUrl);
     setPopupVisible(true);
@@ -83,44 +84,16 @@ const ListCalendar = ({
     const isPosterLinkValid = posterLink && posterLink.trim() !== "";
 
     return (
-      <div className="event-card">
-        <div className="flex items-center w-[20%] esm:w-full esm:mt-2 gap-10 justify-between">
-          <div className="event-date w-2/12">{formatDateWithDot(start)}</div>
-          <button className="event-type w-[100px]">{category}</button>
-        </div>
-        <div className="flex esm:mt-3 esm:flex-wrap justify-between flex-1">
-          <div className="event-details esm:w-full">
-            <div className="event-name">{title}</div>
-            <div className="event-address !text-textSecondaryTwo">
-              {address}
-            </div>
-          </div>
-          <div className="flex gap-4 esm:mt-3 esm:mb-2 esm:justify-between esm:w-full">
-            <button
-              onClick={onOpenModal(posterUrl)}
-              disabled={!isPosterUrlValid}
-              className={`event-info flex items-center justify-center p-2 border rounded-lg ${
-                isPosterUrlValid
-                  ? "text-textSecondaryTwo"
-                  : "!text-gray-400 !cursor-not-allowed"
-              }`}
-            >
-              Xem thông tin
-            </button>
-
-            <a
-              href={isPosterLinkValid ? posterLink : "#t"}
-              target={isPosterLinkValid ? "_blank" : ""}
-              rel="noopener noreferrer"
-              className={`event-button ${
-                isPosterLinkValid ? "buy-ticket-enabled" : "buy-ticket-disabled"
-              }`}
-            >
-              Mua Vé
-            </a>
-          </div>
-        </div>
-      </div>
+      <ListCalendarItem
+        title={title}
+        start={start}
+        address={address}
+        category={category}
+        posterLink={posterLink}
+        isPosterLinkValid={isPosterLinkValid}
+        isPosterUrlValid={isPosterUrlValid}
+        onClick={onOpenModal(posterUrl)}
+      />
     );
   };
 
