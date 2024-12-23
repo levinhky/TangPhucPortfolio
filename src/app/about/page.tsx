@@ -45,7 +45,7 @@ const AboutPage = () => {
         </div>
         <div className="basis-2/4 esm:basis-full">
           <h6 className="sub-title--semi text-2xl mb-3">
-            Giới thiệu ngắn về anh
+            Giới thiệu ngắn về Tăng Phúc
           </h6>
           <p className="font-light text-textSecondaryTwo">
             Là một ca sĩ trẻ nổi bật trong làng nhạc Việt Nam, Tăng Phúc được
@@ -91,9 +91,6 @@ const AboutPage = () => {
             </tr>
           </table>
           <div className="px-6 py-10 rounded-lg shadow-lg mr-14 esm:mr-0 relative bg-custom-gradient">
-            <strong className="font-semibold text-textPrimary">
-              [Quote/Slogan]
-            </strong>
             <br />
             <p className="font-normal text-textSecondaryTwo">
               Cố gắng vì nhau và vui vẻ mỗi ngày nha !
@@ -247,13 +244,17 @@ const AboutPage = () => {
         </li>
       </ul>
 
-      <div className="py-10 px-5 bg-[#FDFBF7] flex justify-center">
+      {/* <div className="py-10 px-5 bg-[#b9dee6] flex justify-center"> */}
+      <div className="px-6 py-10 rounded-lg shadow-lg mr-14 esm:mr-0 relative bg-custom-gradient flex justify-center">
+      {/* <div className="py-10 rounded-lg px-5 flex justify-center"> */}
       <div className="w-[80%]"> {/* Shrinks width to 70% */}
-        <h2 className="text-center text-xl italic mb-2">Tìm hiểu về Phúc nè!</h2>
-        <h1 className="text-center text-4xl font-semibold mb-10">Tăng Phúc</h1>
+        <h2 className="text-center text-xl text-textSecondaryTwo mb-2">Tìm hiểu thêm về Tăng Phúc tại đây!</h2>
+        <h1 className="text-center text-4xl text-textSecondaryTwo font-semibold mb-10"> Hải Ly </h1>
 
         {/* Scrollable Container */}
-        <div className="bg-white shadow-lg rounded-md h-[500px] overflow-y-auto">
+        {/* <div className="bg-white rounded-lg shadow-lg rounded-md h-[500px] overflow-y-auto"> */}
+        <div className="rounded-lg shadow-lg rounded-md h-[500px] overflow-y-auto">
+
           {gameShows.map((show, index) => (
             <div
               key={index}
@@ -262,19 +263,19 @@ const AboutPage = () => {
               {/* Left Section - Date, Role, Title, Description */}
               <div className="flex items-center space-x-6 w-[75%]"> {/* Adjusted width */}
                 {/* Date Section */}
-                <div className="w-[15%] text-sm font-semibold text-gray-800 whitespace-nowrap">
+                <div className="w-[15%] text-sm font-light text-textSecondaryTwo whitespace-nowrap">
                   {show.date}
                 </div>
 
                 {/* Role Section */}
-                <div className="w-[15%] text-sm font-medium text-gray-600 whitespace-nowrap">
+                <div className="w-[15%] text-sm font-medium text-textSecondaryTwo whitespace-nowrap">
                   {show.role}
                 </div>
 
                 {/* Title and Description - Displayed Vertically */}
                 <div className="w-[70%] flex flex-col">
-                  <h3 className="text-lg font-bold uppercase mb-1">{show.title}</h3>
-                  <p className="text-gray-500">{show.descipt}</p>
+                  <h3 className="text-textSecondaryTwo font-bold mb-1">{show.title}</h3>
+                  <p className="text-textSecondaryTwo">{show.descipt}</p>
                 </div>
               </div>
 
@@ -284,7 +285,8 @@ const AboutPage = () => {
                   href={show.showLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-2 bg-black text-white uppercase text-sm font-semibold rounded-md hover:bg-gray-800 whitespace-nowrap"
+                  // className="px-6 py-2 bg-black text-white uppercase text-sm font-semibold rounded-md hover:bg-gray-800 whitespace-nowrap"
+                  className="px-6 py-2 bg-blue-900 text-white uppercase text-sm font-semibold rounded-md hover:bg-blue-800 whitespace-nowrap"
                 >
                   Xem Ngay
                 </a>
