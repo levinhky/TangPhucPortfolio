@@ -84,7 +84,6 @@ const ListCalendar = ({
     loadEvents(); // Load events on mount
   }, []);
 
-  if (!isClient) return null;
 
   const onOpenModal = (posterUrl: string) => () => {
     setSelectedPoster(posterUrl);
