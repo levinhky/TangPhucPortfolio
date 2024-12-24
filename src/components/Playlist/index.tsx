@@ -180,7 +180,7 @@ const Playlist = () => {
   };
 
   return (
-    <Container style="relative px-[100px] mt-[5%] esm:px-0">
+    <Container style="relative px-[100px] esm:px-0">
       <Swiper
         slidesPerView={3}
         spaceBetween={30}

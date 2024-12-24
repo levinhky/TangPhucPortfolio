@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <Container style={`mt-4 relative ${!haveBackground ? "h-1" : "h-auto"}`}>
-      <div className="menu bg-white w-10 h-10 esm:w-[30px] esm:h-[30px] rounded-lg esm:rounded-md esm:!-top-[10px] esm:!-right-[10px]">
+      <div className="menu bg-white w-10 h-10 esm:w-[30px] esm:h-[30px] rounded-lg esm:rounded-md">
         <button onClick={toggleShowModal}>
           <Image
             src={"/icons/hamburger.png"}
