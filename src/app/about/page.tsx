@@ -1,8 +1,36 @@
+"use client";
+import '../globals.css';
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
 import Container from "@/themes/Container";
+import {fetchCSVData} from "@/utils/constants";
 
 const AboutPage = () => {
+  // State to store fetched data
+  const [gameShows, setGameShows] = useState<any[]>([]);
+  const [isClient, setIsClient] = useState(false);
+  // const [gameShows, setGameShows] = useState(typeof window !== 'undefined' ? 'Peter' : 'Rick');
+
+  
+  // Fetch data when the component loads
+  useEffect(() => {
+    setIsClient(true); // Marks the component as rendered on the client
+    const loadGameShows = async () => {
+      try {
+        const data = await fetchCSVData("/data/gameShow.csv");
+        setGameShows(data); // Set fetched data
+        // console.log("Fetched Data:", data);
+      } catch (error) {
+        console.error("Failed to fetch game shows:", error);
+      }
+    };
+    loadGameShows();
+  }, []);
+
+  // Avoid rendering on the server side to fix hydration mismatch
+  if (!isClient) return null;
+
   return (
     <Container style="my-12 esm:my-0 esm:mt-0">
       <div className="flex esm:flex-wrap esm:justify-center items-center my-[75px] esm:mt-5">
@@ -17,7 +45,7 @@ const AboutPage = () => {
         </div>
         <div className="basis-2/4 esm:basis-full">
           <h6 className="sub-title--semi text-2xl mb-3">
-            Giới thiệu ngắn về anh
+            Giới thiệu ngắn về Tăng Phúc
           </h6>
           <p className="font-light text-textSecondaryTwo">
             Là một ca sĩ trẻ nổi bật trong làng nhạc Việt Nam, Tăng Phúc được
@@ -63,9 +91,6 @@ const AboutPage = () => {
             </tr>
           </table>
           <div className="px-6 py-10 rounded-lg shadow-lg mr-14 esm:mr-0 relative bg-custom-gradient">
-            <strong className="font-semibold text-textPrimary">
-              [Quote/Slogan]
-            </strong>
             <br />
             <p className="font-normal text-textSecondaryTwo">
               Cố gắng vì nhau và vui vẻ mỗi ngày nha !
@@ -86,7 +111,7 @@ const AboutPage = () => {
           <div className="timeline-info !flex justify-end">
             <Image
               src={
-                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956171/dcan_cup2v1.png"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/2017_c9yhga.png"
               }
               width={300}
               height={300}
@@ -111,7 +136,7 @@ const AboutPage = () => {
           <div className="timeline-info">
             <Image
               src={
-                "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731829160/485e62dfdc68f22a44fdd320cd8f4364-Copy_eon1by.jpg"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/Screenshot_2024-12-22_at_8.27.48_AM_xvbhik.png"
               }
               width={300}
               height={300}
@@ -138,7 +163,7 @@ const AboutPage = () => {
           <div className="timeline-info !flex justify-end">
             <Image
               src={
-                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956801/clkcn_bkvz26.png"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/Screenshot_2024-12-22_at_8.28.21_AM_nsqy8b.png"
               }
               width={300}
               height={300}
@@ -167,7 +192,7 @@ const AboutPage = () => {
           <div className="timeline-info">
             <Image
               src={
-                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1731956965/kvsl_luzsnp.png"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/Screenshot_2024-12-22_at_8.28.42_AM_pgwyxo.png"
               }
               width={300}
               height={300}
@@ -192,7 +217,7 @@ const AboutPage = () => {
           <div className="timeline-info !flex justify-end">
             <Image
               src={
-                "https://res.cloudinary.com/dahnkbdxi/image/upload/v1731828968/437713403_122139125180199321_5545351752770108522_n.jpg_bzypju.jpg"
+                "https://res.cloudinary.com/dwmpmry2n/image/upload/v1734852737/Screenshot_2024-12-22_at_8.29.47_AM_wks9jb.png"
               }
               width={300}
               height={300}
@@ -218,7 +243,59 @@ const AboutPage = () => {
           </div>
         </li>
       </ul>
+
+    <div className="px-6 py-10 rounded-lg shadow-lg esm:px-4 esm:py-6 relative bg-custom-gradient flex justify-center">
+      <div className="w-[80%] esm:w-full"> {/* Chiều rộng đầy đủ cho màn hình nhỏ */}
+        <h2 className="text-center text-xl text-textSecondaryTwo mb-2 esm:text-lg">Tìm hiểu thêm về Tăng Phúc tại đây!</h2>
+        <h1 className="text-center text-4xl text-textSecondaryTwo font-semibold mb-10 esm:text-2xl"> Hải Ly </h1>
+
+        {/* Scrollable Container */}
+        <div className="rounded-lg shadow-lg rounded-md h-[500px] overflow-y-auto esm:h-[400px]"> {/* Giảm chiều cao trên mobile */}
+          {gameShows.map((show, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-between border-b last:border-none p-6 esm:p-4 flex-col esm:items-start" // Điều chỉnh flex thành cột trên mobile
+            >
+              {/* Left Section - Date, Role, Title, Description */}
+              <div className="flex items-center space-x-6 w-full esm:flex-col esm:items-start esm:space-x-0 esm:space-y-2"> {/* Stack cột cho mobile */}
+                {/* Date Section */}
+                <div className="w-[15%] text-sm font-light text-textSecondaryTwo whitespace-nowrap esm:w-full">
+                  {show.date}
+                </div>
+
+                {/* Role Section */}
+                <div className="w-[15%] text-sm font-medium text-textSecondaryTwo whitespace-nowrap esm:w-full">
+                  {show.role}
+                </div>
+
+                {/* Title and Description - Displayed Vertically */}
+                <div className="w-[70%] flex flex-col esm:w-full">
+                  <h3 className="text-textSecondaryTwo font-bold mb-1">{show.title}</h3>
+                  <p className="text-textSecondaryTwo">{show.descipt}</p>
+                </div>
+              </div>
+
+              {/* Right Section - Button */}
+              <div className="mt-3 esm:mt-2 self-end esm:self-start"> {/* Điều chỉnh margin và căn chỉnh trên mobile */}
+                <a
+                  href={show.showLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 bg-blue-900 text-white uppercase text-sm font-semibold rounded-md hover:bg-blue-800 whitespace-nowrap esm:px-4 esm:py-1 esm:text-xs"
+                >
+                  Xem Ngay
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+
     </Container>
+
+    
   );
 };
 
