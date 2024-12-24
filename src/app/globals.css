@@ -213,4 +213,7 @@
     margin-top: 0px !important;
     white-space: nowrap !important;
   }
+  #homeSlider .swiper-pagination-horizontal {
+    display: none;
+  }
 }

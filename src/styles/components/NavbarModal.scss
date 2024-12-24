@@ -8,6 +8,9 @@
   right: 0;
   bottom: 0;
   z-index: 999;
+  @include respond(extra-small-mobile) {
+    overflow-y: scroll;
+  }
 }
 #navbar-modal-artist {
   #modal-background-image {
