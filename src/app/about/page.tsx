@@ -244,49 +244,44 @@ const AboutPage = () => {
         </li>
       </ul>
 
-      {/* <div className="py-10 px-5 bg-[#b9dee6] flex justify-center"> */}
-      <div className="px-6 py-10 rounded-lg shadow-lg mr-14 esm:mr-0 relative bg-custom-gradient flex justify-center">
-      {/* <div className="py-10 rounded-lg px-5 flex justify-center"> */}
-      <div className="w-[80%]"> {/* Shrinks width to 70% */}
-        <h2 className="text-center text-xl text-textSecondaryTwo mb-2">Tìm hiểu thêm về Tăng Phúc tại đây!</h2>
-        <h1 className="text-center text-4xl text-textSecondaryTwo font-semibold mb-10"> Hải Ly </h1>
+    <div className="px-6 py-10 rounded-lg shadow-lg esm:px-4 esm:py-6 relative bg-custom-gradient flex justify-center">
+      <div className="w-[80%] esm:w-full"> {/* Chiều rộng đầy đủ cho màn hình nhỏ */}
+        <h2 className="text-center text-xl text-textSecondaryTwo mb-2 esm:text-lg">Tìm hiểu thêm về Tăng Phúc tại đây!</h2>
+        <h1 className="text-center text-4xl text-textSecondaryTwo font-semibold mb-10 esm:text-2xl"> Hải Ly </h1>
 
         {/* Scrollable Container */}
-        {/* <div className="bg-white rounded-lg shadow-lg rounded-md h-[500px] overflow-y-auto"> */}
-        <div className="rounded-lg shadow-lg rounded-md h-[500px] overflow-y-auto">
-
+        <div className="rounded-lg shadow-lg rounded-md h-[500px] overflow-y-auto esm:h-[400px]"> {/* Giảm chiều cao trên mobile */}
           {gameShows.map((show, index) => (
             <div
               key={index}
-              className="flex items-center justify-between border-b last:border-none p-6"
+              className="flex items-center justify-between border-b last:border-none p-6 esm:p-4 flex-col esm:items-start" // Điều chỉnh flex thành cột trên mobile
             >
               {/* Left Section - Date, Role, Title, Description */}
-              <div className="flex items-center space-x-6 w-[75%]"> {/* Adjusted width */}
+              <div className="flex items-center space-x-6 w-full esm:flex-col esm:items-start esm:space-x-0 esm:space-y-2"> {/* Stack cột cho mobile */}
                 {/* Date Section */}
-                <div className="w-[15%] text-sm font-light text-textSecondaryTwo whitespace-nowrap">
+                <div className="w-[15%] text-sm font-light text-textSecondaryTwo whitespace-nowrap esm:w-full">
                   {show.date}
                 </div>
 
                 {/* Role Section */}
-                <div className="w-[15%] text-sm font-medium text-textSecondaryTwo whitespace-nowrap">
+                <div className="w-[15%] text-sm font-medium text-textSecondaryTwo whitespace-nowrap esm:w-full">
                   {show.role}
                 </div>
 
                 {/* Title and Description - Displayed Vertically */}
-                <div className="w-[70%] flex flex-col">
+                <div className="w-[70%] flex flex-col esm:w-full">
                   <h3 className="text-textSecondaryTwo font-bold mb-1">{show.title}</h3>
                   <p className="text-textSecondaryTwo">{show.descipt}</p>
                 </div>
               </div>
 
               {/* Right Section - Button */}
-              <div className="ml-3"> {/* Reduced margin-left for button spacing */}
+              <div className="mt-3 esm:mt-2 self-end esm:self-start"> {/* Điều chỉnh margin và căn chỉnh trên mobile */}
                 <a
                   href={show.showLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  // className="px-6 py-2 bg-black text-white uppercase text-sm font-semibold rounded-md hover:bg-gray-800 whitespace-nowrap"
-                  className="px-6 py-2 bg-blue-900 text-white uppercase text-sm font-semibold rounded-md hover:bg-blue-800 whitespace-nowrap"
+                  className="px-6 py-2 bg-blue-900 text-white uppercase text-sm font-semibold rounded-md hover:bg-blue-800 whitespace-nowrap esm:px-4 esm:py-1 esm:text-xs"
                 >
                   Xem Ngay
                 </a>
