@@ -21,7 +21,10 @@ const Schedule = () => {
                   </p>
                   <div className="schedule-list--info max-w-[600px]">
                     <h4>{event.extendedProps.category}</h4>
-                    <Link href={"/schedule/1"} className="sub-title--bold">
+                    <Link
+                      href={event.extendedProps.posterLink}
+                      className="sub-title--bold"
+                    >
                       {event.title}
                     </Link>
                   </div>

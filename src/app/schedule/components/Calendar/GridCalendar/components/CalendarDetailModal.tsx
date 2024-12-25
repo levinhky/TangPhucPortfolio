@@ -14,7 +14,7 @@ const CalendarDetailModal = ({
   onClose,
 }: CalendarDetailModalProps) => {
   const { title, start, extendedProps } = calendarInfo?.event || {};
-  const { address, id, time } = extendedProps || {};
+  const { address, id, time, posterLink } = extendedProps || {};
 
   if (!calendarInfo) {
     return null;
@@ -46,7 +46,12 @@ const CalendarDetailModal = ({
             </p>
           </div>
           <Link
-            href={`/schedule/${id}`}
+            href={posterLink}
+            style={
+              posterLink === ""
+                ? { pointerEvents: "none", cursor: "default" }
+                : {}
+            }
             className="h-10 border-[#003EA0] border px-4 rounded-lg  flex gap-2 items-center justify-center text-textSecondaryTwo text-sm font-medium"
           >
             Xem chi tiết
