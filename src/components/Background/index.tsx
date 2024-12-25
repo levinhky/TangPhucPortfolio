@@ -13,7 +13,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
   const { device } = useDetectDevice();
 
   return (
-    <div className={`relative w-full h-full masked-background`}>
+    <div className={`relative w-full h-fit masked-background`}>
       <Swiper
         pagination={{
           clickable: true,
@@ -31,7 +31,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
                   src={item.src}
                   alt="Background"
                   fill
-                  className="object-cover aspect-1376/770 rounded-xl !h-[770px] esm:!h-fit"
+                  className="object-cover aspect-1376/770 rounded-xl !h-[770px] esm:!h-fit !relative"
                   priority
                 />
               </div>

@@ -10,7 +10,7 @@ const PosterModal = ({ onCloseModal, posterSrc }: PosterModalProps) => {
   return (
     <div className="poster-overlay" onClick={onCloseModal}>
       <div
-        className="relative bg-white w-full max-w-[500px] rounded-xl"
+        className="relative bg-white w-full max-w-[500px] esm:mx-6 rounded-xl"
         onClick={(e) => e.stopPropagation()}
       >
         <Image
