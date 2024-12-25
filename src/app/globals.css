@@ -170,7 +170,6 @@
 
 #homeSlider .swiper-pagination-horizontal {
   left: 90%;
-  bottom: 5rem;
   width: fit-content;
 }
 #swiperGallery .swiper-pagination-bullet,

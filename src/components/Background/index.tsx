@@ -31,7 +31,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
                   src={item.src}
                   alt="Background"
                   fill
-                  className="object-cover aspect-1376/770 rounded-xl"
+                  className="object-cover aspect-1376/770 rounded-xl !h-[770px] esm:!h-fit"
                   priority
                 />
               </div>
@@ -40,7 +40,7 @@ const Background = ({ isHomeType }: { isHomeType: boolean }) => {
         })}
       </Swiper>
       {isHomeType && (
-        <div className="z-10 flex flex-col items-center absolute bottom-20 esm:bottom-10 esm:w-full left-2/4 -translate-x-2/4 ">
+        <div className="z-10 flex flex-col items-center absolute bottom-2 esm:bottom-10 esm:w-full left-2/4 -translate-x-2/4 ">
           <Image
             src={"/icons/mouse-scroll.png"}
             width={24}
