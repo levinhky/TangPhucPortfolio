@@ -49,7 +49,10 @@ const CalendarView = () => {
 
   const renderListButton = (
     <button
-      onClick={() => setGridType(false)}
+      onClick={() => {
+        setGridType(false);
+        setCurrentMonth(new Date().getMonth() + 1);
+      }}
       style={{ background: !gridType ? "#000B6E" : "#fff" }}
       className="rounded-lg flex h-10 w-10 items-center justify-center"
     >
@@ -68,7 +71,10 @@ const CalendarView = () => {
 
   const renderGridButton = (
     <button
-      onClick={() => setGridType(true)}
+      onClick={() => {
+        setGridType(true);
+        setCurrentMonth(new Date().getMonth() + 1);
+      }}
       style={{ background: gridType ? "#000B6E" : "#fff" }}
       className="rounded-lg flex h-10 w-10 items-center justify-center"
     >
